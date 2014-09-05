@@ -4,20 +4,20 @@
 # --- !Ups
 
 create table area (
-  id                        bigint not null,
+  id                        bigint auto_increment not null,
   area_name                 varchar(255),
   constraint pk_area primary key (id))
 ;
 
 create table food_item (
-  id                        bigint not null,
+  id                        bigint auto_increment not null,
   category                  varchar(255),
   item_title                varchar(255),
   constraint pk_food_item primary key (id))
 ;
 
 create table franchise (
-  id                        bigint not null,
+  id                        bigint auto_increment not null,
   franchise_title           varchar(255),
   email                     varchar(255),
   phone                     varchar(255),
@@ -26,7 +26,7 @@ create table franchise (
 ;
 
 create table restaurant (
-  id                        bigint not null,
+  id                        bigint auto_increment not null,
   name                      varchar(255),
   overall_rating            double,
   email                     varchar(255),
@@ -39,7 +39,7 @@ create table restaurant (
 ;
 
 create table restaurant_food (
-  id                        bigint not null,
+  id                        bigint auto_increment not null,
   price                     integer,
   rating                    double,
   details                   varchar(255),
@@ -53,7 +53,7 @@ create table visitor (
   password                  varchar(255),
   first_name                varchar(255),
   last_name                 varchar(255),
-  dateof_birth              timestamp,
+  dateof_birth              datetime,
   gender                    varchar(255),
   address                   varchar(255),
   occupation                varchar(255),
@@ -64,18 +64,6 @@ create table visitor (
   post_box_no               varchar(255),
   constraint pk_visitor primary key (visitor_id))
 ;
-
-create sequence area_seq;
-
-create sequence food_item_seq;
-
-create sequence franchise_seq;
-
-create sequence restaurant_seq;
-
-create sequence restaurant_food_seq;
-
-create sequence visitor_seq;
 
 alter table restaurant add constraint fk_restaurant_franchise_1 foreign key (franchise_id) references franchise (id) on delete restrict on update restrict;
 create index ix_restaurant_franchise_1 on restaurant (franchise_id);
@@ -92,31 +80,19 @@ create index ix_restaurant_food_foodItem_5 on restaurant_food (food_item_id);
 
 # --- !Downs
 
-SET REFERENTIAL_INTEGRITY FALSE;
+SET FOREIGN_KEY_CHECKS=0;
 
-drop table if exists area;
+drop table area;
 
-drop table if exists food_item;
+drop table food_item;
 
-drop table if exists franchise;
+drop table franchise;
 
-drop table if exists restaurant;
+drop table restaurant;
 
-drop table if exists restaurant_food;
+drop table restaurant_food;
 
-drop table if exists visitor;
+drop table visitor;
 
-SET REFERENTIAL_INTEGRITY TRUE;
-
-drop sequence if exists area_seq;
-
-drop sequence if exists food_item_seq;
-
-drop sequence if exists franchise_seq;
-
-drop sequence if exists restaurant_seq;
-
-drop sequence if exists restaurant_food_seq;
-
-drop sequence if exists visitor_seq;
+SET FOREIGN_KEY_CHECKS=1;
 

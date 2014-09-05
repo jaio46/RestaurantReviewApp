@@ -7,7 +7,7 @@
 [debug] == resolving dependencies for restaurantdatabasesystem#restaurantdatabasesystem_2.10;1.0-SNAPSHOT [compile]
 [debug] == resolving dependencies restaurantdatabasesystem#restaurantdatabasesystem_2.10;1.0-SNAPSHOT->org.scala-lang#scala-library;2.10.3 [compile->default(compile)]
 [info] Resolving org.scala-lang#scala-library;2.10.3 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@4a60e14e
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@287f7240
 [debug] sbt-chain: module revision found in cache: org.scala-lang#scala-library;2.10.3
 [debug] 	local: revision in cache: org.scala-lang#scala-library;2.10.3
 [debug] 	found org.scala-lang#scala-library;2.10.3 in sbt-chain
@@ -920,6 +920,28 @@
 [debug] == resolving dependencies org.webjars#bootstrap;2.3.1->org.webjars#jquery;1.9.0 [runtime->runtime(*)]
 [debug] == resolving dependencies org.webjars#bootstrap;2.3.1->org.webjars#jquery;1.9.0 [runtime->compile]
 [debug] == resolving dependencies restaurantdatabasesystem#restaurantdatabasesystem_2.10;1.0-SNAPSHOT->org.webjars#bootstrap;2.3.1 [compile->master]
+[debug] == resolving dependencies restaurantdatabasesystem#restaurantdatabasesystem_2.10;1.0-SNAPSHOT->mysql#mysql-connector-java;5.1.27 [compile->default(compile)]
+[info] Resolving mysql#mysql-connector-java;5.1.27 ...
+[debug] sbt-chain: Checking cache for: dependency: mysql#mysql-connector-java;5.1.27 {compile=[default(compile)]}
+[debug] 		tried C:\Users\User\.ivy2\local\mysql\mysql-connector-java\5.1.27\ivys\ivy.xml
+[debug] 	local: no ivy file found for mysql#mysql-connector-java;5.1.27
+[debug] 		tried file:/C:/activator-1.0.13/repository/mysql/mysql-connector-java/5.1.27/ivys/ivy.xml
+[debug] 	activator-local: no ivy file found for mysql#mysql-connector-java;5.1.27
+[debug] 		tried http://repo1.maven.org/maven2/mysql/mysql-connector-java/5.1.27/mysql-connector-java-5.1.27.pom
+[debug] 	public: found md file for mysql#mysql-connector-java;5.1.27
+[debug] 		=> http://repo1.maven.org/maven2/mysql/mysql-connector-java/5.1.27/mysql-connector-java-5.1.27.pom (5.1.27)
+[debug] downloading http://repo1.maven.org/maven2/mysql/mysql-connector-java/5.1.27/mysql-connector-java-5.1.27.pom ...
+[debug] 	public: downloading http://repo1.maven.org/maven2/mysql/mysql-connector-java/5.1.27/mysql-connector-java-5.1.27.pom
+[debug] 	public: downloading http://repo1.maven.org/maven2/mysql/mysql-connector-java/5.1.27/mysql-connector-java-5.1.27.pom.sha1
+[debug] sha1 OK for http://repo1.maven.org/maven2/mysql/mysql-connector-java/5.1.27/mysql-connector-java-5.1.27.pom
+[debug] 	[SUCCESSFUL ] mysql#mysql-connector-java;5.1.27!mysql-connector-java.pom(pom.original) (1542ms)
+[debug] 		tried C:\Users\User\.ivy2\local\mysql\mysql-connector-java\5.1.27\jars\mysql-connector-java.jar
+[debug] 		tried file:/C:/activator-1.0.13/repository/mysql/mysql-connector-java/5.1.27/jars/mysql-connector-java.jar
+[debug] 		tried http://repo1.maven.org/maven2/mysql/mysql-connector-java/5.1.27/mysql-connector-java-5.1.27.jar
+[debug] 	found mysql#mysql-connector-java;5.1.27 in public
+[debug] == resolving dependencies restaurantdatabasesystem#restaurantdatabasesystem_2.10;1.0-SNAPSHOT->mysql#mysql-connector-java;5.1.27 [compile->runtime]
+[debug] == resolving dependencies restaurantdatabasesystem#restaurantdatabasesystem_2.10;1.0-SNAPSHOT->mysql#mysql-connector-java;5.1.27 [compile->compile]
+[debug] == resolving dependencies restaurantdatabasesystem#restaurantdatabasesystem_2.10;1.0-SNAPSHOT->mysql#mysql-connector-java;5.1.27 [compile->master]
 [debug] == resolving dependencies restaurantdatabasesystem#restaurantdatabasesystem_2.10;1.0-SNAPSHOT->com.typesafe.play#play_2.10;2.2.3 [compile->default(compile)]
 [debug] == resolving dependencies restaurantdatabasesystem#restaurantdatabasesystem_2.10;1.0-SNAPSHOT->com.typesafe.play#play_2.10;2.2.3 [compile->runtime]
 [debug] == resolving dependencies restaurantdatabasesystem#restaurantdatabasesystem_2.10;1.0-SNAPSHOT->com.typesafe.play#play_2.10;2.2.3 [compile->compile]
@@ -1466,6 +1488,10 @@
 [debug] == resolving dependencies org.webjars#bootstrap;2.3.1->org.webjars#jquery;1.9.0 [runtime->runtime(*)]
 [debug] == resolving dependencies org.webjars#bootstrap;2.3.1->org.webjars#jquery;1.9.0 [runtime->compile]
 [debug] == resolving dependencies restaurantdatabasesystem#restaurantdatabasesystem_2.10;1.0-SNAPSHOT->org.webjars#bootstrap;2.3.1 [compile->master]
+[debug] == resolving dependencies restaurantdatabasesystem#restaurantdatabasesystem_2.10;1.0-SNAPSHOT->mysql#mysql-connector-java;5.1.27 [compile->default(compile)]
+[debug] == resolving dependencies restaurantdatabasesystem#restaurantdatabasesystem_2.10;1.0-SNAPSHOT->mysql#mysql-connector-java;5.1.27 [compile->runtime]
+[debug] == resolving dependencies restaurantdatabasesystem#restaurantdatabasesystem_2.10;1.0-SNAPSHOT->mysql#mysql-connector-java;5.1.27 [compile->compile]
+[debug] == resolving dependencies restaurantdatabasesystem#restaurantdatabasesystem_2.10;1.0-SNAPSHOT->mysql#mysql-connector-java;5.1.27 [compile->master]
 [debug] == resolving dependencies restaurantdatabasesystem#restaurantdatabasesystem_2.10;1.0-SNAPSHOT->com.typesafe.play#play_2.10;2.2.3 [compile->default(compile)]
 [debug] == resolving dependencies restaurantdatabasesystem#restaurantdatabasesystem_2.10;1.0-SNAPSHOT->com.typesafe.play#play_2.10;2.2.3 [compile->runtime]
 [debug] == resolving dependencies restaurantdatabasesystem#restaurantdatabasesystem_2.10;1.0-SNAPSHOT->com.typesafe.play#play_2.10;2.2.3 [compile->compile]
@@ -2013,6 +2039,10 @@
 [debug] == resolving dependencies org.webjars#bootstrap;2.3.1->org.webjars#jquery;1.9.0 [runtime->runtime(*)]
 [debug] == resolving dependencies org.webjars#bootstrap;2.3.1->org.webjars#jquery;1.9.0 [runtime->compile]
 [debug] == resolving dependencies restaurantdatabasesystem#restaurantdatabasesystem_2.10;1.0-SNAPSHOT->org.webjars#bootstrap;2.3.1 [compile->master]
+[debug] == resolving dependencies restaurantdatabasesystem#restaurantdatabasesystem_2.10;1.0-SNAPSHOT->mysql#mysql-connector-java;5.1.27 [compile->default(compile)]
+[debug] == resolving dependencies restaurantdatabasesystem#restaurantdatabasesystem_2.10;1.0-SNAPSHOT->mysql#mysql-connector-java;5.1.27 [compile->runtime]
+[debug] == resolving dependencies restaurantdatabasesystem#restaurantdatabasesystem_2.10;1.0-SNAPSHOT->mysql#mysql-connector-java;5.1.27 [compile->compile]
+[debug] == resolving dependencies restaurantdatabasesystem#restaurantdatabasesystem_2.10;1.0-SNAPSHOT->mysql#mysql-connector-java;5.1.27 [compile->master]
 [debug] == resolving dependencies restaurantdatabasesystem#restaurantdatabasesystem_2.10;1.0-SNAPSHOT->com.typesafe.play#play_2.10;2.2.3 [compile->default(compile)]
 [debug] == resolving dependencies restaurantdatabasesystem#restaurantdatabasesystem_2.10;1.0-SNAPSHOT->com.typesafe.play#play_2.10;2.2.3 [compile->runtime]
 [debug] == resolving dependencies restaurantdatabasesystem#restaurantdatabasesystem_2.10;1.0-SNAPSHOT->com.typesafe.play#play_2.10;2.2.3 [compile->compile]
@@ -3614,6 +3644,10 @@
 [debug] == resolving dependencies org.webjars#bootstrap;2.3.1->org.webjars#jquery;1.9.0 [runtime->runtime(*)]
 [debug] == resolving dependencies org.webjars#bootstrap;2.3.1->org.webjars#jquery;1.9.0 [runtime->compile]
 [debug] == resolving dependencies restaurantdatabasesystem#restaurantdatabasesystem_2.10;1.0-SNAPSHOT->org.webjars#bootstrap;2.3.1 [compile->master]
+[debug] == resolving dependencies restaurantdatabasesystem#restaurantdatabasesystem_2.10;1.0-SNAPSHOT->mysql#mysql-connector-java;5.1.27 [compile->default(compile)]
+[debug] == resolving dependencies restaurantdatabasesystem#restaurantdatabasesystem_2.10;1.0-SNAPSHOT->mysql#mysql-connector-java;5.1.27 [compile->runtime]
+[debug] == resolving dependencies restaurantdatabasesystem#restaurantdatabasesystem_2.10;1.0-SNAPSHOT->mysql#mysql-connector-java;5.1.27 [compile->compile]
+[debug] == resolving dependencies restaurantdatabasesystem#restaurantdatabasesystem_2.10;1.0-SNAPSHOT->mysql#mysql-connector-java;5.1.27 [compile->master]
 [debug] == resolving dependencies restaurantdatabasesystem#restaurantdatabasesystem_2.10;1.0-SNAPSHOT->com.typesafe.play#play_2.10;2.2.3 [compile->default(compile)]
 [debug] == resolving dependencies restaurantdatabasesystem#restaurantdatabasesystem_2.10;1.0-SNAPSHOT->com.typesafe.play#play_2.10;2.2.3 [compile->runtime]
 [debug] == resolving dependencies restaurantdatabasesystem#restaurantdatabasesystem_2.10;1.0-SNAPSHOT->com.typesafe.play#play_2.10;2.2.3 [compile->compile]
@@ -4163,6 +4197,10 @@
 [debug] == resolving dependencies org.webjars#bootstrap;2.3.1->org.webjars#jquery;1.9.0 [runtime->runtime(*)]
 [debug] == resolving dependencies org.webjars#bootstrap;2.3.1->org.webjars#jquery;1.9.0 [runtime->compile]
 [debug] == resolving dependencies restaurantdatabasesystem#restaurantdatabasesystem_2.10;1.0-SNAPSHOT->org.webjars#bootstrap;2.3.1 [compile->master]
+[debug] == resolving dependencies restaurantdatabasesystem#restaurantdatabasesystem_2.10;1.0-SNAPSHOT->mysql#mysql-connector-java;5.1.27 [compile->default(compile)]
+[debug] == resolving dependencies restaurantdatabasesystem#restaurantdatabasesystem_2.10;1.0-SNAPSHOT->mysql#mysql-connector-java;5.1.27 [compile->runtime]
+[debug] == resolving dependencies restaurantdatabasesystem#restaurantdatabasesystem_2.10;1.0-SNAPSHOT->mysql#mysql-connector-java;5.1.27 [compile->compile]
+[debug] == resolving dependencies restaurantdatabasesystem#restaurantdatabasesystem_2.10;1.0-SNAPSHOT->mysql#mysql-connector-java;5.1.27 [compile->master]
 [debug] == resolving dependencies restaurantdatabasesystem#restaurantdatabasesystem_2.10;1.0-SNAPSHOT->com.typesafe.play#play_2.10;2.2.3 [compile->default(compile)]
 [debug] == resolving dependencies restaurantdatabasesystem#restaurantdatabasesystem_2.10;1.0-SNAPSHOT->com.typesafe.play#play_2.10;2.2.3 [compile->runtime]
 [debug] == resolving dependencies restaurantdatabasesystem#restaurantdatabasesystem_2.10;1.0-SNAPSHOT->com.typesafe.play#play_2.10;2.2.3 [compile->compile]
@@ -4712,6 +4750,10 @@
 [debug] == resolving dependencies org.webjars#bootstrap;2.3.1->org.webjars#jquery;1.9.0 [runtime->runtime(*)]
 [debug] == resolving dependencies org.webjars#bootstrap;2.3.1->org.webjars#jquery;1.9.0 [runtime->compile]
 [debug] == resolving dependencies restaurantdatabasesystem#restaurantdatabasesystem_2.10;1.0-SNAPSHOT->org.webjars#bootstrap;2.3.1 [compile->master]
+[debug] == resolving dependencies restaurantdatabasesystem#restaurantdatabasesystem_2.10;1.0-SNAPSHOT->mysql#mysql-connector-java;5.1.27 [compile->default(compile)]
+[debug] == resolving dependencies restaurantdatabasesystem#restaurantdatabasesystem_2.10;1.0-SNAPSHOT->mysql#mysql-connector-java;5.1.27 [compile->runtime]
+[debug] == resolving dependencies restaurantdatabasesystem#restaurantdatabasesystem_2.10;1.0-SNAPSHOT->mysql#mysql-connector-java;5.1.27 [compile->compile]
+[debug] == resolving dependencies restaurantdatabasesystem#restaurantdatabasesystem_2.10;1.0-SNAPSHOT->mysql#mysql-connector-java;5.1.27 [compile->master]
 [debug] == resolving dependencies restaurantdatabasesystem#restaurantdatabasesystem_2.10;1.0-SNAPSHOT->com.typesafe.play#play_2.10;2.2.3 [compile->default(compile)]
 [debug] == resolving dependencies restaurantdatabasesystem#restaurantdatabasesystem_2.10;1.0-SNAPSHOT->com.typesafe.play#play_2.10;2.2.3 [compile->runtime]
 [debug] == resolving dependencies restaurantdatabasesystem#restaurantdatabasesystem_2.10;1.0-SNAPSHOT->com.typesafe.play#play_2.10;2.2.3 [compile->compile]
@@ -6547,6 +6589,10 @@
 [debug] == resolving dependencies org.webjars#bootstrap;2.3.1->org.webjars#jquery;1.9.0 [runtime->runtime(*)]
 [debug] == resolving dependencies org.webjars#bootstrap;2.3.1->org.webjars#jquery;1.9.0 [runtime->compile]
 [debug] == resolving dependencies restaurantdatabasesystem#restaurantdatabasesystem_2.10;1.0-SNAPSHOT->org.webjars#bootstrap;2.3.1 [compile->master]
+[debug] == resolving dependencies restaurantdatabasesystem#restaurantdatabasesystem_2.10;1.0-SNAPSHOT->mysql#mysql-connector-java;5.1.27 [compile->default(compile)]
+[debug] == resolving dependencies restaurantdatabasesystem#restaurantdatabasesystem_2.10;1.0-SNAPSHOT->mysql#mysql-connector-java;5.1.27 [compile->runtime]
+[debug] == resolving dependencies restaurantdatabasesystem#restaurantdatabasesystem_2.10;1.0-SNAPSHOT->mysql#mysql-connector-java;5.1.27 [compile->compile]
+[debug] == resolving dependencies restaurantdatabasesystem#restaurantdatabasesystem_2.10;1.0-SNAPSHOT->mysql#mysql-connector-java;5.1.27 [compile->master]
 [debug] == resolving dependencies restaurantdatabasesystem#restaurantdatabasesystem_2.10;1.0-SNAPSHOT->com.typesafe.play#play_2.10;2.2.3 [compile->default(compile)]
 [debug] == resolving dependencies restaurantdatabasesystem#restaurantdatabasesystem_2.10;1.0-SNAPSHOT->com.typesafe.play#play_2.10;2.2.3 [compile->runtime]
 [debug] == resolving dependencies restaurantdatabasesystem#restaurantdatabasesystem_2.10;1.0-SNAPSHOT->com.typesafe.play#play_2.10;2.2.3 [compile->compile]
@@ -7097,6 +7143,10 @@
 [debug] == resolving dependencies org.webjars#bootstrap;2.3.1->org.webjars#jquery;1.9.0 [runtime->runtime(*)]
 [debug] == resolving dependencies org.webjars#bootstrap;2.3.1->org.webjars#jquery;1.9.0 [runtime->compile]
 [debug] == resolving dependencies restaurantdatabasesystem#restaurantdatabasesystem_2.10;1.0-SNAPSHOT->org.webjars#bootstrap;2.3.1 [compile->master]
+[debug] == resolving dependencies restaurantdatabasesystem#restaurantdatabasesystem_2.10;1.0-SNAPSHOT->mysql#mysql-connector-java;5.1.27 [compile->default(compile)]
+[debug] == resolving dependencies restaurantdatabasesystem#restaurantdatabasesystem_2.10;1.0-SNAPSHOT->mysql#mysql-connector-java;5.1.27 [compile->runtime]
+[debug] == resolving dependencies restaurantdatabasesystem#restaurantdatabasesystem_2.10;1.0-SNAPSHOT->mysql#mysql-connector-java;5.1.27 [compile->compile]
+[debug] == resolving dependencies restaurantdatabasesystem#restaurantdatabasesystem_2.10;1.0-SNAPSHOT->mysql#mysql-connector-java;5.1.27 [compile->master]
 [debug] == resolving dependencies restaurantdatabasesystem#restaurantdatabasesystem_2.10;1.0-SNAPSHOT->com.typesafe.play#play_2.10;2.2.3 [compile->default(compile)]
 [debug] == resolving dependencies restaurantdatabasesystem#restaurantdatabasesystem_2.10;1.0-SNAPSHOT->com.typesafe.play#play_2.10;2.2.3 [compile->runtime]
 [debug] == resolving dependencies restaurantdatabasesystem#restaurantdatabasesystem_2.10;1.0-SNAPSHOT->com.typesafe.play#play_2.10;2.2.3 [compile->compile]
@@ -7936,7 +7986,7 @@
 [debug] == resolving dependencies for restaurantdatabasesystem#restaurantdatabasesystem_2.10;1.0-SNAPSHOT [atmos-weave]
 [debug] == resolving dependencies restaurantdatabasesystem#restaurantdatabasesystem_2.10;1.0-SNAPSHOT->org.aspectj#aspectjweaver;1.7.3 [atmos-weave->default(compile)]
 [info] Resolving org.aspectj#aspectjweaver;1.7.3 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@26e5aca1
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@7cadd293
 [debug] sbt-chain: module revision found in cache: org.aspectj#aspectjweaver;1.7.3
 [debug] 	local: revision in cache: org.aspectj#aspectjweaver;1.7.3
 [debug] 	found org.aspectj#aspectjweaver;1.7.3 in sbt-chain
@@ -8498,6 +8548,10 @@
 [debug] == resolving dependencies org.webjars#bootstrap;2.3.1->org.webjars#jquery;1.9.0 [runtime->runtime(*)]
 [debug] == resolving dependencies org.webjars#bootstrap;2.3.1->org.webjars#jquery;1.9.0 [runtime->compile]
 [debug] == resolving dependencies restaurantdatabasesystem#restaurantdatabasesystem_2.10;1.0-SNAPSHOT->org.webjars#bootstrap;2.3.1 [compile->master]
+[debug] == resolving dependencies restaurantdatabasesystem#restaurantdatabasesystem_2.10;1.0-SNAPSHOT->mysql#mysql-connector-java;5.1.27 [compile->default(compile)]
+[debug] == resolving dependencies restaurantdatabasesystem#restaurantdatabasesystem_2.10;1.0-SNAPSHOT->mysql#mysql-connector-java;5.1.27 [compile->runtime]
+[debug] == resolving dependencies restaurantdatabasesystem#restaurantdatabasesystem_2.10;1.0-SNAPSHOT->mysql#mysql-connector-java;5.1.27 [compile->compile]
+[debug] == resolving dependencies restaurantdatabasesystem#restaurantdatabasesystem_2.10;1.0-SNAPSHOT->mysql#mysql-connector-java;5.1.27 [compile->master]
 [debug] == resolving dependencies restaurantdatabasesystem#restaurantdatabasesystem_2.10;1.0-SNAPSHOT->com.typesafe.play#play_2.10;2.2.3 [compile->default(compile)]
 [debug] == resolving dependencies restaurantdatabasesystem#restaurantdatabasesystem_2.10;1.0-SNAPSHOT->com.typesafe.play#play_2.10;2.2.3 [compile->runtime]
 [debug] == resolving dependencies restaurantdatabasesystem#restaurantdatabasesystem_2.10;1.0-SNAPSHOT->com.typesafe.play#play_2.10;2.2.3 [compile->compile]
@@ -9314,6 +9368,10 @@
 [debug] == resolving dependencies org.webjars#bootstrap;2.3.1->org.webjars#jquery;1.9.0 [runtime->runtime(*)]
 [debug] == resolving dependencies org.webjars#bootstrap;2.3.1->org.webjars#jquery;1.9.0 [runtime->compile]
 [debug] == resolving dependencies restaurantdatabasesystem#restaurantdatabasesystem_2.10;1.0-SNAPSHOT->org.webjars#bootstrap;2.3.1 [compile->master]
+[debug] == resolving dependencies restaurantdatabasesystem#restaurantdatabasesystem_2.10;1.0-SNAPSHOT->mysql#mysql-connector-java;5.1.27 [compile->default(compile)]
+[debug] == resolving dependencies restaurantdatabasesystem#restaurantdatabasesystem_2.10;1.0-SNAPSHOT->mysql#mysql-connector-java;5.1.27 [compile->runtime]
+[debug] == resolving dependencies restaurantdatabasesystem#restaurantdatabasesystem_2.10;1.0-SNAPSHOT->mysql#mysql-connector-java;5.1.27 [compile->compile]
+[debug] == resolving dependencies restaurantdatabasesystem#restaurantdatabasesystem_2.10;1.0-SNAPSHOT->mysql#mysql-connector-java;5.1.27 [compile->master]
 [debug] == resolving dependencies restaurantdatabasesystem#restaurantdatabasesystem_2.10;1.0-SNAPSHOT->com.typesafe.play#play_2.10;2.2.3 [compile->default(compile)]
 [debug] == resolving dependencies restaurantdatabasesystem#restaurantdatabasesystem_2.10;1.0-SNAPSHOT->com.typesafe.play#play_2.10;2.2.3 [compile->runtime]
 [debug] == resolving dependencies restaurantdatabasesystem#restaurantdatabasesystem_2.10;1.0-SNAPSHOT->com.typesafe.play#play_2.10;2.2.3 [compile->compile]
@@ -10319,6 +10377,12 @@
 [debug] 	[NOT REQUIRED] com.typesafe.play#play-java_2.10;2.2.3!play-java_2.10.jar
 [debug] 	[NOT REQUIRED] org.webjars#webjars-play_2.10;2.2.0!webjars-play_2.10.jar
 [debug] 	[NOT REQUIRED] org.webjars#bootstrap;2.3.1!bootstrap.jar
+[debug] 		tried http://repo1.maven.org/maven2/mysql/mysql-connector-java/5.1.27/mysql-connector-java-5.1.27.jar
+[info] downloading http://repo1.maven.org/maven2/mysql/mysql-connector-java/5.1.27/mysql-connector-java-5.1.27.jar ...
+[debug] 	public: downloading http://repo1.maven.org/maven2/mysql/mysql-connector-java/5.1.27/mysql-connector-java-5.1.27.jar
+[debug] 	public: downloading http://repo1.maven.org/maven2/mysql/mysql-connector-java/5.1.27/mysql-connector-java-5.1.27.jar.sha1
+[debug] sha1 OK for http://repo1.maven.org/maven2/mysql/mysql-connector-java/5.1.27/mysql-connector-java-5.1.27.jar
+[info] 	[SUCCESSFUL ] mysql#mysql-connector-java;5.1.27!mysql-connector-java.jar (9570ms)
 [debug] 	[NOT REQUIRED] com.typesafe.play#play_2.10;2.2.3!play_2.10.jar
 [debug] 	[NOT REQUIRED] com.jolbox#bonecp;0.8.0.RELEASE!bonecp.jar(bundle)
 [debug] 	[NOT REQUIRED] com.google.guava#guava;14.0.1!guava.jar(bundle)
@@ -10462,7 +10526,7 @@
 [debug] 	[NOT REQUIRED] org.uncommons.maths#uncommons-maths;1.2.2a!uncommons-maths.jar
 [debug] 	[NOT REQUIRED] log4j#log4j;1.2.15!log4j.jar
 [debug] 	[NOT REQUIRED] com.typesafe.trace#trace-sigar-libs;0.1.5!trace-sigar-libs.jar
-[debug] :: resolution report :: resolve 7751ms :: artifacts dl 142ms
+[debug] :: resolution report :: resolve 9615ms :: artifacts dl 9776ms
 [debug] 	report for restaurantdatabasesystem#restaurantdatabasesystem_2.10;1.0-SNAPSHOT compile produced in G:\Play\Restaurant App\target\resolution-cache\reports\restaurantdatabasesystem-restaurantdatabasesystem_2.10-compile.xml
 [debug] 	report for restaurantdatabasesystem#restaurantdatabasesystem_2.10;1.0-SNAPSHOT runtime produced in G:\Play\Restaurant App\target\resolution-cache\reports\restaurantdatabasesystem-restaurantdatabasesystem_2.10-runtime.xml
 [debug] 	report for restaurantdatabasesystem#restaurantdatabasesystem_2.10;1.0-SNAPSHOT test produced in G:\Play\Restaurant App\target\resolution-cache\reports\restaurantdatabasesystem-restaurantdatabasesystem_2.10-test.xml
@@ -10486,5 +10550,5 @@
 [debug] 	report for restaurantdatabasesystem#restaurantdatabasesystem_2.10;1.0-SNAPSHOT echo-trace-test produced in G:\Play\Restaurant App\target\resolution-cache\reports\restaurantdatabasesystem-restaurantdatabasesystem_2.10-echo-trace-test.xml
 [debug] 	report for restaurantdatabasesystem#restaurantdatabasesystem_2.10;1.0-SNAPSHOT echo-weave produced in G:\Play\Restaurant App\target\resolution-cache\reports\restaurantdatabasesystem-restaurantdatabasesystem_2.10-echo-weave.xml
 [debug] 	report for restaurantdatabasesystem#restaurantdatabasesystem_2.10;1.0-SNAPSHOT echo-sigar produced in G:\Play\Restaurant App\target\resolution-cache\reports\restaurantdatabasesystem-restaurantdatabasesystem_2.10-echo-sigar.xml
-[debug] 	resolve done (7751ms resolve - 142ms download)
+[debug] 	resolve done (9615ms resolve - 9776ms download)
 [info] Done updating.

@@ -4,7 +4,7 @@
 		module="restaurantdatabasesystem_2.10"
 		revision="1.0-SNAPSHOT"
 		status="integration"
-		publication="20140905070527"
+		publication="20140905072836"
 	>
 		<description>
 		RestaurantDatabaseSystem
@@ -57,6 +57,7 @@
 		<dependency org="com.typesafe.play" name="play-java_2.10" rev="2.2.3" conf="compile->default(compile)"/>
 		<dependency org="org.webjars" name="webjars-play_2.10" rev="2.2.0" conf="compile->default(compile)"/>
 		<dependency org="org.webjars" name="bootstrap" rev="2.3.1" conf="compile->default(compile)"/>
+		<dependency org="mysql" name="mysql-connector-java" rev="5.1.27" conf="compile->default(compile)"/>
 		<dependency org="com.typesafe.play" name="play_2.10" rev="2.2.3" conf="compile->default(compile)"/>
 		<dependency org="com.typesafe.play" name="play-test_2.10" rev="2.2.3" conf="test->default(compile)"/>
 		<dependency org="com.typesafe.play" name="play-docs_2.10" rev="2.2.3" conf="docs->default(compile)"/>

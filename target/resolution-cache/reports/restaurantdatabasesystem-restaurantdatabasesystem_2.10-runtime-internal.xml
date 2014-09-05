@@ -7,8 +7,20 @@
 		revision="1.0-SNAPSHOT"
 		conf="runtime-internal"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool, atmos-trace-compile, atmos-trace-test, atmos-dev, atmos-console, atmos-weave, atmos-sigar, echo-trace-compile, echo-trace-test, echo-weave, echo-sigar"
-		date="20140905070527"/>
+		date="20140905072836"/>
 	<dependencies>
+		<module organisation="mysql" name="mysql-connector-java">
+			<revision name="5.1.27" status="release" pubdate="20131024034550" resolver="public" artresolver="public" homepage="http://dev.mysql.com/usingmysql/java/" downloaded="true" searched="true" default="false" conf="default(compile), default, compile, runtime, master" position="71">
+				<license name="The GNU General Public License, Version 2" url="http://www.gnu.org/licenses/gpl.txt"/>
+				<metadata-artifact status="successful" details="" size="1263" time="1542" location="C:\Users\User\.ivy2\cache\mysql\mysql-connector-java\ivy-5.1.27.xml" searched="true" original-local-location="C:\Users\User\.ivy2\cache\mysql\mysql-connector-java\ivy-5.1.27.xml.original" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/mysql/mysql-connector-java/5.1.27/mysql-connector-java-5.1.27.pom"/>
+				<caller organisation="restaurantdatabasesystem" name="restaurantdatabasesystem_2.10" conf="optional, compile, runtime, runtime-internal" rev="5.1.27" rev-constraint-default="5.1.27" rev-constraint-dynamic="5.1.27" callerrev="1.0-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="mysql-connector-java" type="jar" ext="jar" status="successful" details="" size="872300" time="9570" location="C:\Users\User\.ivy2\cache\mysql\mysql-connector-java\jars\mysql-connector-java-5.1.27.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/mysql/mysql-connector-java/5.1.27/mysql-connector-java-5.1.27.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
 		<module organisation="org.webjars" name="bootstrap">
 			<revision name="2.3.1" status="release" pubdate="20130301115014" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://webjars.org" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="69">
 				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
