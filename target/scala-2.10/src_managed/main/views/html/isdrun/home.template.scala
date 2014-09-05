@@ -67,7 +67,7 @@ Seq[Any](format.raw/*2.1*/("""<html class="full" lang="en">
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">Quick Dining</a>
+            <a class="navbar-brand" href="http://localhost:9000/">Quick Dining</a>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -97,10 +97,12 @@ Seq[Any](format.raw/*2.1*/("""<html class="full" lang="en">
                 </div>
                 <div class="col-md-6 column">
                     <h3>
-                        Hangout where you aresupposed to!
+                        Hangout where you are supposed to!
                     </h3>
                     <div class="row clearfix">
-                        <div class="col-md-6 column">
+                        <div class="col-md-2 column">
+                        </div>
+                        <div class="col-md-4 column">
                             <button type="button" class="btn btn-block btn-primary">Log in with Fcaebook</button>
                         </div>
                         <div class="col-md-6 column">
@@ -114,10 +116,10 @@ Seq[Any](format.raw/*2.1*/("""<html class="full" lang="en">
 <!-- /.container -->
 
 <!-- jQuery Version 1.11.0 -->
-<script src=""""),_display_(Seq[Any](/*90.15*/routes/*90.21*/.Assets.at("javascripts/jquery-1.11.0.js"))),format.raw/*90.63*/(""""></script>
+<script src=""""),_display_(Seq[Any](/*92.15*/routes/*92.21*/.Assets.at("javascripts/jquery-1.11.0.js"))),format.raw/*92.63*/(""""></script>
 
 <!-- Bootstrap Core JavaScript -->
-<script src=""""),_display_(Seq[Any](/*93.15*/routes/*93.21*/.Assets.at("javascripts/bootstrap.min.js"))),format.raw/*93.63*/(""""></script>
+<script src=""""),_display_(Seq[Any](/*95.15*/routes/*95.21*/.Assets.at("javascripts/bootstrap.min.js"))),format.raw/*95.63*/(""""></script>
 
 </body>
 
@@ -134,11 +136,11 @@ Seq[Any](format.raw/*2.1*/("""<html class="full" lang="en">
 }
                 /*
                     -- GENERATED --
-                    DATE: Fri Sep 05 07:05:50 ALMT 2014
+                    DATE: Fri Sep 05 16:44:49 ALMT 2014
                     SOURCE: G:/Play/Restaurant App/app/views/isdrun/home.scala.html
-                    HASH: 7859b9749a3752e30170289635739b62ce746cd0
-                    MATRIX: 861->1|1392->496|1407->502|1472->545|1570->607|1585->613|1652->658|4215->3185|4230->3191|4294->3233|4392->3295|4407->3301|4471->3343
-                    LINES: 29->2|43->16|43->16|43->16|46->19|46->19|46->19|117->90|117->90|117->90|120->93|120->93|120->93
+                    HASH: baad3a6cc3b733a580518f66af235a4c184e1ce3
+                    MATRIX: 861->1|1392->496|1407->502|1472->545|1570->607|1585->613|1652->658|4322->3292|4337->3298|4401->3340|4499->3402|4514->3408|4578->3450
+                    LINES: 29->2|43->16|43->16|43->16|46->19|46->19|46->19|119->92|119->92|119->92|122->95|122->95|122->95
                     -- GENERATED --
                 */
             

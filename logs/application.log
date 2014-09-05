@@ -1,202 +1,57 @@
-2014-09-05 07:29:04,293 - [INFO] - from play in pool-31-thread-3 
+2014-09-05 07:35:13,331 - [INFO] - from play in pool-31-thread-1 
 Listening for HTTP on /0:0:0:0:0:0:0:0:9000
 
-2014-09-05 07:29:17,044 - [INFO] - from play in play-internal-execution-context-1 
+2014-09-05 07:35:40,330 - [INFO] - from play in play-internal-execution-context-1 
 datasource [jdbc:mysql://localhost/restaurantdb?characterEncoding=UTF-8] bound to JNDI as DefaultDS
 
-2014-09-05 07:29:17,264 - [ERROR] - from com.jolbox.bonecp.hooks.AbstractConnectionHook in play-internal-execution-context-1 
-Failed to obtain initial connection Sleeping for 0ms and trying again. Attempts left: 0. Exception: null.Message:Access denied for user 'amar'@'localhost' (using password: YES)
-
-2014-09-05 07:29:17,290 - [ERROR] - from application in New I/O worker #1 
-
-
-! @6jdp1lg3e - Internal server error, for (GET) [/] ->
-
-play.api.Configuration$$anon$1: Configuration error[Cannot connect to database [default]]
-	at play.api.Configuration$.play$api$Configuration$$configError(Configuration.scala:92) ~[na:na]
-	at play.api.Configuration.reportError(Configuration.scala:570) ~[na:na]
-	at play.api.db.BoneCPPlugin$$anonfun$onStart$1.apply(DB.scala:252) ~[na:na]
-	at play.api.db.BoneCPPlugin$$anonfun$onStart$1.apply(DB.scala:243) ~[na:na]
-	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:244) ~[na:na]
-	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:244) ~[na:na]
-	at scala.collection.immutable.List.foreach(List.scala:318) ~[na:na]
-	at scala.collection.TraversableLike$class.map(TraversableLike.scala:244) ~[na:na]
-	at scala.collection.AbstractTraversable.map(Traversable.scala:105) ~[na:na]
-	at play.api.db.BoneCPPlugin.onStart(DB.scala:243) ~[na:na]
-	at play.api.Play$$anonfun$start$1$$anonfun$apply$mcV$sp$1.apply(Play.scala:88) ~[na:na]
-	at play.api.Play$$anonfun$start$1$$anonfun$apply$mcV$sp$1.apply(Play.scala:88) ~[na:na]
-	at scala.collection.immutable.List.foreach(List.scala:318) ~[na:na]
-	at play.api.Play$$anonfun$start$1.apply$mcV$sp(Play.scala:88) ~[na:na]
-	at play.api.Play$$anonfun$start$1.apply(Play.scala:88) ~[na:na]
-	at play.api.Play$$anonfun$start$1.apply(Play.scala:88) ~[na:na]
-	at play.utils.Threads$.withContextClassLoader(Threads.scala:18) ~[na:na]
-	at play.api.Play$.start(Play.scala:87) ~[na:na]
-	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1$$anonfun$1.apply(ApplicationProvider.scala:139) ~[na:na]
-	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1$$anonfun$1.apply(ApplicationProvider.scala:112) ~[na:na]
-	at scala.Option.map(Option.scala:145) ~[na:na]
-	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1.apply(ApplicationProvider.scala:112) ~[na:na]
-	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1.apply(ApplicationProvider.scala:110) ~[na:na]
-	at scala.util.Success.flatMap(Try.scala:200) ~[na:na]
-	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:110) ~[na:na]
-	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:102) ~[na:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[na:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[na:na]
-	at com.typesafe.trace.FutureRunnable.run(FutureTrace.scala:119) ~[na:na]
-	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[na:na]
-	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[na:na]
-	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[na:na]
-	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[na:na]
-	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[na:na]
-Caused by: java.sql.SQLException: Access denied for user 'amar'@'localhost' (using password: YES)
-	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1078) ~[na:na]
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4237) ~[na:na]
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4169) ~[na:na]
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:928) ~[na:na]
-	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1750) ~[na:na]
-	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1290) ~[na:na]
-	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2493) ~[na:na]
-	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2526) ~[na:na]
-	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2311) ~[na:na]
-	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:834) ~[na:na]
-	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47) ~[na:na]
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.7.0_03]
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57) ~[na:1.7.0_03]
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.7.0_03]
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:525) ~[na:1.7.0_03]
-	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411) ~[na:na]
-	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:416) ~[na:na]
-	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:347) ~[na:na]
-	at java.sql.DriverManager.getConnection(DriverManager.java:579) ~[na:1.7.0_03]
-	at java.sql.DriverManager.getConnection(DriverManager.java:221) ~[na:1.7.0_03]
-	at com.jolbox.bonecp.BoneCP.obtainRawInternalConnection(BoneCP.java:363) ~[na:na]
-	at com.jolbox.bonecp.BoneCP.<init>(BoneCP.java:416) ~[na:na]
-	at com.jolbox.bonecp.BoneCPDataSource.getConnection(BoneCPDataSource.java:120) ~[na:na]
-	at play.api.db.BoneCPPlugin$$anonfun$onStart$1.apply(DB.scala:245) ~[na:na]
-	... 31 common frames omitted
-
-2014-09-05 07:30:00,602 - [INFO] - from play in play-internal-execution-context-1 
-datasource [jdbc:mysql://localhost/restaurantdb?characterEncoding=UTF-8] bound to JNDI as DefaultDS
-
-2014-09-05 07:30:00,615 - [ERROR] - from com.jolbox.bonecp.hooks.AbstractConnectionHook in play-internal-execution-context-1 
-Failed to obtain initial connection Sleeping for 0ms and trying again. Attempts left: 0. Exception: null.Message:Access denied for user 'amar'@'localhost' (using password: YES)
-
-2014-09-05 07:30:00,617 - [ERROR] - from application in New I/O worker #1 
-
-
-! @6jdp1o26k - Internal server error, for (GET) [/] ->
-
-play.api.Configuration$$anon$1: Configuration error[Cannot connect to database [default]]
-	at play.api.Configuration$.play$api$Configuration$$configError(Configuration.scala:92) ~[na:na]
-	at play.api.Configuration.reportError(Configuration.scala:570) ~[na:na]
-	at play.api.db.BoneCPPlugin$$anonfun$onStart$1.apply(DB.scala:252) ~[na:na]
-	at play.api.db.BoneCPPlugin$$anonfun$onStart$1.apply(DB.scala:243) ~[na:na]
-	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:244) ~[na:na]
-	at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:244) ~[na:na]
-	at scala.collection.immutable.List.foreach(List.scala:318) ~[na:na]
-	at scala.collection.TraversableLike$class.map(TraversableLike.scala:244) ~[na:na]
-	at scala.collection.AbstractTraversable.map(Traversable.scala:105) ~[na:na]
-	at play.api.db.BoneCPPlugin.onStart(DB.scala:243) ~[na:na]
-	at play.api.Play$$anonfun$start$1$$anonfun$apply$mcV$sp$1.apply(Play.scala:88) ~[na:na]
-	at play.api.Play$$anonfun$start$1$$anonfun$apply$mcV$sp$1.apply(Play.scala:88) ~[na:na]
-	at scala.collection.immutable.List.foreach(List.scala:318) ~[na:na]
-	at play.api.Play$$anonfun$start$1.apply$mcV$sp(Play.scala:88) ~[na:na]
-	at play.api.Play$$anonfun$start$1.apply(Play.scala:88) ~[na:na]
-	at play.api.Play$$anonfun$start$1.apply(Play.scala:88) ~[na:na]
-	at play.utils.Threads$.withContextClassLoader(Threads.scala:18) ~[na:na]
-	at play.api.Play$.start(Play.scala:87) ~[na:na]
-	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1$$anonfun$1.apply(ApplicationProvider.scala:139) ~[na:na]
-	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1$$anonfun$1.apply(ApplicationProvider.scala:112) ~[na:na]
-	at scala.Option.map(Option.scala:145) ~[na:na]
-	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1.apply(ApplicationProvider.scala:112) ~[na:na]
-	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1.apply(ApplicationProvider.scala:110) ~[na:na]
-	at scala.util.Success.flatMap(Try.scala:200) ~[na:na]
-	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:110) ~[na:na]
-	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:102) ~[na:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[na:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[na:na]
-	at com.typesafe.trace.FutureRunnable.run(FutureTrace.scala:119) ~[na:na]
-	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[na:na]
-	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[na:na]
-	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[na:na]
-	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[na:na]
-	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[na:na]
-Caused by: java.sql.SQLException: Access denied for user 'amar'@'localhost' (using password: YES)
-	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1078) ~[na:na]
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4237) ~[na:na]
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4169) ~[na:na]
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:928) ~[na:na]
-	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1750) ~[na:na]
-	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1290) ~[na:na]
-	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2493) ~[na:na]
-	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2526) ~[na:na]
-	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2311) ~[na:na]
-	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:834) ~[na:na]
-	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47) ~[na:na]
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.7.0_03]
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57) ~[na:1.7.0_03]
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.7.0_03]
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:525) ~[na:1.7.0_03]
-	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411) ~[na:na]
-	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:416) ~[na:na]
-	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:347) ~[na:na]
-	at play.utils.ProxyDriver.connect(ProxyDriver.scala:9) ~[na:na]
-	at java.sql.DriverManager.getConnection(DriverManager.java:579) ~[na:1.7.0_03]
-	at java.sql.DriverManager.getConnection(DriverManager.java:221) ~[na:1.7.0_03]
-	at com.jolbox.bonecp.BoneCP.obtainRawInternalConnection(BoneCP.java:363) ~[na:na]
-	at com.jolbox.bonecp.BoneCP.<init>(BoneCP.java:416) ~[na:na]
-	at com.jolbox.bonecp.BoneCPDataSource.getConnection(BoneCPDataSource.java:120) ~[na:na]
-	at play.api.db.BoneCPPlugin$$anonfun$onStart$1.apply(DB.scala:245) ~[na:na]
-	... 31 common frames omitted
-
-2014-09-05 07:30:32,401 - [INFO] - from play in play-internal-execution-context-1 
-datasource [jdbc:mysql://localhost/restaurantdb?characterEncoding=UTF-8] bound to JNDI as DefaultDS
-
-2014-09-05 07:30:32,588 - [INFO] - from play in play-internal-execution-context-1 
+2014-09-05 07:35:40,664 - [INFO] - from play in play-internal-execution-context-1 
 database [default] connected at jdbc:mysql://localhost/restaurantdb?characterEncoding=UTF-8
 
-2014-09-05 07:30:33,637 - [ERROR] - from application in New I/O worker #1 
+2014-09-05 07:35:41,355 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
 
-
-! @6jdp1pp2l - Internal server error, for (GET) [/] ->
-
-play.api.db.evolutions.InvalidDatabaseRevision: Database 'default' needs evolution![An SQL script need to be run on your database.]
-	at play.api.db.evolutions.EvolutionsPlugin$$anonfun$onStart$1$$anonfun$apply$1.apply$mcV$sp(Evolutions.scala:486) ~[na:na]
-	at play.api.db.evolutions.EvolutionsPlugin.withLock(Evolutions.scala:507) ~[na:na]
-	at play.api.db.evolutions.EvolutionsPlugin$$anonfun$onStart$1.apply(Evolutions.scala:461) ~[na:na]
-	at play.api.db.evolutions.EvolutionsPlugin$$anonfun$onStart$1.apply(Evolutions.scala:459) ~[na:na]
-	at scala.collection.immutable.List.foreach(List.scala:318) ~[na:na]
-	at play.api.db.evolutions.EvolutionsPlugin.onStart(Evolutions.scala:459) ~[na:na]
-	at play.api.Play$$anonfun$start$1$$anonfun$apply$mcV$sp$1.apply(Play.scala:88) ~[na:na]
-	at play.api.Play$$anonfun$start$1$$anonfun$apply$mcV$sp$1.apply(Play.scala:88) ~[na:na]
-	at scala.collection.immutable.List.foreach(List.scala:318) ~[na:na]
-	at play.api.Play$$anonfun$start$1.apply$mcV$sp(Play.scala:88) ~[na:na]
-	at play.api.Play$$anonfun$start$1.apply(Play.scala:88) ~[na:na]
-	at play.api.Play$$anonfun$start$1.apply(Play.scala:88) ~[na:na]
-	at play.utils.Threads$.withContextClassLoader(Threads.scala:18) ~[na:na]
-	at play.api.Play$.start(Play.scala:87) ~[na:na]
-	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1$$anonfun$1.apply(ApplicationProvider.scala:139) ~[na:na]
-	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1$$anonfun$1.apply(ApplicationProvider.scala:112) ~[na:na]
-	at scala.Option.map(Option.scala:145) ~[na:na]
-	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1.apply(ApplicationProvider.scala:112) ~[na:na]
-	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1.apply(ApplicationProvider.scala:110) ~[na:na]
-	at scala.util.Success.flatMap(Try.scala:200) ~[na:na]
-	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:110) ~[na:na]
-	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:102) ~[na:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[na:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[na:na]
-	at com.typesafe.trace.FutureRunnable.run(FutureTrace.scala:119) ~[na:na]
-	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[na:na]
-	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[na:na]
-	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[na:na]
-	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[na:na]
-	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[na:na]
-
-2014-09-05 07:30:46,142 - [INFO] - from play in play-internal-execution-context-1 
+2014-09-05 16:43:18,190 - [INFO] - from play in play-internal-execution-context-1 
 datasource [jdbc:mysql://localhost/restaurantdb?characterEncoding=UTF-8] bound to JNDI as DefaultDS
 
-2014-09-05 07:30:46,229 - [INFO] - from play in play-internal-execution-context-1 
+2014-09-05 16:43:18,222 - [INFO] - from play in play-internal-execution-context-1 
 database [default] connected at jdbc:mysql://localhost/restaurantdb?characterEncoding=UTF-8
 
-2014-09-05 07:30:46,361 - [INFO] - from play in play-internal-execution-context-1 
+2014-09-05 16:43:18,340 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2014-09-05 16:43:32,658 - [INFO] - from play in play-internal-execution-context-1 
+datasource [jdbc:mysql://localhost/restaurantdb?characterEncoding=UTF-8] bound to JNDI as DefaultDS
+
+2014-09-05 16:43:32,690 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://localhost/restaurantdb?characterEncoding=UTF-8
+
+2014-09-05 16:43:32,808 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2014-09-05 16:43:54,126 - [INFO] - from play in play-internal-execution-context-1 
+datasource [jdbc:mysql://localhost/restaurantdb?characterEncoding=UTF-8] bound to JNDI as DefaultDS
+
+2014-09-05 16:43:54,159 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://localhost/restaurantdb?characterEncoding=UTF-8
+
+2014-09-05 16:43:54,269 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2014-09-05 16:44:32,427 - [INFO] - from play in play-internal-execution-context-1 
+datasource [jdbc:mysql://localhost/restaurantdb?characterEncoding=UTF-8] bound to JNDI as DefaultDS
+
+2014-09-05 16:44:32,461 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://localhost/restaurantdb?characterEncoding=UTF-8
+
+2014-09-05 16:44:32,588 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2014-09-05 16:44:50,476 - [INFO] - from play in play-internal-execution-context-1 
+datasource [jdbc:mysql://localhost/restaurantdb?characterEncoding=UTF-8] bound to JNDI as DefaultDS
+
+2014-09-05 16:44:50,511 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://localhost/restaurantdb?characterEncoding=UTF-8
+
+2014-09-05 16:44:50,610 - [INFO] - from play in play-internal-execution-context-1 
 Application started (Dev)
 
