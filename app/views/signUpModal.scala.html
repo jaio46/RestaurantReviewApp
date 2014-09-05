@@ -1,0 +1,79 @@
+@(signUpForm: play.data.Form[models.Visitor])
+
+<div class="modal fade" id="signUpModal" tabindex="-1" role="dialog"
+	aria-labelledby="signUpModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"
+					aria-hidden="true">&times;</button>
+				<h4 class="modal-title" id="signUpModalLabel">Sign Up</h4>
+			</div>
+			@helper.form(action = controllers.routes.VisitorEnd.signUp()) {
+				<div class="modal-body">
+
+					@helper.input(signUpForm("visitorID"),
+						 '_showConstraints -> false, 
+						 '_class -> "no-dt") { (id, name, value, args) =>
+							<input type="text" class="form-control" name="@name" id="@id"
+							placeholder="Visitor ID">
+					}
+					
+					
+					@helper.input(signUpForm("firstName"),
+						 '_showConstraints -> false, 
+						 '_class -> "no-dt") { (id, name, value, args) =>
+							<input type="text" class="form-control" name="@name" id="@id"
+							placeholder="First Name">
+					}
+					
+					@helper.input(signUpForm("lastName"),
+						 '_showConstraints -> false, 
+						 '_class -> "no-dt") { (id, name, value, args) =>
+							<input type="text" class="form-control" name="@name" id="@id"
+							placeholder="Last Name">
+					}
+					
+					
+					@helper.inputRadioGroup(
+						signUpForm("gender"),
+						options = Seq("Male"->"Male","Female"->"Female","Other"->"Other"),
+						'_label -> "Gender",
+						'_error -> signUpForm("Gender").error.map(_.withMessage("Please Select Gender")))
+				    
+					
+					@helper.input(signUpForm("address"),
+						 '_showConstraints -> false, 
+						 '_class -> "no-dt") { (id, name, value, args) =>
+							<input type="text" class="form-control" name="@name" id="@id"
+							placeholder="Address">
+					}
+					
+					@helper.input(signUpForm("occupation"),
+						 '_showConstraints -> false, 
+						 '_class -> "no-dt") { (id, name, value, args) =>
+							<input type="text" class="form-control" name="@name" id="@id"
+							placeholder="Occupation">
+					}
+					
+					<!-- @helper.input(signUpForm("email"),
+						 '_showConstraints -> false,
+						 '_class -> "no-dt") { (id, name, value, args) =>
+							<input type="email" class="form-control" name="@name" id="@id"
+							placeholder="Email">
+					} -->
+
+					
+					<p><input type="password" class="form-control" placeholder="Password"
+						id="password" name="password" required></p>
+					<!-- <p><button type="button" class="btn btn-default">Select Image</button>
+						<b>1005003.jpg</b></p>  --> 
+
+				</div>
+				<div class="modal-footer">
+					<button type="submit" class="btn btn-success">Sign Up</button>
+				</div>
+			}
+		</div>
+	</div>
+</div>

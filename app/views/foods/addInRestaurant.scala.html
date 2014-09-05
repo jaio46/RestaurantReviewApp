@@ -1,0 +1,41 @@
+@(foodForm: play.data.Form[models.RestaurantFood], lst : List[models.FoodItem], restaurant: Restaurant)
+
+@import helper._
+
+@common.main("Add Food In Restaurant") {
+	
+	<h2>Restaurant Name: @restaurant.name</h2>
+	<h2>Franchise: @restaurant.franchise.franchiseTitle</h2>
+	
+	@helper.form(action = controllers.restaurant.routes.RestaurantFoodController.addFoodInRestaurant(restaurant.id)) {
+		<div class="modal-body">
+		
+			@helper.select(field = foodForm("foodItem"), lst.map {a => a.id.toString -> a.itemTitle}, '_label -> "Choose Food")
+			
+			@helper.input(foodForm("price"),
+				 '_showConstraints -> false,
+				 '_class -> "no-dt") { (id, name, value, args) =>
+					<input type="text" class="form-control" name="@name" id="@id"
+					placeholder="Price">
+			}
+			
+			@helper.input(foodForm("details"),
+				 '_showConstraints -> false,
+				 '_class -> "no-dt") { (id, name, value, args) =>
+					<input type="text" class="form-control" name="@name" id="@id"
+					placeholder="Details">
+			}
+		</div>
+		
+		<div class="col-md-4" id="add-options">
+			<div class="row">
+				<a class="btn" href="@controllers.foods.routes.FoodController.addNewFood()" >Add New Food
+  				</a>
+			</div>
+		</div>
+		<br>
+		<div class="Submission">
+			<button type="submit" class="btn btn-success">Submit</button>
+		</div>
+	}
+}
