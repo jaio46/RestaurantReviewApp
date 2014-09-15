@@ -9,6 +9,12 @@ create table area (
   constraint pk_area primary key (id))
 ;
 
+create table area (
+  id                        integer auto_increment not null,
+  area_name                 varchar(255),
+  constraint pk_area primary key (id))
+;
+
 create table food_item (
   id                        bigint auto_increment not null,
   category                  varchar(255),
@@ -48,6 +54,9 @@ create table restaurant_food (
   constraint pk_restaurant_food primary key (id))
 ;
 
+create table user)
+;
+
 create table visitor (
   visitor_id                varchar(255) not null,
   password                  varchar(255),
@@ -84,6 +93,8 @@ SET FOREIGN_KEY_CHECKS=0;
 
 drop table area;
 
+drop table area;
+
 drop table food_item;
 
 drop table franchise;
@@ -91,6 +102,8 @@ drop table franchise;
 drop table restaurant;
 
 drop table restaurant_food;
+
+drop table user;
 
 drop table visitor;
 

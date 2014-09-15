@@ -1,0 +1,137 @@
+@(title : String)
+
+<!DOCTYPE html>
+<html>
+<head>
+    @common.head(title)
+</head>
+<body>
+@common.navbar(title)
+
+<div class="container">
+    <div class="row clearfix">
+        <div class="col-md-12 column">
+            <div class="row clearfix">
+                <div class="col-md-3 column">
+                    <img alt="200x200" src="http://lorempixel.com/200/200/food">
+                </div>
+                <div class="col-md-6 column">
+                    <h2>
+                        Western Grill
+                    </h2>
+                    <p>
+                        A place to enjoy grills
+                    </p>
+                    <p>
+                        <a class="btn" href="#">About »</a>
+                    </p>
+                </div>
+                <div class="col-md-3 column">
+                </div>
+            </div>
+            <h3>
+                Menu and Pricing
+            </h3>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>
+                        #
+                    </th>
+                    <th>
+                        Product
+                    </th>
+                    <th>
+                        Price (+15% vat)
+                    </th>
+                    <th>
+                        Rating
+                    </th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>
+                        1
+                    </td>
+                    <td>
+                        Chicken Cheese Burger
+                    </td>
+                    <td>
+                        100
+                    </td>
+                    <td>
+                        <img src="@routes.Assets.at("images/rating6.png")"></img>
+                    </td>
+                </tr>
+                <tr class="active">
+                    <td>
+                        2
+                    </td>
+                    <td>
+                        Beef Cheese Burger
+                    </td>
+                    <td>
+                        100
+                    </td>
+                    <td>
+                        <img src="@routes.Assets.at("images/rating6.png")"></img>
+                    </td>
+                </tr>
+                <tr class="success">
+                    <td>
+                        3
+                    </td>
+                    <td>
+                        Double Beef Cheese Burger (drinks add on)
+                    </td>
+                    <td>
+                        100
+                    </td>
+                    <td>
+                        <img src="@routes.Assets.at("images/rating6.png")"></img>
+                    </td>
+                </tr>
+                <tr class>
+                    <td>
+                        4
+                    </td>
+                    <td>
+                        Double Beef Cheese Burger with french fry
+                    </td>
+                    <td>
+                        100
+                    </td>
+                    <td>
+                        <img src="@routes.Assets.at("images/rating6.png")"></img>
+                    </td>
+                </tr>
+                <tr class>
+                    <td>
+                        5
+                    </td>
+                    <td>
+                        Double Beef Cheese Burger with french fry
+                    </td>
+                    <td>
+                        100
+                    </td>
+                    <td>
+                        <img src="@routes.Assets.at("images/rating6.png")"></img>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="row clearfix">
+        <div class="col-md-12 column">
+        </div>
+    </div>
+</div>
+
+@common.footer()
+
+</body>
+
+</html>

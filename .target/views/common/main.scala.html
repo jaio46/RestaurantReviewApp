@@ -1,0 +1,19 @@
+@(title: String)(content: Html)
+
+<!DOCTYPE html>
+<html>
+<head>
+    @common.head(title)
+</head>
+<body>
+
+@common.navbar(title)
+
+<div class="container container-body">
+    @content
+</div>
+
+@common.footer()
+
+</body>
+</html>

@@ -1,57 +1,199 @@
-2014-09-05 07:35:13,331 - [INFO] - from play in pool-31-thread-1 
+2014-09-16 04:29:13,712 - [INFO] - from play in pool-35-thread-1 
 Listening for HTTP on /0:0:0:0:0:0:0:0:9000
 
-2014-09-05 07:35:40,330 - [INFO] - from play in play-internal-execution-context-1 
+2014-09-16 04:29:25,676 - [INFO] - from play in play-internal-execution-context-1 
 datasource [jdbc:mysql://localhost/restaurantdb?characterEncoding=UTF-8] bound to JNDI as DefaultDS
 
-2014-09-05 07:35:40,664 - [INFO] - from play in play-internal-execution-context-1 
+2014-09-16 04:29:26,073 - [INFO] - from play in play-internal-execution-context-1 
 database [default] connected at jdbc:mysql://localhost/restaurantdb?characterEncoding=UTF-8
 
-2014-09-05 07:35:41,355 - [INFO] - from play in play-internal-execution-context-1 
-Application started (Dev)
+2014-09-16 04:29:27,240 - [ERROR] - from application in New I/O worker #1 
 
-2014-09-05 16:43:18,190 - [INFO] - from play in play-internal-execution-context-1 
+
+! @6jh03pbhe - Internal server error, for (GET) [/] ->
+
+play.api.db.evolutions.InvalidDatabaseRevision: Database 'default' needs evolution![An SQL script need to be run on your database.]
+	at play.api.db.evolutions.EvolutionsPlugin$$anonfun$onStart$1$$anonfun$apply$1.apply$mcV$sp(Evolutions.scala:486) ~[na:na]
+	at play.api.db.evolutions.EvolutionsPlugin.withLock(Evolutions.scala:507) ~[na:na]
+	at play.api.db.evolutions.EvolutionsPlugin$$anonfun$onStart$1.apply(Evolutions.scala:461) ~[na:na]
+	at play.api.db.evolutions.EvolutionsPlugin$$anonfun$onStart$1.apply(Evolutions.scala:459) ~[na:na]
+	at scala.collection.immutable.List.foreach(List.scala:318) ~[na:na]
+	at play.api.db.evolutions.EvolutionsPlugin.onStart(Evolutions.scala:459) ~[na:na]
+	at play.api.Play$$anonfun$start$1$$anonfun$apply$mcV$sp$1.apply(Play.scala:88) ~[na:na]
+	at play.api.Play$$anonfun$start$1$$anonfun$apply$mcV$sp$1.apply(Play.scala:88) ~[na:na]
+	at scala.collection.immutable.List.foreach(List.scala:318) ~[na:na]
+	at play.api.Play$$anonfun$start$1.apply$mcV$sp(Play.scala:88) ~[na:na]
+	at play.api.Play$$anonfun$start$1.apply(Play.scala:88) ~[na:na]
+	at play.api.Play$$anonfun$start$1.apply(Play.scala:88) ~[na:na]
+	at play.utils.Threads$.withContextClassLoader(Threads.scala:18) ~[na:na]
+	at play.api.Play$.start(Play.scala:87) ~[na:na]
+	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1$$anonfun$1.apply(ApplicationProvider.scala:139) ~[na:na]
+	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1$$anonfun$1.apply(ApplicationProvider.scala:112) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[na:na]
+	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1.apply(ApplicationProvider.scala:112) ~[na:na]
+	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1.apply(ApplicationProvider.scala:110) ~[na:na]
+	at scala.util.Success.flatMap(Try.scala:200) ~[na:na]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:110) ~[na:na]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:102) ~[na:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[na:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[na:na]
+	at com.typesafe.trace.FutureRunnable.run(FutureTrace.scala:119) ~[na:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[na:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[na:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[na:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[na:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[na:na]
+
+2014-09-16 04:29:58,152 - [ERROR] - from play in New I/O worker #1 
+Unknown table 'restaurantdb.user' [ERROR:1051, SQLSTATE:42S02]
+
+2014-09-16 04:29:58,154 - [ERROR] - from application in New I/O worker #1 
+
+
+! @6jh0415bf - Internal server error, for (GET) [/@evolutions/apply/default?redirect=http%3A%2F%2Flocalhost%3A9000%2F] ->
+
+play.api.db.evolutions.InconsistentDatabase: Database 'default' is in an inconsistent state![An evolution has not been applied properly. Please check the problem and resolve it manually before marking it as resolved.]
+	at play.api.db.evolutions.Evolutions$.checkEvolutionsState(Evolutions.scala:193) ~[na:na]
+	at play.api.db.evolutions.Evolutions$.applyScript(Evolutions.scala:277) ~[na:na]
+	at play.api.db.evolutions.EvolutionsPlugin.handleWebCommand(Evolutions.scala:560) ~[na:na]
+	at play.core.ReloadableApplication$$anonfun$handleWebCommand$1$$anonfun$apply$5$$anonfun$apply$6.apply(ApplicationProvider.scala:175) ~[na:na]
+	at play.core.ReloadableApplication$$anonfun$handleWebCommand$1$$anonfun$apply$5$$anonfun$apply$6.apply(ApplicationProvider.scala:174) ~[na:na]
+	at scala.collection.LinearSeqOptimized$class.foldLeft(LinearSeqOptimized.scala:111) ~[na:na]
+	at scala.collection.immutable.List.foldLeft(List.scala:84) ~[na:na]
+	at play.core.ReloadableApplication$$anonfun$handleWebCommand$1$$anonfun$apply$5.apply(ApplicationProvider.scala:174) ~[na:na]
+	at play.core.ReloadableApplication$$anonfun$handleWebCommand$1$$anonfun$apply$5.apply(ApplicationProvider.scala:173) ~[na:na]
+	at scala.Option.flatMap(Option.scala:170) ~[na:na]
+	at play.core.ReloadableApplication$$anonfun$handleWebCommand$1.apply(ApplicationProvider.scala:173) ~[na:na]
+	at play.core.ReloadableApplication$$anonfun$handleWebCommand$1.apply(ApplicationProvider.scala:173) ~[na:na]
+	at scala.Option.orElse(Option.scala:257) ~[na:na]
+	at play.core.ReloadableApplication.handleWebCommand(ApplicationProvider.scala:171) ~[na:na]
+	at play.core.server.Server$$anonfun$getHandlerFor$1.apply(Server.scala:79) ~[na:na]
+	at play.core.server.Server$$anonfun$getHandlerFor$1.apply(Server.scala:79) ~[na:na]
+	at scala.util.control.Exception$Catch$$anonfun$either$1.apply(Exception.scala:124) ~[na:na]
+	at scala.util.control.Exception$Catch$$anonfun$either$1.apply(Exception.scala:124) ~[na:na]
+	at scala.util.control.Exception$Catch.apply(Exception.scala:102) ~[na:na]
+	at scala.util.control.Exception$Catch.either(Exception.scala:124) ~[na:na]
+	at play.core.server.Server$class.getHandlerFor(Server.scala:79) ~[na:na]
+	at play.core.server.NettyServer.getHandlerFor(NettyServer.scala:35) [na:na]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$9.apply(PlayDefaultUpstreamHandler.scala:118) [na:na]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$9.apply(PlayDefaultUpstreamHandler.scala:118) [na:na]
+	at scala.util.Either.fold(Either.scala:98) [na:na]
+	at play.core.server.netty.PlayDefaultUpstreamHandler.messageReceived_aroundBody2(PlayDefaultUpstreamHandler.scala:112) [na:na]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$AjcClosure3.run(PlayDefaultUpstreamHandler.scala:1) [na:na]
+	at com.typesafe.trace.NettyTraceAspect.ajc$around$com_typesafe_trace_NettyTraceAspect$4$af7df278proceed(NettyTraceAspect.aj:188) [na:na]
+	at com.typesafe.trace.NettyTraceAspect.ajc$around$com_typesafe_trace_NettyTraceAspect$4$af7df278(NettyTraceAspect.aj:193) [na:na]
+	at play.core.server.netty.PlayDefaultUpstreamHandler.messageReceived(PlayDefaultUpstreamHandler.scala:65) [na:na]
+	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70) [na:na]
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564) [na:na]
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791) [na:na]
+	at com.typesafe.netty.http.pipelining.HttpPipeliningHandler.messageReceived(HttpPipeliningHandler.java:62) [na:na]
+	at org.jboss.netty.channel.SimpleChannelHandler.handleUpstream(SimpleChannelHandler.java:88) [na:na]
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564) [na:na]
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791) [na:na]
+	at org.jboss.netty.handler.codec.http.HttpContentDecoder.messageReceived(HttpContentDecoder.java:108) [na:na]
+	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70) [na:na]
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564) [na:na]
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791) [na:na]
+	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:296) [na:na]
+	at org.jboss.netty.handler.codec.frame.FrameDecoder.unfoldAndFireMessageReceived(FrameDecoder.java:459) [na:na]
+	at org.jboss.netty.handler.codec.replay.ReplayingDecoder.callDecode(ReplayingDecoder.java:536) [na:na]
+	at org.jboss.netty.handler.codec.replay.ReplayingDecoder.messageReceived_aroundBody0(ReplayingDecoder.java:435) [na:na]
+	at org.jboss.netty.handler.codec.replay.ReplayingDecoder.messageReceived_aroundBody1$advice(ReplayingDecoder.java:170) [na:na]
+	at org.jboss.netty.handler.codec.replay.ReplayingDecoder.messageReceived(ReplayingDecoder.java:1) [na:na]
+	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70) [na:na]
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564) [na:na]
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:559) [na:na]
+	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:268) [na:na]
+	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:255) [na:na]
+	at org.jboss.netty.channel.socket.nio.NioWorker.read(NioWorker.java:88) [na:na]
+	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.process(AbstractNioWorker.java:109) [na:na]
+	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:312) [na:na]
+	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:90) [na:na]
+	at org.jboss.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178) [na:na]
+	at org.jboss.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108) [na:na]
+	at org.jboss.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42) [na:na]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110) [na:1.7.0_03]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603) [na:1.7.0_03]
+	at java.lang.Thread.run(Thread.java:722) [na:1.7.0_03]
+
+2014-09-16 04:30:06,250 - [ERROR] - from play in New I/O worker #1 
+Table 'area' already exists [ERROR:1050, SQLSTATE:42S01]
+
+2014-09-16 04:30:06,251 - [ERROR] - from application in New I/O worker #1 
+
+
+! @6jh041hb1 - Internal server error, for (GET) [/@evolutions/apply/default?redirect=http%3A%2F%2Flocalhost%3A9000%2F] ->
+
+play.api.db.evolutions.InconsistentDatabase: Database 'default' is in an inconsistent state![An evolution has not been applied properly. Please check the problem and resolve it manually before marking it as resolved.]
+	at play.api.db.evolutions.Evolutions$.checkEvolutionsState(Evolutions.scala:193) ~[na:na]
+	at play.api.db.evolutions.Evolutions$.applyScript(Evolutions.scala:277) ~[na:na]
+	at play.api.db.evolutions.EvolutionsPlugin.handleWebCommand(Evolutions.scala:560) ~[na:na]
+	at play.core.ReloadableApplication$$anonfun$handleWebCommand$1$$anonfun$apply$5$$anonfun$apply$6.apply(ApplicationProvider.scala:175) ~[na:na]
+	at play.core.ReloadableApplication$$anonfun$handleWebCommand$1$$anonfun$apply$5$$anonfun$apply$6.apply(ApplicationProvider.scala:174) ~[na:na]
+	at scala.collection.LinearSeqOptimized$class.foldLeft(LinearSeqOptimized.scala:111) ~[na:na]
+	at scala.collection.immutable.List.foldLeft(List.scala:84) ~[na:na]
+	at play.core.ReloadableApplication$$anonfun$handleWebCommand$1$$anonfun$apply$5.apply(ApplicationProvider.scala:174) ~[na:na]
+	at play.core.ReloadableApplication$$anonfun$handleWebCommand$1$$anonfun$apply$5.apply(ApplicationProvider.scala:173) ~[na:na]
+	at scala.Option.flatMap(Option.scala:170) ~[na:na]
+	at play.core.ReloadableApplication$$anonfun$handleWebCommand$1.apply(ApplicationProvider.scala:173) ~[na:na]
+	at play.core.ReloadableApplication$$anonfun$handleWebCommand$1.apply(ApplicationProvider.scala:173) ~[na:na]
+	at scala.Option.orElse(Option.scala:257) ~[na:na]
+	at play.core.ReloadableApplication.handleWebCommand(ApplicationProvider.scala:171) ~[na:na]
+	at play.core.server.Server$$anonfun$getHandlerFor$1.apply(Server.scala:79) ~[na:na]
+	at play.core.server.Server$$anonfun$getHandlerFor$1.apply(Server.scala:79) ~[na:na]
+	at scala.util.control.Exception$Catch$$anonfun$either$1.apply(Exception.scala:124) ~[na:na]
+	at scala.util.control.Exception$Catch$$anonfun$either$1.apply(Exception.scala:124) ~[na:na]
+	at scala.util.control.Exception$Catch.apply(Exception.scala:102) ~[na:na]
+	at scala.util.control.Exception$Catch.either(Exception.scala:124) ~[na:na]
+	at play.core.server.Server$class.getHandlerFor(Server.scala:79) ~[na:na]
+	at play.core.server.NettyServer.getHandlerFor(NettyServer.scala:35) [na:na]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$9.apply(PlayDefaultUpstreamHandler.scala:118) [na:na]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$9.apply(PlayDefaultUpstreamHandler.scala:118) [na:na]
+	at scala.util.Either.fold(Either.scala:98) [na:na]
+	at play.core.server.netty.PlayDefaultUpstreamHandler.messageReceived_aroundBody2(PlayDefaultUpstreamHandler.scala:112) [na:na]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$AjcClosure3.run(PlayDefaultUpstreamHandler.scala:1) [na:na]
+	at com.typesafe.trace.NettyTraceAspect.ajc$around$com_typesafe_trace_NettyTraceAspect$4$af7df278proceed(NettyTraceAspect.aj:188) [na:na]
+	at com.typesafe.trace.NettyTraceAspect.ajc$around$com_typesafe_trace_NettyTraceAspect$4$af7df278(NettyTraceAspect.aj:193) [na:na]
+	at play.core.server.netty.PlayDefaultUpstreamHandler.messageReceived(PlayDefaultUpstreamHandler.scala:65) [na:na]
+	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70) [na:na]
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564) [na:na]
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791) [na:na]
+	at com.typesafe.netty.http.pipelining.HttpPipeliningHandler.messageReceived(HttpPipeliningHandler.java:62) [na:na]
+	at org.jboss.netty.channel.SimpleChannelHandler.handleUpstream(SimpleChannelHandler.java:88) [na:na]
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564) [na:na]
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791) [na:na]
+	at org.jboss.netty.handler.codec.http.HttpContentDecoder.messageReceived(HttpContentDecoder.java:108) [na:na]
+	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70) [na:na]
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564) [na:na]
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791) [na:na]
+	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:296) [na:na]
+	at org.jboss.netty.handler.codec.frame.FrameDecoder.unfoldAndFireMessageReceived(FrameDecoder.java:459) [na:na]
+	at org.jboss.netty.handler.codec.replay.ReplayingDecoder.callDecode(ReplayingDecoder.java:536) [na:na]
+	at org.jboss.netty.handler.codec.replay.ReplayingDecoder.messageReceived_aroundBody0(ReplayingDecoder.java:435) [na:na]
+	at org.jboss.netty.handler.codec.replay.ReplayingDecoder.messageReceived_aroundBody1$advice(ReplayingDecoder.java:170) [na:na]
+	at org.jboss.netty.handler.codec.replay.ReplayingDecoder.messageReceived(ReplayingDecoder.java:1) [na:na]
+	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70) [na:na]
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564) [na:na]
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:559) [na:na]
+	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:268) [na:na]
+	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:255) [na:na]
+	at org.jboss.netty.channel.socket.nio.NioWorker.read(NioWorker.java:88) [na:na]
+	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.process(AbstractNioWorker.java:109) [na:na]
+	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:312) [na:na]
+	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:90) [na:na]
+	at org.jboss.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178) [na:na]
+	at org.jboss.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108) [na:na]
+	at org.jboss.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42) [na:na]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110) [na:1.7.0_03]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603) [na:1.7.0_03]
+	at java.lang.Thread.run(Thread.java:722) [na:1.7.0_03]
+
+2014-09-16 04:30:18,223 - [INFO] - from play in play-internal-execution-context-1 
 datasource [jdbc:mysql://localhost/restaurantdb?characterEncoding=UTF-8] bound to JNDI as DefaultDS
 
-2014-09-05 16:43:18,222 - [INFO] - from play in play-internal-execution-context-1 
+2014-09-16 04:30:18,315 - [INFO] - from play in play-internal-execution-context-1 
 database [default] connected at jdbc:mysql://localhost/restaurantdb?characterEncoding=UTF-8
 
-2014-09-05 16:43:18,340 - [INFO] - from play in play-internal-execution-context-1 
-Application started (Dev)
-
-2014-09-05 16:43:32,658 - [INFO] - from play in play-internal-execution-context-1 
-datasource [jdbc:mysql://localhost/restaurantdb?characterEncoding=UTF-8] bound to JNDI as DefaultDS
-
-2014-09-05 16:43:32,690 - [INFO] - from play in play-internal-execution-context-1 
-database [default] connected at jdbc:mysql://localhost/restaurantdb?characterEncoding=UTF-8
-
-2014-09-05 16:43:32,808 - [INFO] - from play in play-internal-execution-context-1 
-Application started (Dev)
-
-2014-09-05 16:43:54,126 - [INFO] - from play in play-internal-execution-context-1 
-datasource [jdbc:mysql://localhost/restaurantdb?characterEncoding=UTF-8] bound to JNDI as DefaultDS
-
-2014-09-05 16:43:54,159 - [INFO] - from play in play-internal-execution-context-1 
-database [default] connected at jdbc:mysql://localhost/restaurantdb?characterEncoding=UTF-8
-
-2014-09-05 16:43:54,269 - [INFO] - from play in play-internal-execution-context-1 
-Application started (Dev)
-
-2014-09-05 16:44:32,427 - [INFO] - from play in play-internal-execution-context-1 
-datasource [jdbc:mysql://localhost/restaurantdb?characterEncoding=UTF-8] bound to JNDI as DefaultDS
-
-2014-09-05 16:44:32,461 - [INFO] - from play in play-internal-execution-context-1 
-database [default] connected at jdbc:mysql://localhost/restaurantdb?characterEncoding=UTF-8
-
-2014-09-05 16:44:32,588 - [INFO] - from play in play-internal-execution-context-1 
-Application started (Dev)
-
-2014-09-05 16:44:50,476 - [INFO] - from play in play-internal-execution-context-1 
-datasource [jdbc:mysql://localhost/restaurantdb?characterEncoding=UTF-8] bound to JNDI as DefaultDS
-
-2014-09-05 16:44:50,511 - [INFO] - from play in play-internal-execution-context-1 
-database [default] connected at jdbc:mysql://localhost/restaurantdb?characterEncoding=UTF-8
-
-2014-09-05 16:44:50,610 - [INFO] - from play in play-internal-execution-context-1 
+2014-09-16 04:30:18,471 - [INFO] - from play in play-internal-execution-context-1 
 Application started (Dev)
 

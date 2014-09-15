@@ -1,0 +1,30 @@
+@(restaurants : List[Restaurant])
+
+@common.main("Restaurant") {
+	
+
+	<div class="panel panel-default">
+		  <!-- Default panel contents -->
+		  <div class="panel-heading"><h3> All Restaurants </h3></div>
+		  <div class="panel-body">	   
+		 </div>
+	
+	<table class="table table-bordered table-striped table-hover">
+		
+		<tr>
+			<th> <h4> Restaurant Name </h4> </th>
+			<th> <h4> Location </h4> </th>
+			<th> <h4> Phone Number </h4> </th>
+		</tr>
+								
+		@for(restaurant <- restaurants){
+			<tr>		    
+		        <th> <h5><a class="btn" href="@controllers.restaurant.routes.RestaurantController.showRestaurantProfile(restaurant.id)"> @restaurant.name </a></h5> </th>
+		        <th> <h5>@restaurant.address</h5> </th>
+		        <th> <h5>@restaurant.phone</h5> </th>
+		    </tr>		    		    
+		    }
+		    
+	</table>
+
+}

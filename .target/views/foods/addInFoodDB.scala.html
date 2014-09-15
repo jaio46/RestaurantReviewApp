@@ -1,0 +1,30 @@
+@(foodForm: play.data.Form[models.FoodItem])
+
+@import helper._
+
+@common.main("Add Food") {
+	
+	@helper.form(action = controllers.foods.routes.FoodController.saveFood()) {
+		<div class="modal-body">
+		
+			
+			@helper.input(foodForm("itemTitle"),
+				 '_showConstraints -> false,
+				 '_class -> "no-dt") { (id, name, value, args) =>
+					<input type="text" class="form-control" name="@name" id="@id"
+					placeholder="Food Title">
+			}
+			
+			@helper.input(foodForm("category"),
+				 '_showConstraints -> false,
+				 '_class -> "no-dt") { (id, name, value, args) =>
+					<input type="text" class="form-control" name="@name" id="@id"
+					placeholder="Category">
+			}
+		</div>
+		
+		<div class="Submission">
+			<button type="submit" class="btn btn-success">Submit</button>
+		</div>
+	}
+}

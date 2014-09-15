@@ -4,7 +4,7 @@
 		module="restaurantdatabasesystem$sources_javadoc_2.10"
 		revision="1.0-SNAPSHOT"
 		status="integration"
-		publication="20140905070818"
+		publication="20140915214445"
 	/>
 	<configurations>
 		<conf name="compile" visibility="public" description=""/>
@@ -279,6 +279,10 @@
 		</dependency>
 		<dependency org="org.webjars" name="bootstrap" rev="2.3.1" transitive="false" conf="compile->default(compile);runtime->default(compile);test->default(compile);compile-internal->default(compile);runtime-internal->default(compile);test-internal->default(compile);atmos-trace-compile->default(compile);atmos-trace-test->default(compile);echo-trace-compile->default(compile);echo-trace-test->default(compile)">
 			<artifact name="bootstrap" type="doc" ext="jar" conf="docs" e:classifier="javadoc"/>
+		</dependency>
+		<dependency org="mysql" name="mysql-connector-java" rev="5.1.27" transitive="false" conf="compile->default(compile);runtime->default(compile);test->default(compile);compile-internal->default(compile);runtime-internal->default(compile);test-internal->default(compile);atmos-trace-compile->default(compile);atmos-trace-test->default(compile);echo-trace-compile->default(compile);echo-trace-test->default(compile)">
+			<artifact name="mysql-connector-java" type="src" ext="jar" conf="sources" e:classifier="sources"/>
+			<artifact name="mysql-connector-java" type="doc" ext="jar" conf="docs" e:classifier="javadoc"/>
 		</dependency>
 		<dependency org="com.typesafe.play" name="play-test_2.10" rev="2.2.3" transitive="false" conf="test->default(compile);test-internal->default(compile);atmos-trace-test->default(compile);echo-trace-test->default(compile)">
 			<artifact name="play-test_2.10" type="src" ext="jar" conf="sources" e:classifier="sources"/>

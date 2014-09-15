@@ -1,6 +1,6 @@
 // @SOURCE:G:/Play/Restaurant App/conf/routes
-// @HASH:33f4e2c2dc7bdef23be21fb94aa4856af1565c50
-// @DATE:Fri Sep 05 07:05:47 ALMT 2014
+// @HASH:e7a991833daf29ee9b65532151f863c80150a735
+// @DATE:Sun Sep 07 23:33:06 ALMT 2014
 
 import Routes.{prefix => _prefix, defaultPrefix => _defaultPrefix}
 import play.core._
@@ -155,6 +155,8 @@ case () if true => Call("GET", _prefix + { _defaultPrefix } + "showRestaurant")
 }
                   
 
+// @LINE:38
+// @LINE:37
 // @LINE:36
 // @LINE:35
 // @LINE:34
@@ -193,6 +195,26 @@ class Reversehome {
 // @LINE:34
 def index(): Call = {
    Call("GET", _prefix + { _defaultPrefix } + "home")
+}
+                                                
+    
+}
+                          
+
+// @LINE:38
+// @LINE:37
+class Reversetest {
+    
+
+// @LINE:38
+def objectView(): Call = {
+   Call("POST", _prefix + { _defaultPrefix } + "test/JSON/")
+}
+                                                
+
+// @LINE:37
+def index(): Call = {
+   Call("GET", _prefix + { _defaultPrefix } + "test")
 }
                                                 
     
@@ -449,6 +471,8 @@ def index : JavascriptReverseRoute = JavascriptReverseRoute(
 }
         
 
+// @LINE:38
+// @LINE:37
 // @LINE:36
 // @LINE:35
 // @LINE:34
@@ -500,6 +524,36 @@ def index : JavascriptReverseRoute = JavascriptReverseRoute(
    """
       function() {
       return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "home"})
+      }
+   """
+)
+                        
+    
+}
+              
+
+// @LINE:38
+// @LINE:37
+class Reversetest {
+    
+
+// @LINE:38
+def objectView : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.isdrun.test.objectView",
+   """
+      function() {
+      return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "test/JSON/"})
+      }
+   """
+)
+                        
+
+// @LINE:37
+def index : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.isdrun.test.index",
+   """
+      function() {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "test"})
       }
    """
 )
@@ -715,6 +769,8 @@ def index(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
 }
         
 
+// @LINE:38
+// @LINE:37
 // @LINE:36
 // @LINE:35
 // @LINE:34
@@ -754,6 +810,26 @@ class Reversehome {
 // @LINE:34
 def index(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.isdrun.home.index(), HandlerDef(this, "controllers.isdrun.home", "index", Seq(), "GET", """""", _prefix + """home""")
+)
+                      
+    
+}
+                          
+
+// @LINE:38
+// @LINE:37
+class Reversetest {
+    
+
+// @LINE:38
+def objectView(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.isdrun.test.objectView(), HandlerDef(this, "controllers.isdrun.test", "objectView", Seq(), "POST", """""", _prefix + """test/JSON/""")
+)
+                      
+
+// @LINE:37
+def index(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.isdrun.test.index(), HandlerDef(this, "controllers.isdrun.test", "index", Seq(), "GET", """""", _prefix + """test""")
 )
                       
     
