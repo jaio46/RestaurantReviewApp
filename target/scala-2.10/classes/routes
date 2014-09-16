@@ -2,36 +2,14 @@
 # This file defines all application routes (Higher priority routes first)
 # ~~~~
 
-GET     /                           controllers.VisitorEnd.index()
+GET     /                       controllers.isdrun.home.index()
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)
 GET     /webjars/*file              controllers.WebJarAssets.at(file)
 
-#restaurants
-GET		/addnewRestaurant			controllers.restaurant.RestaurantController.createRestaurant()
-POST	/newRestaurant				controllers.restaurant.RestaurantController.addRestaurant()
-GET	/showProfile/:id			controllers.restaurant.RestaurantController.showRestaurantProfile(id: Long)
-GET	/viewRestaurants			controllers.restaurant.RestaurantController.showAllRestaurant()
-GET	/createFranchise			controllers.franchise.FranchiseController.createFranchise()
-POST	/newFranchise				controllers.franchise.FranchiseController.addNewFranhcise()
-
-
-#food
-GET		/addInMenu/:id				controllers.restaurant.RestaurantFoodController.addFoodInMenu(id: Long)
-POST	/addedInMenu/:id			controllers.restaurant.RestaurantFoodController.addFoodInRestaurant(id: Long)
-GET		/addNewItem					controllers.foods.FoodController.addNewFood()
-POST	/addedFood					controllers.foods.FoodController.saveFood()
-
-#visitor 
-POST 	/signUp						controllers.VisitorEnd.signUp()
-POST 	/signIn						controllers.VisitorEnd.signIn()
-GET		/visitor					controllers.VisitorEnd.index()
-GET		/showRestaurant				controllers.VisitorEnd.index()
-
 #isdrun
 
-GET     /home                       controllers.isdrun.home.index()
 GET     /User/:user                 controllers.isdrun.User.index(user: String)
 GET     /Restaurant/:restaurant     controllers.isdrun.Restaurant.index(restaurant : String)
 GET     /test                       controllers.isdrun.test.index()

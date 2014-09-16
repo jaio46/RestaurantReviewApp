@@ -2,8 +2,6 @@ package controllers.isdrun;
 
 
 import java.util.Map;
-
-import models.Visitor;
 import play.data.Form;
 import play.mvc.Controller;
 import play.mvc.Result;

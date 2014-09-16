@@ -1,6 +1,7 @@
 package models.Feeds;
 
 import javax.persistence.CascadeType;
+import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -10,6 +11,8 @@ import models.Restaurants.Restaurant;
 import models.User.User;
 import play.db.ebean.Model;
 
+
+@Entity
 public class FeedOnRestaurant extends Model{
 
 	/**

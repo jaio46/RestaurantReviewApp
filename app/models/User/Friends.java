@@ -5,10 +5,10 @@ import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 
-import models.FoodItem;
 import play.data.validation.Constraints.Required;
 import play.db.ebean.Model;
 import play.db.ebean.Model.Finder;
@@ -26,8 +26,8 @@ public class Friends extends Model{
 	int id;
 	
 	@Required
-	@OneToMany(fetch=FetchType.LAZY, mappedBy="friends", cascade=CascadeType.ALL)
-	User source;
+	@ManyToOne
+	User user;
 	
 	@Required
 	int friendUserId;
@@ -51,13 +51,12 @@ public class Friends extends Model{
 		this.id = id;
 	}
 
-	public User getSource() {
-		return source;
+	public User getUser() {
+		return user;
 	}
 
-	public void setSource(User source) {
-		this.source = source;
+	public void setUser(User user) {
+		this.user = user;
 	}
-	
 	
 }

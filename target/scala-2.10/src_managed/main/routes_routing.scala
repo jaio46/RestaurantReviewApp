@@ -1,6 +1,6 @@
 // @SOURCE:G:/Play/Restaurant App/conf/routes
-// @HASH:e7a991833daf29ee9b65532151f863c80150a735
-// @DATE:Sun Sep 07 23:33:06 ALMT 2014
+// @HASH:6296e5309a5942165eb6629266cd2246c9960a9d
+// @DATE:Tue Sep 16 08:24:15 ALMT 2014
 
 
 import play.core._
@@ -29,7 +29,7 @@ lazy val defaultPrefix = { if(Routes.prefix.endsWith("/")) "" else "/" }
 
 
 // @LINE:5
-private[this] lazy val controllers_VisitorEnd_index0 = Route("GET", PathPattern(List(StaticPart(Routes.prefix))))
+private[this] lazy val controllers_isdrun_home_index0 = Route("GET", PathPattern(List(StaticPart(Routes.prefix))))
         
 
 // @LINE:8
@@ -40,82 +40,22 @@ private[this] lazy val controllers_Assets_at1 = Route("GET", PathPattern(List(St
 private[this] lazy val controllers_WebJarAssets_at2 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("webjars/"),DynamicPart("file", """.+""",false))))
         
 
-// @LINE:12
-private[this] lazy val controllers_restaurant_RestaurantController_createRestaurant3 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("addnewRestaurant"))))
-        
-
 // @LINE:13
-private[this] lazy val controllers_restaurant_RestaurantController_addRestaurant4 = Route("POST", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("newRestaurant"))))
+private[this] lazy val controllers_isdrun_User_index3 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("User/"),DynamicPart("user", """[^/]+""",true))))
         
 
 // @LINE:14
-private[this] lazy val controllers_restaurant_RestaurantController_showRestaurantProfile5 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("showProfile/"),DynamicPart("id", """[^/]+""",true))))
+private[this] lazy val controllers_isdrun_Restaurant_index4 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("Restaurant/"),DynamicPart("restaurant", """[^/]+""",true))))
         
 
 // @LINE:15
-private[this] lazy val controllers_restaurant_RestaurantController_showAllRestaurant6 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("viewRestaurants"))))
+private[this] lazy val controllers_isdrun_test_index5 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("test"))))
         
 
 // @LINE:16
-private[this] lazy val controllers_franchise_FranchiseController_createFranchise7 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("createFranchise"))))
+private[this] lazy val controllers_isdrun_test_objectView6 = Route("POST", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("test/JSON/"))))
         
-
-// @LINE:17
-private[this] lazy val controllers_franchise_FranchiseController_addNewFranhcise8 = Route("POST", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("newFranchise"))))
-        
-
-// @LINE:21
-private[this] lazy val controllers_restaurant_RestaurantFoodController_addFoodInMenu9 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("addInMenu/"),DynamicPart("id", """[^/]+""",true))))
-        
-
-// @LINE:22
-private[this] lazy val controllers_restaurant_RestaurantFoodController_addFoodInRestaurant10 = Route("POST", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("addedInMenu/"),DynamicPart("id", """[^/]+""",true))))
-        
-
-// @LINE:23
-private[this] lazy val controllers_foods_FoodController_addNewFood11 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("addNewItem"))))
-        
-
-// @LINE:24
-private[this] lazy val controllers_foods_FoodController_saveFood12 = Route("POST", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("addedFood"))))
-        
-
-// @LINE:27
-private[this] lazy val controllers_VisitorEnd_signUp13 = Route("POST", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("signUp"))))
-        
-
-// @LINE:28
-private[this] lazy val controllers_VisitorEnd_signIn14 = Route("POST", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("signIn"))))
-        
-
-// @LINE:29
-private[this] lazy val controllers_VisitorEnd_index15 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("visitor"))))
-        
-
-// @LINE:30
-private[this] lazy val controllers_VisitorEnd_index16 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("showRestaurant"))))
-        
-
-// @LINE:34
-private[this] lazy val controllers_isdrun_home_index17 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("home"))))
-        
-
-// @LINE:35
-private[this] lazy val controllers_isdrun_User_index18 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("User/"),DynamicPart("user", """[^/]+""",true))))
-        
-
-// @LINE:36
-private[this] lazy val controllers_isdrun_Restaurant_index19 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("Restaurant/"),DynamicPart("restaurant", """[^/]+""",true))))
-        
-
-// @LINE:37
-private[this] lazy val controllers_isdrun_test_index20 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("test"))))
-        
-
-// @LINE:38
-private[this] lazy val controllers_isdrun_test_objectView21 = Route("POST", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("test/JSON/"))))
-        
-def documentation = List(("""GET""", prefix,"""controllers.VisitorEnd.index()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """assets/$file<.+>""","""controllers.Assets.at(path:String = "/public", file:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """webjars/$file<.+>""","""controllers.WebJarAssets.at(file:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """addnewRestaurant""","""controllers.restaurant.RestaurantController.createRestaurant()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """newRestaurant""","""controllers.restaurant.RestaurantController.addRestaurant()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """showProfile/$id<[^/]+>""","""controllers.restaurant.RestaurantController.showRestaurantProfile(id:Long)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """viewRestaurants""","""controllers.restaurant.RestaurantController.showAllRestaurant()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """createFranchise""","""controllers.franchise.FranchiseController.createFranchise()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """newFranchise""","""controllers.franchise.FranchiseController.addNewFranhcise()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """addInMenu/$id<[^/]+>""","""controllers.restaurant.RestaurantFoodController.addFoodInMenu(id:Long)"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """addedInMenu/$id<[^/]+>""","""controllers.restaurant.RestaurantFoodController.addFoodInRestaurant(id:Long)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """addNewItem""","""controllers.foods.FoodController.addNewFood()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """addedFood""","""controllers.foods.FoodController.saveFood()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """signUp""","""controllers.VisitorEnd.signUp()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """signIn""","""controllers.VisitorEnd.signIn()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """visitor""","""controllers.VisitorEnd.index()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """showRestaurant""","""controllers.VisitorEnd.index()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """home""","""controllers.isdrun.home.index()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """User/$user<[^/]+>""","""controllers.isdrun.User.index(user:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """Restaurant/$restaurant<[^/]+>""","""controllers.isdrun.Restaurant.index(restaurant:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """test""","""controllers.isdrun.test.index()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """test/JSON/""","""controllers.isdrun.test.objectView()""")).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
+def documentation = List(("""GET""", prefix,"""controllers.isdrun.home.index()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """assets/$file<.+>""","""controllers.Assets.at(path:String = "/public", file:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """webjars/$file<.+>""","""controllers.WebJarAssets.at(file:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """User/$user<[^/]+>""","""controllers.isdrun.User.index(user:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """Restaurant/$restaurant<[^/]+>""","""controllers.isdrun.Restaurant.index(restaurant:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """test""","""controllers.isdrun.test.index()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """test/JSON/""","""controllers.isdrun.test.objectView()""")).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
   case r @ (_,_,_) => s :+ r.asInstanceOf[(String,String,String)]
   case l => s ++ l.asInstanceOf[List[(String,String,String)]] 
 }}
@@ -124,9 +64,9 @@ def documentation = List(("""GET""", prefix,"""controllers.VisitorEnd.index()"""
 def routes:PartialFunction[RequestHeader,Handler] = {
 
 // @LINE:5
-case controllers_VisitorEnd_index0(params) => {
+case controllers_isdrun_home_index0(params) => {
    call { 
-        invokeHandler(controllers.VisitorEnd.index(), HandlerDef(this, "controllers.VisitorEnd", "index", Nil,"GET", """""", Routes.prefix + """"""))
+        invokeHandler(controllers.isdrun.home.index(), HandlerDef(this, "controllers.isdrun.home", "index", Nil,"GET", """""", Routes.prefix + """"""))
    }
 }
         
@@ -147,152 +87,32 @@ case controllers_WebJarAssets_at2(params) => {
 }
         
 
-// @LINE:12
-case controllers_restaurant_RestaurantController_createRestaurant3(params) => {
-   call { 
-        invokeHandler(controllers.restaurant.RestaurantController.createRestaurant(), HandlerDef(this, "controllers.restaurant.RestaurantController", "createRestaurant", Nil,"GET", """restaurants""", Routes.prefix + """addnewRestaurant"""))
-   }
-}
-        
-
 // @LINE:13
-case controllers_restaurant_RestaurantController_addRestaurant4(params) => {
-   call { 
-        invokeHandler(controllers.restaurant.RestaurantController.addRestaurant(), HandlerDef(this, "controllers.restaurant.RestaurantController", "addRestaurant", Nil,"POST", """""", Routes.prefix + """newRestaurant"""))
-   }
-}
-        
-
-// @LINE:14
-case controllers_restaurant_RestaurantController_showRestaurantProfile5(params) => {
-   call(params.fromPath[Long]("id", None)) { (id) =>
-        invokeHandler(controllers.restaurant.RestaurantController.showRestaurantProfile(id), HandlerDef(this, "controllers.restaurant.RestaurantController", "showRestaurantProfile", Seq(classOf[Long]),"GET", """""", Routes.prefix + """showProfile/$id<[^/]+>"""))
-   }
-}
-        
-
-// @LINE:15
-case controllers_restaurant_RestaurantController_showAllRestaurant6(params) => {
-   call { 
-        invokeHandler(controllers.restaurant.RestaurantController.showAllRestaurant(), HandlerDef(this, "controllers.restaurant.RestaurantController", "showAllRestaurant", Nil,"GET", """""", Routes.prefix + """viewRestaurants"""))
-   }
-}
-        
-
-// @LINE:16
-case controllers_franchise_FranchiseController_createFranchise7(params) => {
-   call { 
-        invokeHandler(controllers.franchise.FranchiseController.createFranchise(), HandlerDef(this, "controllers.franchise.FranchiseController", "createFranchise", Nil,"GET", """""", Routes.prefix + """createFranchise"""))
-   }
-}
-        
-
-// @LINE:17
-case controllers_franchise_FranchiseController_addNewFranhcise8(params) => {
-   call { 
-        invokeHandler(controllers.franchise.FranchiseController.addNewFranhcise(), HandlerDef(this, "controllers.franchise.FranchiseController", "addNewFranhcise", Nil,"POST", """""", Routes.prefix + """newFranchise"""))
-   }
-}
-        
-
-// @LINE:21
-case controllers_restaurant_RestaurantFoodController_addFoodInMenu9(params) => {
-   call(params.fromPath[Long]("id", None)) { (id) =>
-        invokeHandler(controllers.restaurant.RestaurantFoodController.addFoodInMenu(id), HandlerDef(this, "controllers.restaurant.RestaurantFoodController", "addFoodInMenu", Seq(classOf[Long]),"GET", """food""", Routes.prefix + """addInMenu/$id<[^/]+>"""))
-   }
-}
-        
-
-// @LINE:22
-case controllers_restaurant_RestaurantFoodController_addFoodInRestaurant10(params) => {
-   call(params.fromPath[Long]("id", None)) { (id) =>
-        invokeHandler(controllers.restaurant.RestaurantFoodController.addFoodInRestaurant(id), HandlerDef(this, "controllers.restaurant.RestaurantFoodController", "addFoodInRestaurant", Seq(classOf[Long]),"POST", """""", Routes.prefix + """addedInMenu/$id<[^/]+>"""))
-   }
-}
-        
-
-// @LINE:23
-case controllers_foods_FoodController_addNewFood11(params) => {
-   call { 
-        invokeHandler(controllers.foods.FoodController.addNewFood(), HandlerDef(this, "controllers.foods.FoodController", "addNewFood", Nil,"GET", """""", Routes.prefix + """addNewItem"""))
-   }
-}
-        
-
-// @LINE:24
-case controllers_foods_FoodController_saveFood12(params) => {
-   call { 
-        invokeHandler(controllers.foods.FoodController.saveFood(), HandlerDef(this, "controllers.foods.FoodController", "saveFood", Nil,"POST", """""", Routes.prefix + """addedFood"""))
-   }
-}
-        
-
-// @LINE:27
-case controllers_VisitorEnd_signUp13(params) => {
-   call { 
-        invokeHandler(controllers.VisitorEnd.signUp(), HandlerDef(this, "controllers.VisitorEnd", "signUp", Nil,"POST", """visitor """, Routes.prefix + """signUp"""))
-   }
-}
-        
-
-// @LINE:28
-case controllers_VisitorEnd_signIn14(params) => {
-   call { 
-        invokeHandler(controllers.VisitorEnd.signIn(), HandlerDef(this, "controllers.VisitorEnd", "signIn", Nil,"POST", """""", Routes.prefix + """signIn"""))
-   }
-}
-        
-
-// @LINE:29
-case controllers_VisitorEnd_index15(params) => {
-   call { 
-        invokeHandler(controllers.VisitorEnd.index(), HandlerDef(this, "controllers.VisitorEnd", "index", Nil,"GET", """""", Routes.prefix + """visitor"""))
-   }
-}
-        
-
-// @LINE:30
-case controllers_VisitorEnd_index16(params) => {
-   call { 
-        invokeHandler(controllers.VisitorEnd.index(), HandlerDef(this, "controllers.VisitorEnd", "index", Nil,"GET", """""", Routes.prefix + """showRestaurant"""))
-   }
-}
-        
-
-// @LINE:34
-case controllers_isdrun_home_index17(params) => {
-   call { 
-        invokeHandler(controllers.isdrun.home.index(), HandlerDef(this, "controllers.isdrun.home", "index", Nil,"GET", """""", Routes.prefix + """home"""))
-   }
-}
-        
-
-// @LINE:35
-case controllers_isdrun_User_index18(params) => {
+case controllers_isdrun_User_index3(params) => {
    call(params.fromPath[String]("user", None)) { (user) =>
         invokeHandler(controllers.isdrun.User.index(user), HandlerDef(this, "controllers.isdrun.User", "index", Seq(classOf[String]),"GET", """""", Routes.prefix + """User/$user<[^/]+>"""))
    }
 }
         
 
-// @LINE:36
-case controllers_isdrun_Restaurant_index19(params) => {
+// @LINE:14
+case controllers_isdrun_Restaurant_index4(params) => {
    call(params.fromPath[String]("restaurant", None)) { (restaurant) =>
         invokeHandler(controllers.isdrun.Restaurant.index(restaurant), HandlerDef(this, "controllers.isdrun.Restaurant", "index", Seq(classOf[String]),"GET", """""", Routes.prefix + """Restaurant/$restaurant<[^/]+>"""))
    }
 }
         
 
-// @LINE:37
-case controllers_isdrun_test_index20(params) => {
+// @LINE:15
+case controllers_isdrun_test_index5(params) => {
    call { 
         invokeHandler(controllers.isdrun.test.index(), HandlerDef(this, "controllers.isdrun.test", "index", Nil,"GET", """""", Routes.prefix + """test"""))
    }
 }
         
 
-// @LINE:38
-case controllers_isdrun_test_objectView21(params) => {
+// @LINE:16
+case controllers_isdrun_test_objectView6(params) => {
    call { 
         invokeHandler(controllers.isdrun.test.objectView(), HandlerDef(this, "controllers.isdrun.test", "objectView", Nil,"POST", """""", Routes.prefix + """test/JSON/"""))
    }

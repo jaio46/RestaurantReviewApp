@@ -1,5 +1,6 @@
 package models.Feeds;
 
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
@@ -8,6 +9,8 @@ import models.Foods.FoodItem;
 import models.User.User;
 import play.db.ebean.Model;
 
+
+@Entity
 public class FeedOnFoodItem extends Model{
 
 	/**

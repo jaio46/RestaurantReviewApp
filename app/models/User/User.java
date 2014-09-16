@@ -34,6 +34,9 @@ public class User extends Model{
 	
 	String email;
 	
+	@OneToMany
+	List<Friends> friendList;
+	
 	public static Finder<Integer,User> find = 
 			new Finder<Integer, User> (Integer.class, User.class);
 
