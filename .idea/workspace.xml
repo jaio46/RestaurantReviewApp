@@ -2,8 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ee70e62b-d8fa-417b-99e9-31005ac8030e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/isdrun/NewTest.scala.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/src_managed/src_managed.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.cache" afterPath="$PROJECT_DIR$/.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/compile/incCompileSetup/$global/inc_compile" afterPath="$PROJECT_DIR$/target/streams/compile/incCompileSetup/$global/inc_compile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.target/controllers/isdrun/test.class" afterPath="$PROJECT_DIR$/.target/controllers/isdrun/test.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/isdrun/NewTest.scala.html" afterPath="$PROJECT_DIR$/app/views/isdrun/NewTest.scala.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logs/application.log" afterPath="$PROJECT_DIR$/logs/application.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/compile/compile/$global/export" afterPath="$PROJECT_DIR$/target/streams/compile/compile/$global/export" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/javascripts/facebookLogin.js" afterPath="$PROJECT_DIR$/public/javascripts/facebookLogin.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.10/cache/restaurant-app/compile/play_instrumentation" afterPath="$PROJECT_DIR$/target/scala-2.10/cache/restaurant-app/compile/play_instrumentation" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/isdrun/test.java" afterPath="$PROJECT_DIR$/app/controllers/isdrun/test.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Restaurant Database.iws" />
@@ -71,7 +78,7 @@
       <file leaf-file-name="test.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/isdrun/test.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="0" selection-start="434" selection-end="434" vertical-scroll-proportion="0.0" vertical-offset="425" max-vertical-offset="527">
+            <state line="26" column="22" selection-start="503" selection-end="503" vertical-scroll-proportion="0.0" vertical-offset="170" max-vertical-offset="578">
               <folding />
             </state>
           </provider>
@@ -80,16 +87,7 @@
       <file leaf-file-name="test.scala.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/isdrun/test.scala.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="51" column="0" selection-start="1339" selection-end="1339" vertical-scroll-proportion="-33.346153" vertical-offset="0" max-vertical-offset="1955">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="NewTest.scala.html" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/views/isdrun/NewTest.scala.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="4" selection-start="87" selection-end="87" vertical-scroll-proportion="0.17386363" vertical-offset="0" max-vertical-offset="880">
+            <state line="62" column="33" selection-start="1874" selection-end="1874" vertical-scroll-proportion="-15.5" vertical-offset="651" max-vertical-offset="1955">
               <folding />
             </state>
           </provider>
@@ -98,16 +96,34 @@
       <file leaf-file-name="facebookLogin.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/javascripts/facebookLogin.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="55" column="46" selection-start="1398" selection-end="1398" vertical-scroll-proportion="0.0" vertical-offset="935" max-vertical-offset="1598">
+            <state line="29" column="9" selection-start="780" selection-end="780" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1581">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Restaurant.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/isdrun/Restaurant.java">
+      <file leaf-file-name="routes" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/conf/routes">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="0" selection-start="218" selection-end="218" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="323">
+            <state line="15" column="21" selection-start="649" selection-end="649" vertical-scroll-proportion="0.28145695" vertical-offset="0" max-vertical-offset="906">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NewTest.scala.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/isdrun/NewTest.scala.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="10" column="34" selection-start="190" selection-end="190" vertical-scroll-proportion="-6.5384617" vertical-offset="0" max-vertical-offset="323">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="home.scala.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/isdrun/home.scala.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="18" column="69" selection-start="605" selection-end="659" vertical-scroll-proportion="-11.769231" vertical-offset="0" max-vertical-offset="1819">
               <folding />
             </state>
           </provider>
@@ -151,9 +167,9 @@
         <option value="$PROJECT_DIR$/app/views/isdrun/test.scala.html" />
         <option value="$PROJECT_DIR$/public/javascripts/facebookExtra.js" />
         <option value="$PROJECT_DIR$/conf/routes" />
-        <option value="$PROJECT_DIR$/app/controllers/isdrun/test.java" />
-        <option value="$PROJECT_DIR$/public/javascripts/facebookLogin.js" />
         <option value="$PROJECT_DIR$/app/views/isdrun/NewTest.scala.html" />
+        <option value="$PROJECT_DIR$/public/javascripts/facebookLogin.js" />
+        <option value="$PROJECT_DIR$/app/controllers/isdrun/test.java" />
       </list>
     </option>
   </component>
@@ -205,38 +221,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Restaurant App" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Restaurant App" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Restaurant App" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Restaurant App" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Restaurant App" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javascripts" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -308,6 +292,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Restaurant App" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Restaurant App" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="isdrun" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -324,6 +326,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
     <property name="FullScreen" value="false" />
+    <property name="SearchEverywhereHistory" value="" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin" singleton="true">
@@ -533,6 +536,21 @@
       <envs />
       <method />
     </configuration>
+    <configuration default="true" type="ScalaTestRunConfiguration" factoryName="ScalaTest">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <extension name="scalaCoverage" />
+      <module name="" />
+      <setting name="path" value="" />
+      <setting name="package" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workingDirectory" value="$PROJECT_DIR$" />
+      <setting name="searchForTest" value="Across module dependencies" />
+      <setting name="testName" value="" />
+      <setting name="testKind" value="Class" />
+      <setting name="showProgressMessages" value="true" />
+      <method />
+    </configuration>
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
       <module name="" />
       <option name="ACTIVITY_CLASS" value="" />
@@ -550,21 +568,6 @@
       <option name="NETWORK_LATENCY" value="none" />
       <option name="CLEAR_LOGCAT" value="false" />
       <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
-      <method />
-    </configuration>
-    <configuration default="true" type="ScalaTestRunConfiguration" factoryName="ScalaTest">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <extension name="scalaCoverage" />
-      <module name="" />
-      <setting name="path" value="" />
-      <setting name="package" value="" />
-      <setting name="vmparams" value="" />
-      <setting name="params" value="" />
-      <setting name="workingDirectory" value="$PROJECT_DIR$" />
-      <setting name="searchForTest" value="Across module dependencies" />
-      <setting name="testName" value="" />
-      <setting name="testKind" value="Class" />
-      <setting name="showProgressMessages" value="true" />
       <method />
     </configuration>
     <list size="0" />
@@ -606,12 +609,13 @@
       <workItem from="1410666381299" duration="745000" />
       <workItem from="1410677133619" duration="2406000" />
       <workItem from="1410744773046" duration="595000" />
-      <workItem from="1410837941053" duration="376000" />
+      <workItem from="1410837941053" duration="419000" />
+      <workItem from="1410839933780" duration="1076000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44051000" />
+    <option name="totallyTimeSpent" value="45170000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="960" y="0" width="960" height="1040" extended-state="0" />
@@ -640,8 +644,8 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="UnknownFeatures">
@@ -664,6 +668,41 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/app/controllers/isdrun/test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="0" selection-start="434" selection-end="434" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="527">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/isdrun/test.scala.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="51" column="0" selection-start="1339" selection-end="1339" vertical-scroll-proportion="0.0" vertical-offset="867" max-vertical-offset="1955">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/isdrun/NewTest.scala.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="0" selection-start="83" selection-end="83" vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="289">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascripts/facebookLogin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="55" column="46" selection-start="1398" selection-end="1398" vertical-scroll-proportion="0.0" vertical-offset="935" max-vertical-offset="1598">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/isdrun/Restaurant.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="0" selection-start="218" selection-end="218" vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="425">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/common/navbar.scala.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="20" column="64" selection-start="1044" selection-end="1044" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="782" />
@@ -804,11 +843,6 @@
         <state line="21" column="0" selection-start="380" selection-end="380" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="459" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/isdrun/home.scala.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="0" selection-start="1140" selection-end="1140" vertical-scroll-proportion="0.5691964" vertical-offset="0" max-vertical-offset="1819" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/isdrun/Restaurant.scala.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="119" column="81" selection-start="3594" selection-end="3594" vertical-scroll-proportion="2.312" vertical-offset="0" max-vertical-offset="2414" />
@@ -819,27 +853,6 @@
         <state line="208" column="0" selection-start="9641" selection-end="9676" vertical-scroll-proportion="-32.846153" vertical-offset="2682" max-vertical-offset="3723" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/isdrun/test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="0" selection-start="434" selection-end="434" vertical-scroll-proportion="0.0" vertical-offset="425" max-vertical-offset="527">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/facebookLogin.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="46" selection-start="1398" selection-end="1398" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1564">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/conf/routes">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="23" selection-start="583" selection-end="583" vertical-scroll-proportion="0.26269317" vertical-offset="0" max-vertical-offset="906">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/isdrun/Restaurant.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="0" selection-start="218" selection-end="218" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="323">
@@ -847,16 +860,44 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/isdrun/home.scala.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="69" selection-start="605" selection-end="659" vertical-scroll-proportion="-11.769231" vertical-offset="0" max-vertical-offset="1819">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/isdrun/test.scala.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="0" selection-start="1339" selection-end="1339" vertical-scroll-proportion="-33.346153" vertical-offset="0" max-vertical-offset="1955">
+        <state line="62" column="33" selection-start="1874" selection-end="1874" vertical-scroll-proportion="-15.5" vertical-offset="651" max-vertical-offset="1955">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascripts/facebookLogin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="9" selection-start="780" selection-end="780" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1581">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/isdrun/test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="22" selection-start="503" selection-end="503" vertical-scroll-proportion="0.0" vertical-offset="170" max-vertical-offset="578">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/isdrun/NewTest.scala.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="4" selection-start="87" selection-end="87" vertical-scroll-proportion="0.17386363" vertical-offset="0" max-vertical-offset="880">
+        <state line="10" column="34" selection-start="190" selection-end="190" vertical-scroll-proportion="-6.5384617" vertical-offset="0" max-vertical-offset="323">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/conf/routes">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="21" selection-start="649" selection-end="649" vertical-scroll-proportion="0.28145695" vertical-offset="0" max-vertical-offset="906">
           <folding />
         </state>
       </provider>

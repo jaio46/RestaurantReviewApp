@@ -7,7 +7,7 @@
 		revision="1.0-SNAPSHOT"
 		conf="provided"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool, atmos-trace-compile, atmos-trace-test, atmos-dev, atmos-console, atmos-weave, atmos-sigar, echo-trace-compile, echo-trace-test, echo-weave, echo-sigar"
-		date="20140916082357"/>
+		date="20140916102652"/>
 	<dependencies>
 	</dependencies>
 </ivy-report>

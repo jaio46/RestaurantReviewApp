@@ -21,8 +21,7 @@ window.fbAsyncInit = function() {
         {
             //var form;
             var obj=getUserInfo();
-            window.location.replace("/test/JSON/");
-
+            //window.location.replace("/test/JSON/");
             //document.getElementById("message").innerHTML +=  "<br>Connected to Facebook";
             //SUCCESS
 
@@ -61,9 +60,11 @@ function getUserInfo() {
     var obj;
     FB.api('/me', function(response) {
         obj=response;
+        alert(response.name);
     });
     return obj;
 }
+
 function getPhoto()
 {
     FB.api('/me/picture?type=normal', function(response) {
@@ -74,6 +75,7 @@ function getPhoto()
     });
 
 }
+
 function Logout()
 {
     FB.logout(function(){document.location.reload();});
