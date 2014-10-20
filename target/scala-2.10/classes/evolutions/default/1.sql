@@ -11,7 +11,7 @@ create table area (
 
 create table feed_on_food_item (
   id                        integer auto_increment not null,
-  feeder_id                 integer,
+  feeder_id                 bigint,
   item_id                   integer,
   rating                    double,
   constraint pk_feed_on_food_item primary key (id))
@@ -19,7 +19,7 @@ create table feed_on_food_item (
 
 create table feed_on_restaurant (
   id                        integer auto_increment not null,
-  feeder_id                 integer,
+  feeder_id                 bigint,
   rating                    double,
   restaurnat_id             integer,
   constraint pk_feed_on_restaurant primary key (id))
@@ -43,7 +43,7 @@ create table franchise (
 
 create table friends (
   id                        integer auto_increment not null,
-  user_id                   integer,
+  user_id                   bigint,
   friend_user_id            integer,
   constraint pk_friends primary key (id))
 ;
@@ -70,11 +70,10 @@ create table restaurant_food (
 ;
 
 create table user (
-  id                        integer auto_increment not null,
-  first_name                varchar(255),
-  last_name                 varchar(255),
-  address                   varchar(255),
+  id                        bigint auto_increment not null,
+  name                      varchar(255),
   email                     varchar(255),
+  user_name                 varchar(255),
   constraint pk_user primary key (id))
 ;
 

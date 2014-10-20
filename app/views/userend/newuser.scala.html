@@ -1,0 +1,64 @@
+@(user: models.User.User, userForm: play.data.Form[models.User.User])
+
+<!DOCTYPE html>
+<html>
+<head>
+    @common.head("Hello new friend")
+</head>
+<body>
+@common.navbar("New Signup")
+<script src="@routes.Assets.at("javascripts/facebook.js")"></script>
+<div class="container">
+	<div class="row clearfix">
+		<div class="col-md-12 column">
+			<h3 class="text-info">
+				Welcome new friend!
+			</h3>
+		</div>
+	</div>
+	<div class="row clearfix">
+		<div class="col-md-8 column">
+			@helper.form(action = controllers.UserControl.routes.RegistrationAndLogin.saveUser()){
+				@helper.input(userForm("Name"),
+						 '_showConstraints -> false) { (id, name, value, args) =>
+							<input type="text" class="form-control" name="@name" id="@id"
+							value='@user.name'>
+					}
+				
+				@helper.input(userForm("Email"),
+							'_showConstraints -> false){(id, name, value, args)=>
+							<input type="text" class="form-control" name="@name" id="@id"
+							value=@user.email>
+					}
+				@helper.input(userForm("Username"),
+							'_showConstraints -> false){(id, name, value, args)=>
+							<input type="text" class="form-control" name="@name" id="@id"
+							placeholder= 'choose a username for you'>
+					}
+				
+				<div class="modal-footer">
+					<button type="submit" class="btn btn-success">Confirm</button>
+				</div>
+			}
+			
+			
+		</div>
+		<div class="col-md-4 column" id="picLevel">
+			<h4 class="text-info">
+				Profile Picture
+			</h4>
+			<script>
+			FB.api('/@user.id/picture?type=large', function(response) {
+	        var str="<img src='"+response.data.url+"'/>";
+	        document.getElementById("picLevel").innerHTML+=str;
+	        });
+			</script>
+			
+		</div>
+	</div>
+</div>
+@common.footer()
+
+</body>
+
+</html>

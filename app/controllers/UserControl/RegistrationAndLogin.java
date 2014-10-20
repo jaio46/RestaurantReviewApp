@@ -25,20 +25,48 @@ public class RegistrationAndLogin extends Controller{
     	else
     	{
     		temp=new User();
-    		temp.firstName=obj.findPath("name").textValue();
+    		temp.name=obj.findPath("name").textValue();
     		temp.email=obj.findPath("email").textValue();
-    		temp.id=Integer.parseInt(obj.findPath("id").textValue());
+    		temp.id=Long.parseLong(obj.findPath("id").textValue());
     	}
     	//if user exists
     	
     	//if dont exist
-    	return ok("http://localhost:9000/new");
+    	//if(User)
+    	User userWithRequest=User.find.where().eq("id",temp.id).findUnique();
+    	if(userWithRequest==null)
+    	{
+    		return ok("http://localhost:9000/new");
+    	}
+    	else
+    	{
+    		saveSession();
+    		return ok("http://localhost:9000/Profile/"+String.valueOf(temp.id));
+    	}
     	
+    	
+	}
+	
+	public static void saveSession()
+	{
+		session("connected",String.valueOf(temp.id));
 	}
 	
 	public static Result newUser()
 	{
-		return ok(views.Register.register.render(temp, userForm));
+		return ok(views.html.userend.newuser.render(temp,userForm));
 	}
 	
+	public static Result saveUser()
+	{
+		Map<String, String[]> params = request().body().asFormUrlEncoded();
+		User userToAdd=new User();
+		userToAdd.name=params.get("Name")[0];
+		userToAdd.email=params.get("Email")[0];
+		userToAdd.userName=params.get("Username")[0];
+		userToAdd.id=temp.id;
+		userToAdd.save();
+		saveSession();
+		return ok("");
+	}
 }

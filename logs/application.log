@@ -1,12 +1,12 @@
-2014-10-20 11:18:51,156 - [INFO] - from play in pool-35-thread-2 
+2014-10-21 03:27:53,747 - [INFO] - from play in pool-31-thread-5 
 Listening for HTTP on /0:0:0:0:0:0:0:0:9000
 
-2014-10-20 11:20:27,513 - [INFO] - from play in play-internal-execution-context-1 
+2014-10-21 03:27:56,670 - [INFO] - from play in play-internal-execution-context-1 
 datasource [jdbc:mysql://localhost/restaurantdb] bound to JNDI as DefaultDS
 
-2014-10-20 11:20:28,126 - [INFO] - from play in play-internal-execution-context-1 
+2014-10-21 03:27:57,118 - [INFO] - from play in play-internal-execution-context-1 
 database [default] connected at jdbc:mysql://localhost/restaurantdb
 
-2014-10-20 11:20:29,486 - [INFO] - from play in play-internal-execution-context-1 
+2014-10-21 03:27:58,322 - [INFO] - from play in play-internal-execution-context-1 
 Application started (Dev)
 

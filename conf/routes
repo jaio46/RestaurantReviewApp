@@ -13,7 +13,8 @@ GET     /webjars/*file              controllers.WebJarAssets.at(file)
 GET     /User/:user                 controllers.isdrun.User.index(user: String)
 GET     /Restaurant/:restaurant     controllers.isdrun.Restaurant.index(restaurant : String)
 GET     /test                       controllers.isdrun.test.index()
-POST    /test/JSON/                 controllers.isdrun.test.objectView()
+POST    /test/JSON/                 controllers.UserControl.RegistrationAndLogin.verifier()
 
-GET		/new						controllers.isdrun.test.newUser()
-		
+GET		/new						controllers.UserControl.RegistrationAndLogin.newUser()
+POST	/userRegistration			controllers.UserControl.RegistrationAndLogin.saveUser()
+GET		/Profile/:userId			controllers.UserControl.Profile.profileProvider(userId : Long)

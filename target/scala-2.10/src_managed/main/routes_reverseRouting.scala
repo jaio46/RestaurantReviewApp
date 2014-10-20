@@ -1,6 +1,6 @@
 // @SOURCE:/Users/sheikhahmed/Projects/RestaurantApp/conf/routes
-// @HASH:7a3136345e3da27cfce8f18563be35063a7fc47f
-// @DATE:Mon Oct 20 18:19:23 BDT 2014
+// @HASH:5d7ad6a539fd4f8161094d3c03a5e543239ac034
+// @DATE:Tue Oct 21 01:53:30 BDT 2014
 
 import Routes.{prefix => _prefix, defaultPrefix => _defaultPrefix}
 import play.core._
@@ -45,8 +45,6 @@ def at(file:String): Call = {
 }
                   
 
-// @LINE:18
-// @LINE:16
 // @LINE:15
 // @LINE:14
 // @LINE:13
@@ -92,27 +90,61 @@ def index(): Call = {
 }
                           
 
-// @LINE:18
-// @LINE:16
 // @LINE:15
 class Reversetest {
     
-
-// @LINE:16
-def objectView(): Call = {
-   Call("POST", _prefix + { _defaultPrefix } + "test/JSON/")
-}
-                                                
 
 // @LINE:15
 def index(): Call = {
    Call("GET", _prefix + { _defaultPrefix } + "test")
 }
                                                 
+    
+}
+                          
+}
+                  
+
+// @LINE:20
+// @LINE:19
+// @LINE:18
+// @LINE:16
+package controllers.UserControl {
+
+// @LINE:19
+// @LINE:18
+// @LINE:16
+class ReverseRegistrationAndLogin {
+    
+
+// @LINE:19
+def saveUser(): Call = {
+   Call("POST", _prefix + { _defaultPrefix } + "userRegistration")
+}
+                                                
 
 // @LINE:18
 def newUser(): Call = {
    Call("GET", _prefix + { _defaultPrefix } + "new")
+}
+                                                
+
+// @LINE:16
+def verifier(): Call = {
+   Call("POST", _prefix + { _defaultPrefix } + "test/JSON/")
+}
+                                                
+    
+}
+                          
+
+// @LINE:20
+class ReverseProfile {
+    
+
+// @LINE:20
+def profileProvider(userId:Long): Call = {
+   Call("GET", _prefix + { _defaultPrefix } + "Profile/" + implicitly[PathBindable[Long]].unbind("userId", userId))
 }
                                                 
     
@@ -164,8 +196,6 @@ def at : JavascriptReverseRoute = JavascriptReverseRoute(
 }
         
 
-// @LINE:18
-// @LINE:16
 // @LINE:15
 // @LINE:14
 // @LINE:13
@@ -226,22 +256,9 @@ def index : JavascriptReverseRoute = JavascriptReverseRoute(
 }
               
 
-// @LINE:18
-// @LINE:16
 // @LINE:15
 class Reversetest {
     
-
-// @LINE:16
-def objectView : JavascriptReverseRoute = JavascriptReverseRoute(
-   "controllers.isdrun.test.objectView",
-   """
-      function() {
-      return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "test/JSON/"})
-      }
-   """
-)
-                        
 
 // @LINE:15
 def index : JavascriptReverseRoute = JavascriptReverseRoute(
@@ -253,13 +270,70 @@ def index : JavascriptReverseRoute = JavascriptReverseRoute(
    """
 )
                         
+    
+}
+              
+}
+        
+
+// @LINE:20
+// @LINE:19
+// @LINE:18
+// @LINE:16
+package controllers.UserControl.javascript {
+
+// @LINE:19
+// @LINE:18
+// @LINE:16
+class ReverseRegistrationAndLogin {
+    
+
+// @LINE:19
+def saveUser : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.UserControl.RegistrationAndLogin.saveUser",
+   """
+      function() {
+      return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "userRegistration"})
+      }
+   """
+)
+                        
 
 // @LINE:18
 def newUser : JavascriptReverseRoute = JavascriptReverseRoute(
-   "controllers.isdrun.test.newUser",
+   "controllers.UserControl.RegistrationAndLogin.newUser",
    """
       function() {
       return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "new"})
+      }
+   """
+)
+                        
+
+// @LINE:16
+def verifier : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.UserControl.RegistrationAndLogin.verifier",
+   """
+      function() {
+      return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "test/JSON/"})
+      }
+   """
+)
+                        
+    
+}
+              
+
+// @LINE:20
+class ReverseProfile {
+    
+
+// @LINE:20
+def profileProvider : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.UserControl.Profile.profileProvider",
+   """
+      function(userId) {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "Profile/" + (""" + implicitly[PathBindable[Long]].javascriptUnbind + """)("userId", userId)})
       }
    """
 )
@@ -304,8 +378,6 @@ def at(path:String, file:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.
 }
         
 
-// @LINE:18
-// @LINE:16
 // @LINE:15
 // @LINE:14
 // @LINE:13
@@ -352,27 +424,62 @@ def index(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
 }
                           
 
-// @LINE:18
-// @LINE:16
 // @LINE:15
 class Reversetest {
     
-
-// @LINE:16
-def objectView(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.isdrun.test.objectView(), HandlerDef(this, "controllers.isdrun.test", "objectView", Seq(), "POST", """""", _prefix + """test/JSON/""")
-)
-                      
 
 // @LINE:15
 def index(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.isdrun.test.index(), HandlerDef(this, "controllers.isdrun.test", "index", Seq(), "GET", """""", _prefix + """test""")
 )
                       
+    
+}
+                          
+}
+        
+
+// @LINE:20
+// @LINE:19
+// @LINE:18
+// @LINE:16
+package controllers.UserControl.ref {
+
+
+// @LINE:19
+// @LINE:18
+// @LINE:16
+class ReverseRegistrationAndLogin {
+    
+
+// @LINE:19
+def saveUser(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.UserControl.RegistrationAndLogin.saveUser(), HandlerDef(this, "controllers.UserControl.RegistrationAndLogin", "saveUser", Seq(), "POST", """""", _prefix + """userRegistration""")
+)
+                      
 
 // @LINE:18
 def newUser(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.isdrun.test.newUser(), HandlerDef(this, "controllers.isdrun.test", "newUser", Seq(), "GET", """""", _prefix + """new""")
+   controllers.UserControl.RegistrationAndLogin.newUser(), HandlerDef(this, "controllers.UserControl.RegistrationAndLogin", "newUser", Seq(), "GET", """""", _prefix + """new""")
+)
+                      
+
+// @LINE:16
+def verifier(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.UserControl.RegistrationAndLogin.verifier(), HandlerDef(this, "controllers.UserControl.RegistrationAndLogin", "verifier", Seq(), "POST", """""", _prefix + """test/JSON/""")
+)
+                      
+    
+}
+                          
+
+// @LINE:20
+class ReverseProfile {
+    
+
+// @LINE:20
+def profileProvider(userId:Long): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.UserControl.Profile.profileProvider(userId), HandlerDef(this, "controllers.UserControl.Profile", "profileProvider", Seq(classOf[Long]), "GET", """""", _prefix + """Profile/$userId<[^/]+>""")
 )
                       
     

@@ -43,7 +43,7 @@ public class test extends Controller{
     		temp=new User();
     		temp.firstName=obj.findPath("name").textValue();
     		temp.email=obj.findPath("email").textValue();
-    		temp.id=Integer.parseInt(obj.findPath("id").textValue());
+    		/*temp.id=Integer.parseInt(obj.findPath("id").textValue());*/
     	}
     	/*
     	JsonNode obj=request().body().asJson();

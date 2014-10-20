@@ -1,6 +1,6 @@
 // @SOURCE:/Users/sheikhahmed/Projects/RestaurantApp/conf/routes
-// @HASH:7a3136345e3da27cfce8f18563be35063a7fc47f
-// @DATE:Mon Oct 20 18:19:23 BDT 2014
+// @HASH:5d7ad6a539fd4f8161094d3c03a5e543239ac034
+// @DATE:Tue Oct 21 01:53:30 BDT 2014
 
 
 import play.core._
@@ -53,13 +53,21 @@ private[this] lazy val controllers_isdrun_test_index5 = Route("GET", PathPattern
         
 
 // @LINE:16
-private[this] lazy val controllers_isdrun_test_objectView6 = Route("POST", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("test/JSON/"))))
+private[this] lazy val controllers_UserControl_RegistrationAndLogin_verifier6 = Route("POST", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("test/JSON/"))))
         
 
 // @LINE:18
-private[this] lazy val controllers_isdrun_test_newUser7 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("new"))))
+private[this] lazy val controllers_UserControl_RegistrationAndLogin_newUser7 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("new"))))
         
-def documentation = List(("""GET""", prefix,"""controllers.isdrun.home.index()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """assets/$file<.+>""","""controllers.Assets.at(path:String = "/public", file:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """webjars/$file<.+>""","""controllers.WebJarAssets.at(file:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """User/$user<[^/]+>""","""controllers.isdrun.User.index(user:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """Restaurant/$restaurant<[^/]+>""","""controllers.isdrun.Restaurant.index(restaurant:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """test""","""controllers.isdrun.test.index()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """test/JSON/""","""controllers.isdrun.test.objectView()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """new""","""controllers.isdrun.test.newUser()""")).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
+
+// @LINE:19
+private[this] lazy val controllers_UserControl_RegistrationAndLogin_saveUser8 = Route("POST", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("userRegistration"))))
+        
+
+// @LINE:20
+private[this] lazy val controllers_UserControl_Profile_profileProvider9 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("Profile/"),DynamicPart("userId", """[^/]+""",true))))
+        
+def documentation = List(("""GET""", prefix,"""controllers.isdrun.home.index()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """assets/$file<.+>""","""controllers.Assets.at(path:String = "/public", file:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """webjars/$file<.+>""","""controllers.WebJarAssets.at(file:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """User/$user<[^/]+>""","""controllers.isdrun.User.index(user:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """Restaurant/$restaurant<[^/]+>""","""controllers.isdrun.Restaurant.index(restaurant:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """test""","""controllers.isdrun.test.index()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """test/JSON/""","""controllers.UserControl.RegistrationAndLogin.verifier()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """new""","""controllers.UserControl.RegistrationAndLogin.newUser()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """userRegistration""","""controllers.UserControl.RegistrationAndLogin.saveUser()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """Profile/$userId<[^/]+>""","""controllers.UserControl.Profile.profileProvider(userId:Long)""")).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
   case r @ (_,_,_) => s :+ r.asInstanceOf[(String,String,String)]
   case l => s ++ l.asInstanceOf[List[(String,String,String)]] 
 }}
@@ -116,17 +124,33 @@ case controllers_isdrun_test_index5(params) => {
         
 
 // @LINE:16
-case controllers_isdrun_test_objectView6(params) => {
+case controllers_UserControl_RegistrationAndLogin_verifier6(params) => {
    call { 
-        invokeHandler(controllers.isdrun.test.objectView(), HandlerDef(this, "controllers.isdrun.test", "objectView", Nil,"POST", """""", Routes.prefix + """test/JSON/"""))
+        invokeHandler(controllers.UserControl.RegistrationAndLogin.verifier(), HandlerDef(this, "controllers.UserControl.RegistrationAndLogin", "verifier", Nil,"POST", """""", Routes.prefix + """test/JSON/"""))
    }
 }
         
 
 // @LINE:18
-case controllers_isdrun_test_newUser7(params) => {
+case controllers_UserControl_RegistrationAndLogin_newUser7(params) => {
    call { 
-        invokeHandler(controllers.isdrun.test.newUser(), HandlerDef(this, "controllers.isdrun.test", "newUser", Nil,"GET", """""", Routes.prefix + """new"""))
+        invokeHandler(controllers.UserControl.RegistrationAndLogin.newUser(), HandlerDef(this, "controllers.UserControl.RegistrationAndLogin", "newUser", Nil,"GET", """""", Routes.prefix + """new"""))
+   }
+}
+        
+
+// @LINE:19
+case controllers_UserControl_RegistrationAndLogin_saveUser8(params) => {
+   call { 
+        invokeHandler(controllers.UserControl.RegistrationAndLogin.saveUser(), HandlerDef(this, "controllers.UserControl.RegistrationAndLogin", "saveUser", Nil,"POST", """""", Routes.prefix + """userRegistration"""))
+   }
+}
+        
+
+// @LINE:20
+case controllers_UserControl_Profile_profileProvider9(params) => {
+   call(params.fromPath[Long]("userId", None)) { (userId) =>
+        invokeHandler(controllers.UserControl.Profile.profileProvider(userId), HandlerDef(this, "controllers.UserControl.Profile", "profileProvider", Seq(classOf[Long]),"GET", """""", Routes.prefix + """Profile/$userId<[^/]+>"""))
    }
 }
         

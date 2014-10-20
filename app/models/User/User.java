@@ -24,61 +24,18 @@ public class User extends Model{
 
 	@Id
 	@Required
-	public int id;
+	public long id;
 	
-	public String firstName;
-	
-	public String lastName;
-	
-	public String address;
+	public String name;
 	
 	public String email;
+	
+	public String userName;
 	
 	@OneToMany
 	List<Friends> friendList;
 	
-	public static Finder<Integer,User> find = 
-			new Finder<Integer, User> (Integer.class, User.class);
-
-	public int getId() {
-		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
-	}
-
-	public String getFirstName() {
-		return firstName;
-	}
-
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
-	}
-
-	public String getLastName() {
-		return lastName;
-	}
-
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
-	}
-
-	public String getAddress() {
-		return address;
-	}
-
-	public void setAddress(String address) {
-		this.address = address;
-	}
-
-	public String getEmail() {
-		return email;
-	}
-
-	public void setEmail(String email) {
-		this.email = email;
-	}
-	
+	public static Finder<Long,User> find = 
+			new Finder<Long, User> (Long.class, User.class);
 	
 }
