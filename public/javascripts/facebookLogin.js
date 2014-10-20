@@ -6,7 +6,6 @@
  * Created by User on 9/7/14.
  */
 
-
 window.fbAsyncInit = function() {
     FB.init({
         appId      : '804870622878100', // Set YOUR APP ID
@@ -20,7 +19,7 @@ window.fbAsyncInit = function() {
         if (response.status === 'connected')
         {
             //var form;
-            var obj=getUserInfo();
+            //var obj=getUserInfo();
             //window.location.replace("/test/JSON/");
             //document.getElementById("message").innerHTML +=  "<br>Connected to Facebook";
             //SUCCESS
@@ -56,11 +55,34 @@ function Login()
 
 }
 
+function alertViaResponse(data)
+{
+	alert(data);
+}
+
 function getUserInfo() {
     var obj;
     FB.api('/me', function(response) {
         obj=response;
-        alert(response.name);
+        
+        var temp=response.name;
+        var x='{"User": [{"name":"'+temp+'"\},';
+        x+='{"id":"'+response.id+'"\},';
+        x+='{"email":"'+response.email+'"\}]}';
+        $.ajax({
+        	type: "POST",
+        	url: "/test/JSON/",
+        	contentType: "application/json",
+        	data: x,
+        	success: function(data){
+        			window.location.href=data;
+        	},
+    		failure: function(errMsg) {
+        		alert(errMsg);
+    		}
+        });
+        //alert(temp);
+        //alert(response.name);
     });
     return obj;
 }

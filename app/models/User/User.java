@@ -24,15 +24,15 @@ public class User extends Model{
 
 	@Id
 	@Required
-	int id;
+	public int id;
 	
-	String firstName;
+	public String firstName;
 	
-	String lastName;
+	public String lastName;
 	
-	String address;
+	public String address;
 	
-	String email;
+	public String email;
 	
 	@OneToMany
 	List<Friends> friendList;

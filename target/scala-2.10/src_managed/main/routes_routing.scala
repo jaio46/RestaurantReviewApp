@@ -1,6 +1,6 @@
-// @SOURCE:G:/Play/Restaurant App/conf/routes
-// @HASH:6296e5309a5942165eb6629266cd2246c9960a9d
-// @DATE:Tue Sep 16 10:26:40 ALMT 2014
+// @SOURCE:/Users/sheikhahmed/Projects/RestaurantApp/conf/routes
+// @HASH:7a3136345e3da27cfce8f18563be35063a7fc47f
+// @DATE:Mon Oct 20 18:19:23 BDT 2014
 
 
 import play.core._
@@ -55,7 +55,11 @@ private[this] lazy val controllers_isdrun_test_index5 = Route("GET", PathPattern
 // @LINE:16
 private[this] lazy val controllers_isdrun_test_objectView6 = Route("POST", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("test/JSON/"))))
         
-def documentation = List(("""GET""", prefix,"""controllers.isdrun.home.index()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """assets/$file<.+>""","""controllers.Assets.at(path:String = "/public", file:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """webjars/$file<.+>""","""controllers.WebJarAssets.at(file:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """User/$user<[^/]+>""","""controllers.isdrun.User.index(user:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """Restaurant/$restaurant<[^/]+>""","""controllers.isdrun.Restaurant.index(restaurant:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """test""","""controllers.isdrun.test.index()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """test/JSON/""","""controllers.isdrun.test.objectView()""")).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
+
+// @LINE:18
+private[this] lazy val controllers_isdrun_test_newUser7 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("new"))))
+        
+def documentation = List(("""GET""", prefix,"""controllers.isdrun.home.index()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """assets/$file<.+>""","""controllers.Assets.at(path:String = "/public", file:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """webjars/$file<.+>""","""controllers.WebJarAssets.at(file:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """User/$user<[^/]+>""","""controllers.isdrun.User.index(user:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """Restaurant/$restaurant<[^/]+>""","""controllers.isdrun.Restaurant.index(restaurant:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """test""","""controllers.isdrun.test.index()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """test/JSON/""","""controllers.isdrun.test.objectView()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """new""","""controllers.isdrun.test.newUser()""")).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
   case r @ (_,_,_) => s :+ r.asInstanceOf[(String,String,String)]
   case l => s ++ l.asInstanceOf[List[(String,String,String)]] 
 }}
@@ -115,6 +119,14 @@ case controllers_isdrun_test_index5(params) => {
 case controllers_isdrun_test_objectView6(params) => {
    call { 
         invokeHandler(controllers.isdrun.test.objectView(), HandlerDef(this, "controllers.isdrun.test", "objectView", Nil,"POST", """""", Routes.prefix + """test/JSON/"""))
+   }
+}
+        
+
+// @LINE:18
+case controllers_isdrun_test_newUser7(params) => {
+   call { 
+        invokeHandler(controllers.isdrun.test.newUser(), HandlerDef(this, "controllers.isdrun.test", "newUser", Nil,"GET", """""", Routes.prefix + """new"""))
    }
 }
         

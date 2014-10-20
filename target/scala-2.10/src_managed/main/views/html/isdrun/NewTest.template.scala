@@ -34,7 +34,7 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
   </title>
 </head>
 <body>
-
+	<script src=""""),_display_(Seq[Any](/*9.16*/routes/*9.22*/.Assets.at("javascripts/jquery-1.11.0.js"))),format.raw/*9.64*/(""""></script>
     <script src=""""),_display_(Seq[Any](/*10.19*/routes/*10.25*/.Assets.at("javascripts/facebookLogin.js"))),format.raw/*10.67*/(""""></script>
     <button onclick="Login()">Submit</button>
     <div id="status">
@@ -53,11 +53,11 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
 }
                 /*
                     -- GENERATED --
-                    DATE: Mon Sep 22 21:49:20 ALMT 2014
-                    SOURCE: G:/Play/Restaurant App/app/views/isdrun/NewTest.scala.html
-                    HASH: 1fecd8e13201a129aaf516ecb6f72f9c23f1bb87
-                    MATRIX: 864->0|1001->101|1016->107|1080->149
-                    LINES: 29->1|38->10|38->10|38->10
+                    DATE: Tue Oct 07 13:59:07 BDT 2014
+                    SOURCE: /Users/sheikhahmed/Projects/RestaurantApp/app/views/isdrun/NewTest.scala.html
+                    HASH: 4ae3826389c653aa12ba682dd8d55fadb280001c
+                    MATRIX: 864->0|996->97|1010->103|1073->145|1139->175|1154->181|1218->223
+                    LINES: 29->1|37->9|37->9|37->9|38->10|38->10|38->10
                     -- GENERATED --
                 */
             

@@ -2,16 +2,20 @@ package controllers.isdrun;
 
 
 import java.util.Map;
+
+import models.User.User;
 import play.data.Form;
 import play.mvc.Controller;
 import play.mvc.Result;
 import views.html.helper.form;
 import views.html.*;
 
+
 /**
  * Created by User on 8/23/14.
  */
 public class home extends Controller{
+	static Form<User> userForm=Form.form(User.class);
     public static Result index()
     {
         return ok(views.html.isdrun.home.render());

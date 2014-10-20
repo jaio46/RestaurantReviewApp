@@ -105,7 +105,7 @@ Seq[Any](format.raw/*2.1*/("""<html class="full" lang="en">
                         <div class="col-md-2 column">
                         </div>
                         <div class="col-md-4 column">
-                            <button type="button" class="btn btn-block btn-primary">Log in with Fcaebook</button>
+                            <button type="button" class="btn btn-block btn-primary">Log in with Facebook</button>
                         </div>
                         <div class="col-md-6 column">
                         </div>
@@ -138,9 +138,9 @@ Seq[Any](format.raw/*2.1*/("""<html class="full" lang="en">
 }
                 /*
                     -- GENERATED --
-                    DATE: Tue Sep 16 10:26:42 ALMT 2014
-                    SOURCE: G:/Play/Restaurant App/app/views/isdrun/home.scala.html
-                    HASH: 7a85959ad10eafd0380c929eaf2b2b804df9f871
+                    DATE: Mon Oct 20 18:19:26 BDT 2014
+                    SOURCE: /Users/sheikhahmed/Projects/RestaurantApp/app/views/isdrun/home.scala.html
+                    HASH: a8b98e4e2a7d5cfd4c293cdf500ea124c1b35efb
                     MATRIX: 861->1|1392->496|1407->502|1472->545|1570->607|1585->613|1652->658|1727->697|1742->703|1801->740|4463->3366|4478->3372|4542->3414|4640->3476|4655->3482|4719->3524
                     LINES: 29->2|43->16|43->16|43->16|46->19|46->19|46->19|48->21|48->21|48->21|121->94|121->94|121->94|124->97|124->97|124->97
                     -- GENERATED --

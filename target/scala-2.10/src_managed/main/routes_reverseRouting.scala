@@ -1,6 +1,6 @@
-// @SOURCE:G:/Play/Restaurant App/conf/routes
-// @HASH:6296e5309a5942165eb6629266cd2246c9960a9d
-// @DATE:Tue Sep 16 10:26:40 ALMT 2014
+// @SOURCE:/Users/sheikhahmed/Projects/RestaurantApp/conf/routes
+// @HASH:7a3136345e3da27cfce8f18563be35063a7fc47f
+// @DATE:Mon Oct 20 18:19:23 BDT 2014
 
 import Routes.{prefix => _prefix, defaultPrefix => _defaultPrefix}
 import play.core._
@@ -45,6 +45,7 @@ def at(file:String): Call = {
 }
                   
 
+// @LINE:18
 // @LINE:16
 // @LINE:15
 // @LINE:14
@@ -91,6 +92,7 @@ def index(): Call = {
 }
                           
 
+// @LINE:18
 // @LINE:16
 // @LINE:15
 class Reversetest {
@@ -105,6 +107,12 @@ def objectView(): Call = {
 // @LINE:15
 def index(): Call = {
    Call("GET", _prefix + { _defaultPrefix } + "test")
+}
+                                                
+
+// @LINE:18
+def newUser(): Call = {
+   Call("GET", _prefix + { _defaultPrefix } + "new")
 }
                                                 
     
@@ -156,6 +164,7 @@ def at : JavascriptReverseRoute = JavascriptReverseRoute(
 }
         
 
+// @LINE:18
 // @LINE:16
 // @LINE:15
 // @LINE:14
@@ -217,6 +226,7 @@ def index : JavascriptReverseRoute = JavascriptReverseRoute(
 }
               
 
+// @LINE:18
 // @LINE:16
 // @LINE:15
 class Reversetest {
@@ -239,6 +249,17 @@ def index : JavascriptReverseRoute = JavascriptReverseRoute(
    """
       function() {
       return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "test"})
+      }
+   """
+)
+                        
+
+// @LINE:18
+def newUser : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.isdrun.test.newUser",
+   """
+      function() {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "new"})
       }
    """
 )
@@ -283,6 +304,7 @@ def at(path:String, file:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.
 }
         
 
+// @LINE:18
 // @LINE:16
 // @LINE:15
 // @LINE:14
@@ -330,6 +352,7 @@ def index(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
 }
                           
 
+// @LINE:18
 // @LINE:16
 // @LINE:15
 class Reversetest {
@@ -344,6 +367,12 @@ def objectView(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
 // @LINE:15
 def index(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.isdrun.test.index(), HandlerDef(this, "controllers.isdrun.test", "index", Seq(), "GET", """""", _prefix + """test""")
+)
+                      
+
+// @LINE:18
+def newUser(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.isdrun.test.newUser(), HandlerDef(this, "controllers.isdrun.test", "newUser", Seq(), "GET", """""", _prefix + """new""")
 )
                       
     

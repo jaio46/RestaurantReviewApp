@@ -14,3 +14,5 @@ GET     /User/:user                 controllers.isdrun.User.index(user: String)
 GET     /Restaurant/:restaurant     controllers.isdrun.Restaurant.index(restaurant : String)
 GET     /test                       controllers.isdrun.test.index()
 POST    /test/JSON/                 controllers.isdrun.test.objectView()
+
+GET		/new						controllers.isdrun.test.newUser()

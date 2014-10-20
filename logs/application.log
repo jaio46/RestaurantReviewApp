@@ -1,30 +1,12 @@
-2014-09-22 21:16:10,028 - [INFO] - from play in pool-35-thread-3 
+2014-10-20 11:18:51,156 - [INFO] - from play in pool-35-thread-2 
 Listening for HTTP on /0:0:0:0:0:0:0:0:9000
 
-2014-09-22 21:32:50,887 - [INFO] - from play in play-internal-execution-context-1 
-datasource [jdbc:mysql://localhost/restaurantdb?characterEncoding=UTF-8] bound to JNDI as DefaultDS
+2014-10-20 11:20:27,513 - [INFO] - from play in play-internal-execution-context-1 
+datasource [jdbc:mysql://localhost/restaurantdb] bound to JNDI as DefaultDS
 
-2014-09-22 21:32:51,409 - [INFO] - from play in play-internal-execution-context-1 
-database [default] connected at jdbc:mysql://localhost/restaurantdb?characterEncoding=UTF-8
+2014-10-20 11:20:28,126 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://localhost/restaurantdb
 
-2014-09-22 21:32:52,720 - [INFO] - from play in play-internal-execution-context-1 
-Application started (Dev)
-
-2014-09-22 21:33:58,470 - [INFO] - from play in play-internal-execution-context-1 
-datasource [jdbc:mysql://localhost/restaurantdb?characterEncoding=UTF-8] bound to JNDI as DefaultDS
-
-2014-09-22 21:33:58,559 - [INFO] - from play in play-internal-execution-context-1 
-database [default] connected at jdbc:mysql://localhost/restaurantdb?characterEncoding=UTF-8
-
-2014-09-22 21:33:58,715 - [INFO] - from play in play-internal-execution-context-1 
-Application started (Dev)
-
-2014-09-22 21:49:27,439 - [INFO] - from play in play-internal-execution-context-1 
-datasource [jdbc:mysql://localhost/restaurantdb?characterEncoding=UTF-8] bound to JNDI as DefaultDS
-
-2014-09-22 21:49:27,506 - [INFO] - from play in play-internal-execution-context-1 
-database [default] connected at jdbc:mysql://localhost/restaurantdb?characterEncoding=UTF-8
-
-2014-09-22 21:49:27,657 - [INFO] - from play in play-internal-execution-context-1 
+2014-10-20 11:20:29,486 - [INFO] - from play in play-internal-execution-context-1 
 Application started (Dev)
 

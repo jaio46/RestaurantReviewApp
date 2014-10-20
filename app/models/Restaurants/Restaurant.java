@@ -19,33 +19,33 @@ public class Restaurant extends Model{
 	/**
 	 * 
 	 */
-	private static final long serialVersionUID = 7229576054194393462L;
+	public static final long serialVersionUID = 7229576054194393462L;
 
 	@Id
 	@GeneratedValue
-	private int id;
+	public int id;
 	
 	@Required
 	@Min(3)
 	@Max(255)
-	private String restaurantName;
+	public String restaurantName;
 	
 	@Required
 	@Email
-	private String restaurantEmail;
+	public String restaurantEmail;
 	
-	private String restaurantAddress;
+	public String restaurantAddress;
 	
-	private String restaurantPhone;
+	public String restaurantPhone;
 	
-	private double rating;
+	public double rating;
 	
 	@Required
 	@ManyToOne
-	private Area restaurantArea;
+	public Area restaurantArea;
 	
 	@ManyToOne
-	private Franchise franchise;
+	public Franchise franchise;
 
 	public int getId() {
 		return id;
@@ -110,5 +110,4 @@ public class Restaurant extends Model{
 	public void setFranchise(Franchise franchise) {
 		this.franchise = franchise;
 	}
-	
 }
