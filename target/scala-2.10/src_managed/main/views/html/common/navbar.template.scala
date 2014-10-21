@@ -58,7 +58,8 @@ Seq[Any](format.raw/*1.17*/("""
                     <ul class="dropdown-menu" role="menu">
                         <li><a href="#">Profile</a></li>
                         <li><a href="#">Settings</a></li>
-                        <li><a href="#">Create new Franchise</a></li>
+                        <li><a href="/createNewFranchise">Create new Franchise</a></li>
+                        <li><a href="#">Your Franchises</a></li>
                         <li class="divider"></li>
                         <li><a href="#">Log Out</a></li>
                     </ul>
@@ -78,9 +79,9 @@ Seq[Any](format.raw/*1.17*/("""
 }
                 /*
                     -- GENERATED --
-                    DATE: Sat Sep 27 05:33:16 MYT 2014
+                    DATE: Tue Oct 21 08:18:16 BDT 2014
                     SOURCE: /Users/sheikhahmed/Projects/RestaurantApp/app/views/common/navbar.scala.html
-                    HASH: da16b04234031f573330a4fb195f1c7b2ae22118
+                    HASH: 1413fd9d91ca3edf2fef49d057c0487e2e5461e1
                     MATRIX: 782->1|891->16
                     LINES: 26->1|29->1
                     -- GENERATED --

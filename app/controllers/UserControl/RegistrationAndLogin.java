@@ -28,6 +28,7 @@ public class RegistrationAndLogin extends Controller{
     		temp.name=obj.findPath("name").textValue();
     		temp.email=obj.findPath("email").textValue();
     		temp.id=Long.parseLong(obj.findPath("id").textValue());
+    		saveSession();
     	}
     	//if user exists
     	
@@ -54,7 +55,20 @@ public class RegistrationAndLogin extends Controller{
 	
 	public static Result newUser()
 	{
-		return ok(views.html.userend.newuser.render(temp,userForm));
+		String verifier=session("connected");
+		if(temp==null || verifier==null)
+		{
+			return redirect("/");
+			//return ok(views.html.isdrun.home.render());
+		}
+		else if(User.find.where().eq("id",temp.id).findUnique()!=null)
+		{
+			return redirect("/Profile/"+String.valueOf(temp.id));
+		}
+		else
+		{
+			return ok(views.html.userend.newuser.render(temp,userForm));
+		}
 	}
 	
 	public static Result saveUser()
@@ -66,7 +80,6 @@ public class RegistrationAndLogin extends Controller{
 		userToAdd.userName=params.get("Username")[0];
 		userToAdd.id=temp.id;
 		userToAdd.save();
-		saveSession();
-		return ok("");
+		return redirect("/Profile/"+String.valueOf(userToAdd.id));
 	}
 }

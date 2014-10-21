@@ -1,0 +1,42 @@
+@(franchise: models.Restaurants.Franchise, restaurants: List[models.Restaurants.Restaurant])
+<!DOCTYPE html>
+<html>
+<head>
+    @common.head("Create Franchise")
+</head>
+<body>
+@common.navbar("Create New Franchise")
+
+<div class="container">
+	<div class="row clearfix">
+		<div class="col-md-12 column">
+			<h3 class="text-primary">
+				Welcome to @franchise.franchiseName
+			</h3>
+			<table class="table table-striped table-hover">
+				<thead>
+					<tr>
+						<th>
+							Restaurant
+						</th>
+						<th>
+							Overall Rating
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+				
+					<tr>
+						<th> </th>
+					</tr>
+				</tbody>
+			</table> <button type="button" class="btn btn-primary btn-default" onclick="window.location='/'">Add new restaurant</button>
+		</div>
+	</div>
+</div>
+
+@common.footer()
+
+</body>
+
+</html>

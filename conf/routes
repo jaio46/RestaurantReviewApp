@@ -18,3 +18,7 @@ POST    /test/JSON/                 controllers.UserControl.RegistrationAndLogin
 GET		/new						controllers.UserControl.RegistrationAndLogin.newUser()
 POST	/userRegistration			controllers.UserControl.RegistrationAndLogin.saveUser()
 GET		/Profile/:userId			controllers.UserControl.Profile.profileProvider(userId : Long)
+
+GET		/createNewFranchise			controllers.Franchise.FranchiseManager.createNewFranchise()
+POST	/saveFranchise				controllers.Franchise.FranchiseManager.saveFranchiseAndShowProfile()
+GET 	/franchise/:id				controllers.Franchise.FranchiseManager.franchiseProfile(id: Integer)

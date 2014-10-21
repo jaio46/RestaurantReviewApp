@@ -3,12 +3,15 @@ package models.Restaurants;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
+import models.User.User;
 import play.data.validation.Constraints.Email;
 import play.data.validation.Constraints.Max;
 import play.data.validation.Constraints.Min;
 import play.data.validation.Constraints.Required;
 import play.db.ebean.Model;
+import play.db.ebean.Model.Finder;
 
 @Entity
 public class Franchise extends Model{
@@ -16,66 +19,29 @@ public class Franchise extends Model{
 	/**
 	 * 
 	 */
-	private static final long serialVersionUID = -7212885452005118836L;
+	public static final long serialVersionUID = -7212885452005118836L;
 	
 	
 	@Id
 	@GeneratedValue
-	private int id;
+	public int id;
 	
 	@Required
 	@Min(3)
 	@Max(255)
-	private String franchiseName;
+	public String franchiseName;
 	
 	@Email
-	private String franchiseEmail;
+	public String franchiseEmail;
 	
-	private String franciseAddress;
+	public String franciseAddress;
 	
-	private String franchisePhone;
+	public String franchisePhone;
 	
+	@ManyToOne
+	public User createdBy;
 	
-
-	public String getFranchiseName() {
-		return franchiseName;
-	}
-
-	public void setFranchiseName(String franchiseName) {
-		this.franchiseName = franchiseName;
-	}
-
-	public String getFranchiseEmail() {
-		return franchiseEmail;
-	}
-
-	public void setFranchiseEmail(String franchiseEmail) {
-		this.franchiseEmail = franchiseEmail;
-	}
-
-	public String getFranciseAddress() {
-		return franciseAddress;
-	}
-
-	public void setFranciseAddress(String franciseAddress) {
-		this.franciseAddress = franciseAddress;
-	}
-
-	public String getFranchisePhone() {
-		return franchisePhone;
-	}
-
-	public void setFranchisePhone(String franchisePhone) {
-		this.franchisePhone = franchisePhone;
-	}
-
-	public int getId() {
-		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
-	}
-	
+	public static Finder<Integer,Franchise> find = 
+			new Finder<Integer, Franchise> (Integer.class, Franchise.class);
 	
 }

@@ -1,6 +1,6 @@
 // @SOURCE:/Users/sheikhahmed/Projects/RestaurantApp/conf/routes
-// @HASH:5d7ad6a539fd4f8161094d3c03a5e543239ac034
-// @DATE:Tue Oct 21 01:53:30 BDT 2014
+// @HASH:4f92403365510dec56f9269068b355c247911074
+// @DATE:Tue Oct 21 09:40:02 BDT 2014
 
 import Routes.{prefix => _prefix, defaultPrefix => _defaultPrefix}
 import play.core._
@@ -37,6 +37,40 @@ class ReverseAssets {
 // @LINE:8
 def at(file:String): Call = {
    Call("GET", _prefix + { _defaultPrefix } + "assets/" + implicitly[PathBindable[String]].unbind("file", file))
+}
+                                                
+    
+}
+                          
+}
+                  
+
+// @LINE:24
+// @LINE:23
+// @LINE:22
+package controllers.Franchise {
+
+// @LINE:24
+// @LINE:23
+// @LINE:22
+class ReverseFranchiseManager {
+    
+
+// @LINE:22
+def createNewFranchise(): Call = {
+   Call("GET", _prefix + { _defaultPrefix } + "createNewFranchise")
+}
+                                                
+
+// @LINE:24
+def franchiseProfile(id:Integer): Call = {
+   Call("GET", _prefix + { _defaultPrefix } + "franchise/" + implicitly[PathBindable[Integer]].unbind("id", id))
+}
+                                                
+
+// @LINE:23
+def saveFranchiseAndShowProfile(): Call = {
+   Call("POST", _prefix + { _defaultPrefix } + "saveFranchise")
 }
                                                 
     
@@ -186,6 +220,55 @@ def at : JavascriptReverseRoute = JavascriptReverseRoute(
    """
       function(file) {
       return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "assets/" + (""" + implicitly[PathBindable[String]].javascriptUnbind + """)("file", file)})
+      }
+   """
+)
+                        
+    
+}
+              
+}
+        
+
+// @LINE:24
+// @LINE:23
+// @LINE:22
+package controllers.Franchise.javascript {
+
+// @LINE:24
+// @LINE:23
+// @LINE:22
+class ReverseFranchiseManager {
+    
+
+// @LINE:22
+def createNewFranchise : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.Franchise.FranchiseManager.createNewFranchise",
+   """
+      function() {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "createNewFranchise"})
+      }
+   """
+)
+                        
+
+// @LINE:24
+def franchiseProfile : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.Franchise.FranchiseManager.franchiseProfile",
+   """
+      function(id) {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "franchise/" + (""" + implicitly[PathBindable[Integer]].javascriptUnbind + """)("id", id)})
+      }
+   """
+)
+                        
+
+// @LINE:23
+def saveFranchiseAndShowProfile : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.Franchise.FranchiseManager.saveFranchiseAndShowProfile",
+   """
+      function() {
+      return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "saveFranchise"})
       }
    """
 )
@@ -370,6 +453,41 @@ class ReverseAssets {
 // @LINE:8
 def at(path:String, file:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.Assets.at(path, file), HandlerDef(this, "controllers.Assets", "at", Seq(classOf[String], classOf[String]), "GET", """ Map static resources from the /public folder to the /assets URL path""", _prefix + """assets/$file<.+>""")
+)
+                      
+    
+}
+                          
+}
+        
+
+// @LINE:24
+// @LINE:23
+// @LINE:22
+package controllers.Franchise.ref {
+
+
+// @LINE:24
+// @LINE:23
+// @LINE:22
+class ReverseFranchiseManager {
+    
+
+// @LINE:22
+def createNewFranchise(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.Franchise.FranchiseManager.createNewFranchise(), HandlerDef(this, "controllers.Franchise.FranchiseManager", "createNewFranchise", Seq(), "GET", """""", _prefix + """createNewFranchise""")
+)
+                      
+
+// @LINE:24
+def franchiseProfile(id:Integer): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.Franchise.FranchiseManager.franchiseProfile(id), HandlerDef(this, "controllers.Franchise.FranchiseManager", "franchiseProfile", Seq(classOf[Integer]), "GET", """""", _prefix + """franchise/$id<[^/]+>""")
+)
+                      
+
+// @LINE:23
+def saveFranchiseAndShowProfile(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.Franchise.FranchiseManager.saveFranchiseAndShowProfile(), HandlerDef(this, "controllers.Franchise.FranchiseManager", "saveFranchiseAndShowProfile", Seq(), "POST", """""", _prefix + """saveFranchise""")
 )
                       
     

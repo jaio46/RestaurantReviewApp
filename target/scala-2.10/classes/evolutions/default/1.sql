@@ -38,6 +38,7 @@ create table franchise (
   franchise_email           varchar(255),
   francise_address          varchar(255),
   franchise_phone           varchar(255),
+  created_by_id             bigint,
   constraint pk_franchise primary key (id))
 ;
 
@@ -85,16 +86,18 @@ alter table feed_on_restaurant add constraint fk_feed_on_restaurant_feeder_3 for
 create index ix_feed_on_restaurant_feeder_3 on feed_on_restaurant (feeder_id);
 alter table feed_on_restaurant add constraint fk_feed_on_restaurant_restaurnat_4 foreign key (restaurnat_id) references restaurant (id) on delete restrict on update restrict;
 create index ix_feed_on_restaurant_restaurnat_4 on feed_on_restaurant (restaurnat_id);
-alter table friends add constraint fk_friends_user_5 foreign key (user_id) references user (id) on delete restrict on update restrict;
-create index ix_friends_user_5 on friends (user_id);
-alter table restaurant add constraint fk_restaurant_restaurantArea_6 foreign key (restaurant_area_id) references area (id) on delete restrict on update restrict;
-create index ix_restaurant_restaurantArea_6 on restaurant (restaurant_area_id);
-alter table restaurant add constraint fk_restaurant_franchise_7 foreign key (franchise_id) references franchise (id) on delete restrict on update restrict;
-create index ix_restaurant_franchise_7 on restaurant (franchise_id);
-alter table restaurant_food add constraint fk_restaurant_food_restaurant_8 foreign key (restaurant_id) references restaurant (id) on delete restrict on update restrict;
-create index ix_restaurant_food_restaurant_8 on restaurant_food (restaurant_id);
-alter table restaurant_food add constraint fk_restaurant_food_food_9 foreign key (food_id) references food_item (id) on delete restrict on update restrict;
-create index ix_restaurant_food_food_9 on restaurant_food (food_id);
+alter table franchise add constraint fk_franchise_createdBy_5 foreign key (created_by_id) references user (id) on delete restrict on update restrict;
+create index ix_franchise_createdBy_5 on franchise (created_by_id);
+alter table friends add constraint fk_friends_user_6 foreign key (user_id) references user (id) on delete restrict on update restrict;
+create index ix_friends_user_6 on friends (user_id);
+alter table restaurant add constraint fk_restaurant_restaurantArea_7 foreign key (restaurant_area_id) references area (id) on delete restrict on update restrict;
+create index ix_restaurant_restaurantArea_7 on restaurant (restaurant_area_id);
+alter table restaurant add constraint fk_restaurant_franchise_8 foreign key (franchise_id) references franchise (id) on delete restrict on update restrict;
+create index ix_restaurant_franchise_8 on restaurant (franchise_id);
+alter table restaurant_food add constraint fk_restaurant_food_restaurant_9 foreign key (restaurant_id) references restaurant (id) on delete restrict on update restrict;
+create index ix_restaurant_food_restaurant_9 on restaurant_food (restaurant_id);
+alter table restaurant_food add constraint fk_restaurant_food_food_10 foreign key (food_id) references food_item (id) on delete restrict on update restrict;
+create index ix_restaurant_food_food_10 on restaurant_food (food_id);
 
 
 

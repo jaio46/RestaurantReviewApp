@@ -1,12 +1,120 @@
-2014-10-21 03:27:53,747 - [INFO] - from play in pool-31-thread-5 
+2014-10-21 09:43:00,255 - [INFO] - from play in pool-50-thread-2 
 Listening for HTTP on /0:0:0:0:0:0:0:0:9000
 
-2014-10-21 03:27:56,670 - [INFO] - from play in play-internal-execution-context-1 
+2014-10-21 09:43:02,972 - [INFO] - from play in play-internal-execution-context-1 
 datasource [jdbc:mysql://localhost/restaurantdb] bound to JNDI as DefaultDS
 
-2014-10-21 03:27:57,118 - [INFO] - from play in play-internal-execution-context-1 
+2014-10-21 09:43:03,395 - [INFO] - from play in play-internal-execution-context-1 
 database [default] connected at jdbc:mysql://localhost/restaurantdb
 
-2014-10-21 03:27:58,322 - [INFO] - from play in play-internal-execution-context-1 
+2014-10-21 09:43:04,192 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2014-10-21 09:45:51,063 - [INFO] - from play in play-internal-execution-context-2 
+datasource [jdbc:mysql://localhost/restaurantdb] bound to JNDI as DefaultDS
+
+2014-10-21 09:45:51,136 - [INFO] - from play in play-internal-execution-context-2 
+database [default] connected at jdbc:mysql://localhost/restaurantdb
+
+2014-10-21 09:45:51,210 - [INFO] - from play in play-internal-execution-context-2 
+Application started (Dev)
+
+2014-10-21 09:46:18,034 - [INFO] - from play in play-internal-execution-context-2 
+datasource [jdbc:mysql://localhost/restaurantdb] bound to JNDI as DefaultDS
+
+2014-10-21 09:46:18,081 - [INFO] - from play in play-internal-execution-context-2 
+database [default] connected at jdbc:mysql://localhost/restaurantdb
+
+2014-10-21 09:46:18,187 - [INFO] - from play in play-internal-execution-context-2 
+Application started (Dev)
+
+2014-10-21 09:46:18,257 - [ERROR] - from play in play-internal-execution-context-2 
+Cannot invoke the action, eventually got an error: java.lang.ClassCastException: com.avaje.ebeaninternal.util.DefaultExpressionList cannot be cast to java.util.List
+
+2014-10-21 09:46:18,282 - [ERROR] - from application in play-internal-execution-context-2 
+
+
+! @6k0m6pn8g - Internal server error, for (GET) [/franchise/4] ->
+
+play.api.Application$$anon$1: Execution exception[[ClassCastException: com.avaje.ebeaninternal.util.DefaultExpressionList cannot be cast to java.util.List]]
+	at play.api.Application$class.handleError(Application.scala:293) ~[na:na]
+	at play.api.DefaultApplication.handleError(Application.scala:399) [na:na]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$3.apply(PlayDefaultUpstreamHandler.scala:264) [na:na]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$3.apply(PlayDefaultUpstreamHandler.scala:264) [na:na]
+	at scala.Option.map(Option.scala:145) [na:na]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:264) [na:na]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:260) [na:na]
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:344) [na:na]
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:343) [na:na]
+	at com.typesafe.trace.FutureCallback.apply(FutureTrace.scala:136) [na:na]
+	at com.typesafe.trace.FutureCallback.apply(FutureTrace.scala:127) [na:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [na:na]
+	at play.api.libs.iteratee.Execution$$anon$1.execute_aroundBody0(Execution.scala:43) [na:na]
+	at play.api.libs.iteratee.Execution$$anon$1.execute_aroundBody1$advice(Execution.scala:138) [na:na]
+	at play.api.libs.iteratee.Execution$$anon$1.execute(Execution.scala:1) [na:na]
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [na:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete_aroundBody2(Promise.scala:248) [na:na]
+	at scala.concurrent.impl.Promise$DefaultPromise$AjcClosure3.run(Promise.scala:1) [na:na]
+	at com.typesafe.trace.FutureTraceAspect.ajc$around$com_typesafe_trace_FutureTraceAspect$4$3fd2d6f0proceed(FutureTraceAspect.aj:148) [na:na]
+	at com.typesafe.trace.FutureTraceAspect.ajc$around$com_typesafe_trace_FutureTraceAspect$4$3fd2d6f0(FutureTraceAspect.aj:150) [na:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:244) [na:na]
+	at scala.concurrent.Promise$class.complete(Promise.scala:55) [na:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [na:na]
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:235) [na:na]
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:235) [na:na]
+	at com.typesafe.trace.FutureCallback.apply(FutureTrace.scala:136) [na:na]
+	at com.typesafe.trace.FutureCallback.apply(FutureTrace.scala:127) [na:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [na:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) [na:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [na:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [na:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [na:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [na:na]
+Caused by: java.lang.ClassCastException: com.avaje.ebeaninternal.util.DefaultExpressionList cannot be cast to java.util.List
+	at controllers.Franchise.FranchiseManager.franchiseProfile(FranchiseManager.java:54) ~[na:na]
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$13$$anonfun$apply$13.apply(routes_routing.scala:189) ~[na:na]
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$13$$anonfun$apply$13.apply(routes_routing.scala:189) ~[na:na]
+	at play.core.Router$HandlerInvoker$$anon$7$$anon$2.invocation(Router.scala:183) ~[na:na]
+	at play.core.Router$Routes$$anon$1.invocation(Router.scala:377) ~[na:na]
+	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:56) ~[na:na]
+	at play.core.j.JavaAction$$anon$3.apply(JavaAction.scala:91) ~[na:na]
+	at play.core.j.JavaAction$$anon$3.apply(JavaAction.scala:90) ~[na:na]
+	at play.core.j.FPromiseHelper$$anonfun$flatMap$1.apply(FPromiseHelper.scala:82) ~[na:na]
+	at play.core.j.FPromiseHelper$$anonfun$flatMap$1.apply(FPromiseHelper.scala:82) ~[na:na]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:251) ~[na:na]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) ~[na:na]
+	at com.typesafe.trace.FutureCallback.apply(FutureTrace.scala:136) [na:na]
+	at com.typesafe.trace.FutureCallback.apply(FutureTrace.scala:127) [na:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [na:na]
+	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:37) ~[na:na]
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:39) ~[na:na]
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:385) ~[na:na]
+	... 4 common frames omitted
+
+2014-10-21 09:50:36,959 - [INFO] - from play in play-internal-execution-context-2 
+datasource [jdbc:mysql://localhost/restaurantdb] bound to JNDI as DefaultDS
+
+2014-10-21 09:50:37,007 - [INFO] - from play in play-internal-execution-context-2 
+database [default] connected at jdbc:mysql://localhost/restaurantdb
+
+2014-10-21 09:50:37,093 - [INFO] - from play in play-internal-execution-context-2 
+Application started (Dev)
+
+2014-10-21 09:54:26,985 - [INFO] - from play in play-internal-execution-context-3 
+datasource [jdbc:mysql://localhost/restaurantdb] bound to JNDI as DefaultDS
+
+2014-10-21 09:54:27,032 - [INFO] - from play in play-internal-execution-context-3 
+database [default] connected at jdbc:mysql://localhost/restaurantdb
+
+2014-10-21 09:54:27,122 - [INFO] - from play in play-internal-execution-context-3 
+Application started (Dev)
+
+2014-10-21 09:55:31,810 - [INFO] - from play in play-internal-execution-context-3 
+datasource [jdbc:mysql://localhost/restaurantdb] bound to JNDI as DefaultDS
+
+2014-10-21 09:55:31,851 - [INFO] - from play in play-internal-execution-context-3 
+database [default] connected at jdbc:mysql://localhost/restaurantdb
+
+2014-10-21 09:55:31,927 - [INFO] - from play in play-internal-execution-context-3 
 Application started (Dev)
 

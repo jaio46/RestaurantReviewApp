@@ -11,6 +11,7 @@ import models.RestaurantArea.Area;
 import play.data.validation.Constraints.Email;
 import play.data.validation.Constraints.Required;
 import play.db.ebean.Model;
+import play.db.ebean.Model.Finder;
 
 
 @Entity
@@ -46,68 +47,7 @@ public class Restaurant extends Model{
 	
 	@ManyToOne
 	public Franchise franchise;
-
-	public int getId() {
-		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
-	}
-
-	public String getRestaurantName() {
-		return restaurantName;
-	}
-
-	public void setRestaurantName(String restaurantName) {
-		this.restaurantName = restaurantName;
-	}
-
-	public String getRestaurantEmail() {
-		return restaurantEmail;
-	}
-
-	public void setRestaurantEmail(String restaurantEmail) {
-		this.restaurantEmail = restaurantEmail;
-	}
-
-	public String getRestaurantAddress() {
-		return restaurantAddress;
-	}
-
-	public void setRestaurantAddress(String restaurantAddress) {
-		this.restaurantAddress = restaurantAddress;
-	}
-
-	public String getRestaurantPhone() {
-		return restaurantPhone;
-	}
-
-	public void setRestaurantPhone(String restaurantPhone) {
-		this.restaurantPhone = restaurantPhone;
-	}
-
-	public double getRating() {
-		return rating;
-	}
-
-	public void setRating(double rating) {
-		this.rating = rating;
-	}
-
-	public Area getRestaurantArea() {
-		return restaurantArea;
-	}
-
-	public void setRestaurantArea(Area restaurantArea) {
-		this.restaurantArea = restaurantArea;
-	}
-
-	public Franchise getFranchise() {
-		return franchise;
-	}
-
-	public void setFranchise(Franchise franchise) {
-		this.franchise = franchise;
-	}
+	
+	public static Finder<Integer,Restaurant> find = 
+			new Finder<Integer, Restaurant> (Integer.class, Restaurant.class);
 }
