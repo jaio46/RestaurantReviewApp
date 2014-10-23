@@ -1,6 +1,6 @@
 // @SOURCE:/Users/sheikhahmed/Projects/RestaurantApp/conf/routes
-// @HASH:4f92403365510dec56f9269068b355c247911074
-// @DATE:Tue Oct 21 09:40:02 BDT 2014
+// @HASH:376819132303f3b302bdd7eb4601d65aad5c5afb
+// @DATE:Tue Oct 21 11:00:49 BDT 2014
 
 import Routes.{prefix => _prefix, defaultPrefix => _defaultPrefix}
 import play.core._
@@ -45,16 +45,24 @@ def at(file:String): Call = {
 }
                   
 
+// @LINE:25
 // @LINE:24
 // @LINE:23
 // @LINE:22
 package controllers.Franchise {
 
+// @LINE:25
 // @LINE:24
 // @LINE:23
 // @LINE:22
 class ReverseFranchiseManager {
     
+
+// @LINE:25
+def showAll(): Call = {
+   Call("GET", _prefix + { _defaultPrefix } + "fr/list")
+}
+                                                
 
 // @LINE:22
 def createNewFranchise(): Call = {
@@ -230,16 +238,29 @@ def at : JavascriptReverseRoute = JavascriptReverseRoute(
 }
         
 
+// @LINE:25
 // @LINE:24
 // @LINE:23
 // @LINE:22
 package controllers.Franchise.javascript {
 
+// @LINE:25
 // @LINE:24
 // @LINE:23
 // @LINE:22
 class ReverseFranchiseManager {
     
+
+// @LINE:25
+def showAll : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.Franchise.FranchiseManager.showAll",
+   """
+      function() {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "fr/list"})
+      }
+   """
+)
+                        
 
 // @LINE:22
 def createNewFranchise : JavascriptReverseRoute = JavascriptReverseRoute(
@@ -461,17 +482,25 @@ def at(path:String, file:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.
 }
         
 
+// @LINE:25
 // @LINE:24
 // @LINE:23
 // @LINE:22
 package controllers.Franchise.ref {
 
 
+// @LINE:25
 // @LINE:24
 // @LINE:23
 // @LINE:22
 class ReverseFranchiseManager {
     
+
+// @LINE:25
+def showAll(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.Franchise.FranchiseManager.showAll(), HandlerDef(this, "controllers.Franchise.FranchiseManager", "showAll", Seq(), "GET", """""", _prefix + """fr/list""")
+)
+                      
 
 // @LINE:22
 def createNewFranchise(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(

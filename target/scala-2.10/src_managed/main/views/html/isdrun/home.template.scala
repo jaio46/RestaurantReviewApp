@@ -57,7 +57,8 @@ Seq[Any](format.raw/*2.1*/("""<html class="full" lang="en">
 </head>
 
 <body>
-
+<script src=""""),_display_(Seq[Any](/*33.15*/routes/*33.21*/.Assets.at("javascripts/jquery-1.11.0.js"))),format.raw/*33.63*/(""""></script>
+<script src=""""),_display_(Seq[Any](/*34.15*/routes/*34.21*/.Assets.at("javascripts/facebookLogin.js"))),format.raw/*34.63*/(""""></script>
 <!-- Navigation -->
 <nav class="navbar navbar-inverse navbar-fixed-bottom" role="navigation">
     <div class="container">
@@ -105,7 +106,7 @@ Seq[Any](format.raw/*2.1*/("""<html class="full" lang="en">
                         <div class="col-md-2 column">
                         </div>
                         <div class="col-md-4 column">
-                            <button type="button" class="btn btn-block btn-primary">Log in with Facebook</button>
+                            <button type="button" class="btn btn-block btn-primary" onclick="Login()">Log in with Facebook</button>
                         </div>
                         <div class="col-md-6 column">
                         </div>
@@ -118,10 +119,10 @@ Seq[Any](format.raw/*2.1*/("""<html class="full" lang="en">
 <!-- /.container -->
 
 <!-- jQuery Version 1.11.0 -->
-<script src=""""),_display_(Seq[Any](/*94.15*/routes/*94.21*/.Assets.at("javascripts/jquery-1.11.0.js"))),format.raw/*94.63*/(""""></script>
+<script src=""""),_display_(Seq[Any](/*95.15*/routes/*95.21*/.Assets.at("javascripts/jquery-1.11.0.js"))),format.raw/*95.63*/(""""></script>
 
 <!-- Bootstrap Core JavaScript -->
-<script src=""""),_display_(Seq[Any](/*97.15*/routes/*97.21*/.Assets.at("javascripts/bootstrap.min.js"))),format.raw/*97.63*/(""""></script>
+<script src=""""),_display_(Seq[Any](/*98.15*/routes/*98.21*/.Assets.at("javascripts/bootstrap.min.js"))),format.raw/*98.63*/(""""></script>
 
 </body>
 
@@ -138,11 +139,11 @@ Seq[Any](format.raw/*2.1*/("""<html class="full" lang="en">
 }
                 /*
                     -- GENERATED --
-                    DATE: Mon Oct 20 18:19:26 BDT 2014
+                    DATE: Tue Oct 21 11:03:08 BDT 2014
                     SOURCE: /Users/sheikhahmed/Projects/RestaurantApp/app/views/isdrun/home.scala.html
-                    HASH: a8b98e4e2a7d5cfd4c293cdf500ea124c1b35efb
-                    MATRIX: 861->1|1392->496|1407->502|1472->545|1570->607|1585->613|1652->658|1727->697|1742->703|1801->740|4463->3366|4478->3372|4542->3414|4640->3476|4655->3482|4719->3524
-                    LINES: 29->2|43->16|43->16|43->16|46->19|46->19|46->19|48->21|48->21|48->21|121->94|121->94|121->94|124->97|124->97|124->97
+                    HASH: 87451fcf9738686908de3deb1a12d21202f2ab8e
+                    MATRIX: 861->1|1392->496|1407->502|1472->545|1570->607|1585->613|1652->658|1727->697|1742->703|1801->740|2259->1162|2274->1168|2338->1210|2400->1236|2415->1242|2479->1284|4762->3531|4777->3537|4841->3579|4939->3641|4954->3647|5018->3689
+                    LINES: 29->2|43->16|43->16|43->16|46->19|46->19|46->19|48->21|48->21|48->21|60->33|60->33|60->33|61->34|61->34|61->34|122->95|122->95|122->95|125->98|125->98|125->98
                     -- GENERATED --
                 */
             

@@ -55,6 +55,12 @@ public class FranchiseManager extends Controller{
 		return ok(views.html.franchise.franchiseProfile.render(temp,list));
 	}
 	
+	public static Result showAll()
+	{
+		List < Franchise > list= Franchise.find.all();
+		return ok(views.html.franchise.franchiseList.render(list));
+	}
+	
 	public static Result franchiseByMe()
 	{
 		return ok("");

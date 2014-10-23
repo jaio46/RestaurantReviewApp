@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    @common.head("Create Franchise")
+    @common.head(franchise.franchiseName)
 </head>
 <body>
 @common.navbar("Create New Franchise")
@@ -20,15 +20,17 @@
 							Restaurant
 						</th>
 						<th>
-							Overall Rating
+							Average Rating
 						</th>
 					</tr>
 				</thead>
 				<tbody>
-				
-					<tr>
-						<th> </th>
-					</tr>
+					@for( restaurant<-restaurants ){
+						<tr>
+							<th> <h5><a class="btn" href="#"></h5>@restaurant.restaurantName</h5></th>
+							<th> <h5>@restaurant.rating</th>
+						</tr>
+					}
 				</tbody>
 			</table> <button type="button" class="btn btn-primary btn-default" onclick="window.location='/'">Add new restaurant</button>
 		</div>

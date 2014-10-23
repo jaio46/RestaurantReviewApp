@@ -22,3 +22,6 @@ GET		/Profile/:userId			controllers.UserControl.Profile.profileProvider(userId :
 GET		/createNewFranchise			controllers.Franchise.FranchiseManager.createNewFranchise()
 POST	/saveFranchise				controllers.Franchise.FranchiseManager.saveFranchiseAndShowProfile()
 GET 	/franchise/:id				controllers.Franchise.FranchiseManager.franchiseProfile(id: Integer)
+GET		/fr/list				controllers.Franchise.FranchiseManager.showAll()
+
+#GET		/createNewRestaurant		controllers.Franchise.

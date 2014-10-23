@@ -30,7 +30,7 @@ Seq[Any](format.raw/*1.93*/("""
 <!DOCTYPE html>
 <html>
 <head>
-    """),_display_(Seq[Any](/*5.6*/common/*5.12*/.head("Create Franchise"))),format.raw/*5.37*/("""
+    """),_display_(Seq[Any](/*5.6*/common/*5.12*/.head(franchise.franchiseName))),format.raw/*5.42*/("""
 </head>
 <body>
 """),_display_(Seq[Any](/*8.2*/common/*8.8*/.navbar("Create New Franchise"))),format.raw/*8.39*/("""
@@ -48,22 +48,24 @@ Seq[Any](format.raw/*1.93*/("""
 							Restaurant
 						</th>
 						<th>
-							Overall Rating
+							Average Rating
 						</th>
 					</tr>
 				</thead>
 				<tbody>
-				
-					<tr>
-						<th> </th>
-					</tr>
+					"""),_display_(Seq[Any](/*28.7*/for( restaurant<-restaurants ) yield /*28.37*/{_display_(Seq[Any](format.raw/*28.38*/("""
+						<tr>
+							<th> <h5><a class="btn" href="#"></h5>"""),_display_(Seq[Any](/*30.47*/restaurant/*30.57*/.restaurantName)),format.raw/*30.72*/("""</h5></th>
+							<th> <h5>"""),_display_(Seq[Any](/*31.18*/restaurant/*31.28*/.rating)),format.raw/*31.35*/("""</th>
+						</tr>
+					""")))})),format.raw/*33.7*/("""
 				</tbody>
 			</table> <button type="button" class="btn btn-primary btn-default" onclick="window.location='/'">Add new restaurant</button>
 		</div>
 	</div>
 </div>
 
-"""),_display_(Seq[Any](/*38.2*/common/*38.8*/.footer())),format.raw/*38.17*/("""
+"""),_display_(Seq[Any](/*40.2*/common/*40.8*/.footer())),format.raw/*40.17*/("""
 
 </body>
 
@@ -79,11 +81,11 @@ Seq[Any](format.raw/*1.93*/("""
 }
                 /*
                     -- GENERATED --
-                    DATE: Tue Oct 21 09:55:30 BDT 2014
+                    DATE: Wed Oct 22 19:51:04 BDT 2014
                     SOURCE: /Users/sheikhahmed/Projects/RestaurantApp/app/views/franchise/franchiseProfile.scala.html
-                    HASH: 263035fe401f5cdd219dbfa8dcb31afe276709da
-                    MATRIX: 853->1|1038->92|1108->128|1122->134|1168->159|1219->176|1232->182|1284->213|1452->345|1470->354|1506->368|1956->783|1970->789|2001->798
-                    LINES: 26->1|29->1|33->5|33->5|33->5|36->8|36->8|36->8|42->14|42->14|42->14|66->38|66->38|66->38
+                    HASH: cb03e08b1eb0454cb70b54ac820e0aa3c9ff9a6f
+                    MATRIX: 853->1|1038->92|1108->128|1122->134|1173->164|1224->181|1237->187|1289->218|1457->350|1475->359|1511->373|1757->584|1803->614|1842->615|1936->673|1955->683|1992->698|2056->726|2075->736|2104->743|2159->767|2362->935|2376->941|2407->950
+                    LINES: 26->1|29->1|33->5|33->5|33->5|36->8|36->8|36->8|42->14|42->14|42->14|56->28|56->28|56->28|58->30|58->30|58->30|59->31|59->31|59->31|61->33|68->40|68->40|68->40
                     -- GENERATED --
                 */
             

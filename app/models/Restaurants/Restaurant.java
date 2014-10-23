@@ -39,7 +39,7 @@ public class Restaurant extends Model{
 	
 	public String restaurantPhone;
 	
-	public double rating;
+	public double rating=2.5;
 	
 	@Required
 	@ManyToOne

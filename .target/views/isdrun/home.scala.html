@@ -30,7 +30,8 @@
 </head>
 
 <body>
-
+<script src="@routes.Assets.at("javascripts/jquery-1.11.0.js")"></script>
+<script src="@routes.Assets.at("javascripts/facebookLogin.js")"></script>
 <!-- Navigation -->
 <nav class="navbar navbar-inverse navbar-fixed-bottom" role="navigation">
     <div class="container">
@@ -78,7 +79,7 @@
                         <div class="col-md-2 column">
                         </div>
                         <div class="col-md-4 column">
-                            <button type="button" class="btn btn-block btn-primary">Log in with Facebook</button>
+                            <button type="button" class="btn btn-block btn-primary" onclick="Login()">Log in with Facebook</button>
                         </div>
                         <div class="col-md-6 column">
                         </div>
