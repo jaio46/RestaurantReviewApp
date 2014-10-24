@@ -41,7 +41,6 @@ public class Restaurant extends Model{
 	
 	public double rating=2.5;
 	
-	@Required
 	@ManyToOne
 	public Area restaurantArea;
 	

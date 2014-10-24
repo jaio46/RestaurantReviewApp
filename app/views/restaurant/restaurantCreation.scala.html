@@ -1,0 +1,76 @@
+@(franchise: models.Restaurants.Franchise , restaurantForm : play.data.Form[models.Restaurants.Restaurant] , restaurants : List[models.Restaurants.Restaurant] ,
+cnt: Integer)
+<!DOCTYPE html>
+<html>
+<head>
+    @common.head(franchise.franchiseName +"- Add Restaurant")
+</head>
+<body>
+@common.navbar("Create New Franchise")
+
+<div class="container">
+	<div class="row clearfix">
+		<div class="col-md-12 column">
+			<div class="row clearfix">
+				<div class="col-md-12 column">
+					<h3 class="text-info">
+						Add new restaurant to - @franchise.franchiseName
+					</h3>
+				</div>
+			</div>
+			<div class="row clearfix">
+				<div class="col-md-6 column">
+					@helper.form(action = controllers.Restaurant.routes.RestaurantManager.saveRestaurant()){
+						@helper.input(restaurantForm("Name"),
+								 '_showConstraints -> false) { (id, name, value, args) =>
+									<input type="text" class="form-control" name="@name" id="@id"
+									placeholder='Name for your franchise'>
+							}
+						
+						@helper.input(restaurantForm("Email"),
+									'_showConstraints -> false){(id, name, value, args)=>
+									<input type="text" class="form-control" name="@name" id="@id"
+									placeholder='Email Address'>
+							}
+						@helper.input(restaurantForm("Address"),
+									'_showConstraints -> false){(id, name, value, args)=>
+									<input type="text" class="form-control" name="@name" id="@id"
+									placeholder= 'Address'>
+							}
+						@helper.input(restaurantForm("Phone"),
+									'_showConstraints -> false){(id, name, value, args)=>
+									<input type="text" class="form-control" name="@name" id="@id"
+									placeholder= 'contact number'>
+							}
+						
+						<div class="modal-footer">
+							<button type="submit" class="btn btn-success">Confirm</button>
+						</div>
+					}
+				</div>
+				<div class="col-md-6 column">
+					<div class="list-group">
+						 <a href="#" class="list-group-item active">@franchise.franchiseName - Top Restaurants</a>
+						 @if(restaurants.isEmpty){
+						 	<div class="list-group-item">
+								Sorry, no Restaurants yet
+							</div>
+						 }
+						@for( restaurant<-restaurants ){
+							<div class="list-group-item">
+								<a href='/restaurant/@restaurant.id'>@restaurant.restaurantName</a>
+							</div>
+						}
+						<a class="list-group-item active"><span class="badge">@cnt</span>More</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+@common.footer()
+
+</body>
+
+</html>

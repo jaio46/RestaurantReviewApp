@@ -1,6 +1,6 @@
 // @SOURCE:/Users/sheikhahmed/Projects/RestaurantApp/conf/routes
-// @HASH:376819132303f3b302bdd7eb4601d65aad5c5afb
-// @DATE:Tue Oct 21 11:00:49 BDT 2014
+// @HASH:f653627c5d11c3f70b98c39ca02e786887d9884d
+// @DATE:Fri Oct 24 15:39:14 BDT 2014
 
 package controllers.Franchise;
 

@@ -22,6 +22,13 @@ GET		/Profile/:userId			controllers.UserControl.Profile.profileProvider(userId :
 GET		/createNewFranchise			controllers.Franchise.FranchiseManager.createNewFranchise()
 POST	/saveFranchise				controllers.Franchise.FranchiseManager.saveFranchiseAndShowProfile()
 GET 	/franchise/:id				controllers.Franchise.FranchiseManager.franchiseProfile(id: Integer)
-GET		/fr/list				controllers.Franchise.FranchiseManager.showAll()
+GET		/fr/list					controllers.Franchise.FranchiseManager.showAll()
 
-#GET		/createNewRestaurant		controllers.Franchise.
+GET		/srs/preload				controllers.Search.AnswerQueryWithJson.preload()
+GET		/search/:query				controllers.Search.AnswerQueryWithJson.answer(query : String)
+
+GET		/createNewRestaurant/:id	controllers.Restaurant.RestaurantManager.createNewRestaurant(id : Integer)
+POST	/restaurantRegistration		controllers.Restaurant.RestaurantManager.saveRestaurant()
+GET		/restaurant/:id				controllers.Restaurant.RestaurantManager.restaurantProfile(id : Integer)
+
+GET 	/logout						controllers.UserControl.LogoutAndSessionClear.logout()

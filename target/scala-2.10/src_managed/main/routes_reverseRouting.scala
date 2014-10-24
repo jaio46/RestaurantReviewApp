@@ -1,6 +1,6 @@
 // @SOURCE:/Users/sheikhahmed/Projects/RestaurantApp/conf/routes
-// @HASH:376819132303f3b302bdd7eb4601d65aad5c5afb
-// @DATE:Tue Oct 21 11:00:49 BDT 2014
+// @HASH:f653627c5d11c3f70b98c39ca02e786887d9884d
+// @DATE:Fri Oct 24 15:39:14 BDT 2014
 
 import Routes.{prefix => _prefix, defaultPrefix => _defaultPrefix}
 import play.core._
@@ -12,38 +12,6 @@ import play.libs.F
 
 import Router.queryString
 
-
-// @LINE:9
-// @LINE:8
-package controllers {
-
-// @LINE:9
-class ReverseWebJarAssets {
-    
-
-// @LINE:9
-def at(file:String): Call = {
-   Call("GET", _prefix + { _defaultPrefix } + "webjars/" + implicitly[PathBindable[String]].unbind("file", file))
-}
-                                                
-    
-}
-                          
-
-// @LINE:8
-class ReverseAssets {
-    
-
-// @LINE:8
-def at(file:String): Call = {
-   Call("GET", _prefix + { _defaultPrefix } + "assets/" + implicitly[PathBindable[String]].unbind("file", file))
-}
-                                                
-    
-}
-                          
-}
-                  
 
 // @LINE:25
 // @LINE:24
@@ -79,6 +47,38 @@ def franchiseProfile(id:Integer): Call = {
 // @LINE:23
 def saveFranchiseAndShowProfile(): Call = {
    Call("POST", _prefix + { _defaultPrefix } + "saveFranchise")
+}
+                                                
+    
+}
+                          
+}
+                  
+
+// @LINE:9
+// @LINE:8
+package controllers {
+
+// @LINE:9
+class ReverseWebJarAssets {
+    
+
+// @LINE:9
+def at(file:String): Call = {
+   Call("GET", _prefix + { _defaultPrefix } + "webjars/" + implicitly[PathBindable[String]].unbind("file", file))
+}
+                                                
+    
+}
+                          
+
+// @LINE:8
+class ReverseAssets {
+    
+
+// @LINE:8
+def at(file:String): Call = {
+   Call("GET", _prefix + { _defaultPrefix } + "assets/" + implicitly[PathBindable[String]].unbind("file", file))
 }
                                                 
     
@@ -147,11 +147,85 @@ def index(): Call = {
 }
                   
 
+// @LINE:32
+// @LINE:31
+// @LINE:30
+package controllers.Restaurant {
+
+// @LINE:32
+// @LINE:31
+// @LINE:30
+class ReverseRestaurantManager {
+    
+
+// @LINE:31
+def saveRestaurant(): Call = {
+   Call("POST", _prefix + { _defaultPrefix } + "restaurantRegistration")
+}
+                                                
+
+// @LINE:30
+def createNewRestaurant(id:Integer): Call = {
+   Call("GET", _prefix + { _defaultPrefix } + "createNewRestaurant/" + implicitly[PathBindable[Integer]].unbind("id", id))
+}
+                                                
+
+// @LINE:32
+def restaurantProfile(id:Integer): Call = {
+   Call("GET", _prefix + { _defaultPrefix } + "restaurant/" + implicitly[PathBindable[Integer]].unbind("id", id))
+}
+                                                
+    
+}
+                          
+}
+                  
+
+// @LINE:28
+// @LINE:27
+package controllers.Search {
+
+// @LINE:28
+// @LINE:27
+class ReverseAnswerQueryWithJson {
+    
+
+// @LINE:27
+def preload(): Call = {
+   Call("GET", _prefix + { _defaultPrefix } + "srs/preload")
+}
+                                                
+
+// @LINE:28
+def answer(query:String): Call = {
+   Call("GET", _prefix + { _defaultPrefix } + "search/" + implicitly[PathBindable[String]].unbind("query", dynamicString(query)))
+}
+                                                
+    
+}
+                          
+}
+                  
+
+// @LINE:34
 // @LINE:20
 // @LINE:19
 // @LINE:18
 // @LINE:16
 package controllers.UserControl {
+
+// @LINE:34
+class ReverseLogoutAndSessionClear {
+    
+
+// @LINE:34
+def logout(): Call = {
+   Call("GET", _prefix + { _defaultPrefix } + "logout")
+}
+                                                
+    
+}
+                          
 
 // @LINE:19
 // @LINE:18
@@ -195,48 +269,6 @@ def profileProvider(userId:Long): Call = {
 }
                   
 
-
-// @LINE:9
-// @LINE:8
-package controllers.javascript {
-
-// @LINE:9
-class ReverseWebJarAssets {
-    
-
-// @LINE:9
-def at : JavascriptReverseRoute = JavascriptReverseRoute(
-   "controllers.WebJarAssets.at",
-   """
-      function(file) {
-      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "webjars/" + (""" + implicitly[PathBindable[String]].javascriptUnbind + """)("file", file)})
-      }
-   """
-)
-                        
-    
-}
-              
-
-// @LINE:8
-class ReverseAssets {
-    
-
-// @LINE:8
-def at : JavascriptReverseRoute = JavascriptReverseRoute(
-   "controllers.Assets.at",
-   """
-      function(file) {
-      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "assets/" + (""" + implicitly[PathBindable[String]].javascriptUnbind + """)("file", file)})
-      }
-   """
-)
-                        
-    
-}
-              
-}
-        
 
 // @LINE:25
 // @LINE:24
@@ -290,6 +322,48 @@ def saveFranchiseAndShowProfile : JavascriptReverseRoute = JavascriptReverseRout
    """
       function() {
       return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "saveFranchise"})
+      }
+   """
+)
+                        
+    
+}
+              
+}
+        
+
+// @LINE:9
+// @LINE:8
+package controllers.javascript {
+
+// @LINE:9
+class ReverseWebJarAssets {
+    
+
+// @LINE:9
+def at : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.WebJarAssets.at",
+   """
+      function(file) {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "webjars/" + (""" + implicitly[PathBindable[String]].javascriptUnbind + """)("file", file)})
+      }
+   """
+)
+                        
+    
+}
+              
+
+// @LINE:8
+class ReverseAssets {
+    
+
+// @LINE:8
+def at : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.Assets.at",
+   """
+      function(file) {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "assets/" + (""" + implicitly[PathBindable[String]].javascriptUnbind + """)("file", file)})
       }
    """
 )
@@ -380,11 +454,115 @@ def index : JavascriptReverseRoute = JavascriptReverseRoute(
 }
         
 
+// @LINE:32
+// @LINE:31
+// @LINE:30
+package controllers.Restaurant.javascript {
+
+// @LINE:32
+// @LINE:31
+// @LINE:30
+class ReverseRestaurantManager {
+    
+
+// @LINE:31
+def saveRestaurant : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.Restaurant.RestaurantManager.saveRestaurant",
+   """
+      function() {
+      return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "restaurantRegistration"})
+      }
+   """
+)
+                        
+
+// @LINE:30
+def createNewRestaurant : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.Restaurant.RestaurantManager.createNewRestaurant",
+   """
+      function(id) {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "createNewRestaurant/" + (""" + implicitly[PathBindable[Integer]].javascriptUnbind + """)("id", id)})
+      }
+   """
+)
+                        
+
+// @LINE:32
+def restaurantProfile : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.Restaurant.RestaurantManager.restaurantProfile",
+   """
+      function(id) {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "restaurant/" + (""" + implicitly[PathBindable[Integer]].javascriptUnbind + """)("id", id)})
+      }
+   """
+)
+                        
+    
+}
+              
+}
+        
+
+// @LINE:28
+// @LINE:27
+package controllers.Search.javascript {
+
+// @LINE:28
+// @LINE:27
+class ReverseAnswerQueryWithJson {
+    
+
+// @LINE:27
+def preload : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.Search.AnswerQueryWithJson.preload",
+   """
+      function() {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "srs/preload"})
+      }
+   """
+)
+                        
+
+// @LINE:28
+def answer : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.Search.AnswerQueryWithJson.answer",
+   """
+      function(query) {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "search/" + (""" + implicitly[PathBindable[String]].javascriptUnbind + """)("query", encodeURIComponent(query))})
+      }
+   """
+)
+                        
+    
+}
+              
+}
+        
+
+// @LINE:34
 // @LINE:20
 // @LINE:19
 // @LINE:18
 // @LINE:16
 package controllers.UserControl.javascript {
+
+// @LINE:34
+class ReverseLogoutAndSessionClear {
+    
+
+// @LINE:34
+def logout : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.UserControl.LogoutAndSessionClear.logout",
+   """
+      function() {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "logout"})
+      }
+   """
+)
+                        
+    
+}
+              
 
 // @LINE:19
 // @LINE:18
@@ -449,39 +627,6 @@ def profileProvider : JavascriptReverseRoute = JavascriptReverseRoute(
         
 
 
-// @LINE:9
-// @LINE:8
-package controllers.ref {
-
-
-// @LINE:9
-class ReverseWebJarAssets {
-    
-
-// @LINE:9
-def at(file:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.WebJarAssets.at(file), HandlerDef(this, "controllers.WebJarAssets", "at", Seq(classOf[String]), "GET", """""", _prefix + """webjars/$file<.+>""")
-)
-                      
-    
-}
-                          
-
-// @LINE:8
-class ReverseAssets {
-    
-
-// @LINE:8
-def at(path:String, file:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.Assets.at(path, file), HandlerDef(this, "controllers.Assets", "at", Seq(classOf[String], classOf[String]), "GET", """ Map static resources from the /public folder to the /assets URL path""", _prefix + """assets/$file<.+>""")
-)
-                      
-    
-}
-                          
-}
-        
-
 // @LINE:25
 // @LINE:24
 // @LINE:23
@@ -517,6 +662,39 @@ def franchiseProfile(id:Integer): play.api.mvc.HandlerRef[_] = new play.api.mvc.
 // @LINE:23
 def saveFranchiseAndShowProfile(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.Franchise.FranchiseManager.saveFranchiseAndShowProfile(), HandlerDef(this, "controllers.Franchise.FranchiseManager", "saveFranchiseAndShowProfile", Seq(), "POST", """""", _prefix + """saveFranchise""")
+)
+                      
+    
+}
+                          
+}
+        
+
+// @LINE:9
+// @LINE:8
+package controllers.ref {
+
+
+// @LINE:9
+class ReverseWebJarAssets {
+    
+
+// @LINE:9
+def at(file:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.WebJarAssets.at(file), HandlerDef(this, "controllers.WebJarAssets", "at", Seq(classOf[String]), "GET", """""", _prefix + """webjars/$file<.+>""")
+)
+                      
+    
+}
+                          
+
+// @LINE:8
+class ReverseAssets {
+    
+
+// @LINE:8
+def at(path:String, file:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.Assets.at(path, file), HandlerDef(this, "controllers.Assets", "at", Seq(classOf[String], classOf[String]), "GET", """ Map static resources from the /public folder to the /assets URL path""", _prefix + """assets/$file<.+>""")
 )
                       
     
@@ -586,12 +764,88 @@ def index(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
 }
         
 
+// @LINE:32
+// @LINE:31
+// @LINE:30
+package controllers.Restaurant.ref {
+
+
+// @LINE:32
+// @LINE:31
+// @LINE:30
+class ReverseRestaurantManager {
+    
+
+// @LINE:31
+def saveRestaurant(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.Restaurant.RestaurantManager.saveRestaurant(), HandlerDef(this, "controllers.Restaurant.RestaurantManager", "saveRestaurant", Seq(), "POST", """""", _prefix + """restaurantRegistration""")
+)
+                      
+
+// @LINE:30
+def createNewRestaurant(id:Integer): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.Restaurant.RestaurantManager.createNewRestaurant(id), HandlerDef(this, "controllers.Restaurant.RestaurantManager", "createNewRestaurant", Seq(classOf[Integer]), "GET", """""", _prefix + """createNewRestaurant/$id<[^/]+>""")
+)
+                      
+
+// @LINE:32
+def restaurantProfile(id:Integer): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.Restaurant.RestaurantManager.restaurantProfile(id), HandlerDef(this, "controllers.Restaurant.RestaurantManager", "restaurantProfile", Seq(classOf[Integer]), "GET", """""", _prefix + """restaurant/$id<[^/]+>""")
+)
+                      
+    
+}
+                          
+}
+        
+
+// @LINE:28
+// @LINE:27
+package controllers.Search.ref {
+
+
+// @LINE:28
+// @LINE:27
+class ReverseAnswerQueryWithJson {
+    
+
+// @LINE:27
+def preload(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.Search.AnswerQueryWithJson.preload(), HandlerDef(this, "controllers.Search.AnswerQueryWithJson", "preload", Seq(), "GET", """""", _prefix + """srs/preload""")
+)
+                      
+
+// @LINE:28
+def answer(query:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.Search.AnswerQueryWithJson.answer(query), HandlerDef(this, "controllers.Search.AnswerQueryWithJson", "answer", Seq(classOf[String]), "GET", """""", _prefix + """search/$query<[^/]+>""")
+)
+                      
+    
+}
+                          
+}
+        
+
+// @LINE:34
 // @LINE:20
 // @LINE:19
 // @LINE:18
 // @LINE:16
 package controllers.UserControl.ref {
 
+
+// @LINE:34
+class ReverseLogoutAndSessionClear {
+    
+
+// @LINE:34
+def logout(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.UserControl.LogoutAndSessionClear.logout(), HandlerDef(this, "controllers.UserControl.LogoutAndSessionClear", "logout", Seq(), "GET", """""", _prefix + """logout""")
+)
+                      
+    
+}
+                          
 
 // @LINE:19
 // @LINE:18

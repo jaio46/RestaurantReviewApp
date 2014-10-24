@@ -41,8 +41,8 @@ public class FranchiseManager extends Controller{
 		Franchise temp= new Franchise();
 		temp.franchiseName=params.get("Name")[0];
 		temp.franchiseEmail=params.get("Email")[0];
-		temp.franchiseEmail=params.get("Address")[0];
-		temp.franchiseEmail=params.get("Phone")[0];
+		temp.franciseAddress=params.get("Address")[0];
+		temp.franchisePhone=params.get("Phone")[0];
 		temp.createdBy=User.find.where().eq("id", Long.parseLong(val)).findUnique();
 		temp.save();
 		return redirect("/franchise/"+temp.id);

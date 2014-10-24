@@ -48,14 +48,14 @@ Seq[Any](format.raw/*1.50*/("""
 							Franchise
 						</th>
 						<th>
-							Email Address
+							Contact
 						</th>
 					</tr>
 				</thead>
 				<tbody>
 					"""),_display_(Seq[Any](/*28.7*/for( franchise<-franchises ) yield /*28.35*/{_display_(Seq[Any](format.raw/*28.36*/("""
 						<tr>
-							<th> <h5><a class="btn" href="#">"""),_display_(Seq[Any](/*30.42*/franchise/*30.51*/.franchiseName)),format.raw/*30.65*/("""</h5></th>
+							<th> <h5><a class="btn" href="/franchise/"""),_display_(Seq[Any](/*30.50*/franchise/*30.59*/.id)),format.raw/*30.62*/("""">"""),_display_(Seq[Any](/*30.65*/franchise/*30.74*/.franchiseName)),format.raw/*30.88*/("""</h5></th>
 							<th> <h5>"""),_display_(Seq[Any](/*31.18*/franchise/*31.27*/.franchiseEmail)),format.raw/*31.42*/("""</h5></th>
 						</tr>
 					""")))})),format.raw/*33.7*/("""
@@ -81,11 +81,11 @@ Seq[Any](format.raw/*1.50*/("""
 }
                 /*
                     -- GENERATED --
-                    DATE: Tue Oct 21 11:01:49 BDT 2014
+                    DATE: Fri Oct 24 15:56:30 BDT 2014
                     SOURCE: /Users/sheikhahmed/Projects/RestaurantApp/app/views/franchise/franchiseList.scala.html
-                    HASH: a0c9e78ea3c33cbe22e1929129cd6df51516a587
-                    MATRIX: 820->1|962->49|1032->85|1046->91|1092->116|1143->133|1156->139|1201->163|1599->526|1643->554|1682->555|1771->608|1789->617|1825->631|1889->659|1907->668|1944->683|2004->712|2091->764|2105->770|2136->779
-                    LINES: 26->1|29->1|33->5|33->5|33->5|36->8|36->8|36->8|56->28|56->28|56->28|58->30|58->30|58->30|59->31|59->31|59->31|61->33|68->40|68->40|68->40
+                    HASH: 9a299b2c813772fba924b14e5336f4ceac69c851
+                    MATRIX: 820->1|962->49|1032->85|1046->91|1092->116|1143->133|1156->139|1201->163|1593->520|1637->548|1676->549|1773->610|1791->619|1816->622|1855->625|1873->634|1909->648|1973->676|1991->685|2028->700|2088->729|2175->781|2189->787|2220->796
+                    LINES: 26->1|29->1|33->5|33->5|33->5|36->8|36->8|36->8|56->28|56->28|56->28|58->30|58->30|58->30|58->30|58->30|58->30|59->31|59->31|59->31|61->33|68->40|68->40|68->40
                     -- GENERATED --
                 */
             

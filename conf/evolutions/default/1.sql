@@ -70,6 +70,12 @@ create table restaurant_food (
   constraint pk_restaurant_food primary key (id))
 ;
 
+create table tags (
+  id                        integer auto_increment not null,
+  key_words                 varchar(255),
+  constraint pk_tags primary key (id))
+;
+
 create table user (
   id                        bigint auto_increment not null,
   name                      varchar(255),
@@ -120,6 +126,8 @@ drop table friends;
 drop table restaurant;
 
 drop table restaurant_food;
+
+drop table tags;
 
 drop table user;
 

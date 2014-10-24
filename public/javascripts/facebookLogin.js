@@ -42,7 +42,12 @@ window.fbAsyncInit = function() {
 
 function Login()
 {
-
+	FB.init({
+        appId      : '804870622878100', // Set YOUR APP ID
+        status     : true, // check login status
+        cookie     : true, // enable cookies to allow the server to access the session
+        xfbml      : true  // parse XFBML
+    });
     FB.login(function(response) {
         if (response.authResponse)
         {
@@ -111,3 +116,4 @@ function Logout()
     js.src = "http://connect.facebook.net/en_US/all.js";
     ref.parentNode.insertBefore(js, ref);
 }(document));
+

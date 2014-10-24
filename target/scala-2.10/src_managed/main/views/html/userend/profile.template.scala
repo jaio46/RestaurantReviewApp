@@ -36,9 +36,10 @@ Seq[Any](format.raw/*1.27*/("""
 <body>
 """),_display_(Seq[Any](/*9.2*/common/*9.8*/.navbar("Profile"))),format.raw/*9.26*/("""
 
+"""),_display_(Seq[Any](/*11.2*/common/*11.8*/.rating(10,4))),format.raw/*11.21*/("""
+"""),_display_(Seq[Any](/*12.2*/common/*12.8*/.rating(11,4))),format.raw/*12.21*/("""
 
-
-"""),_display_(Seq[Any](/*13.2*/common/*13.8*/.footer())),format.raw/*13.17*/("""
+"""),_display_(Seq[Any](/*14.2*/common/*14.8*/.footer())),format.raw/*14.17*/("""
 
 </body>
 
@@ -54,11 +55,11 @@ Seq[Any](format.raw/*1.27*/("""
 }
                 /*
                     -- GENERATED --
-                    DATE: Tue Oct 21 09:03:15 BDT 2014
+                    DATE: Fri Oct 24 09:01:25 BDT 2014
                     SOURCE: /Users/sheikhahmed/Projects/RestaurantApp/app/views/userend/profile.scala.html
-                    HASH: 28d8690b6deb880d051c7b73c83701c1c896ab4a
-                    MATRIX: 794->1|913->26|984->63|998->69|1035->85|1086->102|1099->108|1138->126|1178->131|1192->137|1223->146
-                    LINES: 26->1|29->1|34->6|34->6|34->6|37->9|37->9|37->9|41->13|41->13|41->13
+                    HASH: 1a75c3252926c694a9ea624ad784ac1f3976077f
+                    MATRIX: 794->1|913->26|984->63|998->69|1035->85|1086->102|1099->108|1138->126|1176->129|1190->135|1225->148|1262->150|1276->156|1311->169|1349->172|1363->178|1394->187
+                    LINES: 26->1|29->1|34->6|34->6|34->6|37->9|37->9|37->9|39->11|39->11|39->11|40->12|40->12|40->12|42->14|42->14|42->14
                     -- GENERATED --
                 */
             
