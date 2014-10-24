@@ -1,6 +1,6 @@
 // @SOURCE:/Users/sheikhahmed/Projects/RestaurantApp/conf/routes
-// @HASH:f653627c5d11c3f70b98c39ca02e786887d9884d
-// @DATE:Fri Oct 24 15:39:14 BDT 2014
+// @HASH:7e73580c16ee1a856b8d4e3f1097fcac0408066f
+// @DATE:Fri Oct 24 23:17:24 BDT 2014
 
 import Routes.{prefix => _prefix, defaultPrefix => _defaultPrefix}
 import play.core._
@@ -147,20 +147,28 @@ def index(): Call = {
 }
                   
 
+// @LINE:33
 // @LINE:32
 // @LINE:31
 // @LINE:30
 package controllers.Restaurant {
 
+// @LINE:33
 // @LINE:32
 // @LINE:31
 // @LINE:30
 class ReverseRestaurantManager {
     
 
+// @LINE:33
+def addFood(): Call = {
+   Call("POST", _prefix + { _defaultPrefix } + "saveFood")
+}
+                                                
+
 // @LINE:31
 def saveRestaurant(): Call = {
-   Call("POST", _prefix + { _defaultPrefix } + "restaurantRegistration")
+   Call("POST", _prefix + { _defaultPrefix } + "saveRestaurant")
 }
                                                 
 
@@ -207,18 +215,18 @@ def answer(query:String): Call = {
 }
                   
 
-// @LINE:34
+// @LINE:35
 // @LINE:20
 // @LINE:19
 // @LINE:18
 // @LINE:16
 package controllers.UserControl {
 
-// @LINE:34
+// @LINE:35
 class ReverseLogoutAndSessionClear {
     
 
-// @LINE:34
+// @LINE:35
 def logout(): Call = {
    Call("GET", _prefix + { _defaultPrefix } + "logout")
 }
@@ -454,23 +462,36 @@ def index : JavascriptReverseRoute = JavascriptReverseRoute(
 }
         
 
+// @LINE:33
 // @LINE:32
 // @LINE:31
 // @LINE:30
 package controllers.Restaurant.javascript {
 
+// @LINE:33
 // @LINE:32
 // @LINE:31
 // @LINE:30
 class ReverseRestaurantManager {
     
 
+// @LINE:33
+def addFood : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.Restaurant.RestaurantManager.addFood",
+   """
+      function() {
+      return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "saveFood"})
+      }
+   """
+)
+                        
+
 // @LINE:31
 def saveRestaurant : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Restaurant.RestaurantManager.saveRestaurant",
    """
       function() {
-      return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "restaurantRegistration"})
+      return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "saveRestaurant"})
       }
    """
 )
@@ -539,18 +560,18 @@ def answer : JavascriptReverseRoute = JavascriptReverseRoute(
 }
         
 
-// @LINE:34
+// @LINE:35
 // @LINE:20
 // @LINE:19
 // @LINE:18
 // @LINE:16
 package controllers.UserControl.javascript {
 
-// @LINE:34
+// @LINE:35
 class ReverseLogoutAndSessionClear {
     
 
-// @LINE:34
+// @LINE:35
 def logout : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.UserControl.LogoutAndSessionClear.logout",
    """
@@ -764,21 +785,29 @@ def index(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
 }
         
 
+// @LINE:33
 // @LINE:32
 // @LINE:31
 // @LINE:30
 package controllers.Restaurant.ref {
 
 
+// @LINE:33
 // @LINE:32
 // @LINE:31
 // @LINE:30
 class ReverseRestaurantManager {
     
 
+// @LINE:33
+def addFood(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.Restaurant.RestaurantManager.addFood(), HandlerDef(this, "controllers.Restaurant.RestaurantManager", "addFood", Seq(), "POST", """""", _prefix + """saveFood""")
+)
+                      
+
 // @LINE:31
 def saveRestaurant(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.Restaurant.RestaurantManager.saveRestaurant(), HandlerDef(this, "controllers.Restaurant.RestaurantManager", "saveRestaurant", Seq(), "POST", """""", _prefix + """restaurantRegistration""")
+   controllers.Restaurant.RestaurantManager.saveRestaurant(), HandlerDef(this, "controllers.Restaurant.RestaurantManager", "saveRestaurant", Seq(), "POST", """""", _prefix + """saveRestaurant""")
 )
                       
 
@@ -826,7 +855,7 @@ def answer(query:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerR
 }
         
 
-// @LINE:34
+// @LINE:35
 // @LINE:20
 // @LINE:19
 // @LINE:18
@@ -834,11 +863,11 @@ def answer(query:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerR
 package controllers.UserControl.ref {
 
 
-// @LINE:34
+// @LINE:35
 class ReverseLogoutAndSessionClear {
     
 
-// @LINE:34
+// @LINE:35
 def logout(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.UserControl.LogoutAndSessionClear.logout(), HandlerDef(this, "controllers.UserControl.LogoutAndSessionClear", "logout", Seq(), "GET", """""", _prefix + """logout""")
 )

@@ -1,0 +1,85 @@
+@(restaurant: models.Restaurants.Restaurant, foodList: List[models.Foods.FoodItem], foodForm : play.data.Form[models.Foods.FoodItem])
+@import math.round
+
+<!DOCTYPE html>
+<html>
+<head>
+    @common.head(restaurant.restaurantName+" - profile")
+</head>
+<body>
+@common.navbar("Profile")
+
+<div class="container">
+	<div class="row clearfix">
+		<div class="col-md-12 column">
+			<h3 class="text-info">
+				@restaurant.restaurantName @common.rating("restaurant/"+restaurant.id,restaurant.rating)
+			</h3>
+		</div>
+	</div>
+	<div class="row clearfix">
+		<div class="col-md-6 column">
+			<img alt="360x360" src="http://lorempixel.com/300/300/food/" />
+		</div>
+		<div class="col-md-6 column">
+			<dl>
+				<dt>
+					Address
+				</dt>
+				<dd>
+					@restaurant.restaurantAddress
+				</dd>
+				<dt>
+				Email
+				</dt>
+				<dd>
+					@restaurant.restaurantEmail
+				</dd>
+				<dt>
+				Phone
+				</dt>
+				<dd>
+				@restaurant.restaurantPhone
+				</dd>
+			</dl>
+		</div>
+	</div>
+	<div class="row clearfix">
+		<div class="col-md-12 column">
+			<table class="table">
+				<thead>
+					<tr>
+						<th>
+						Food Item Name
+						</th>
+						<th>
+						Rating
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+				@for(food<-foodList){
+					<tr>
+						<td>
+							@food.itemName
+						</td>
+						<td>
+						@common.rating("/foodItem/"+food.id,food.rating)
+						</td>
+					</tr>
+				}
+				</tbody>
+			</table>
+			<button type="button" id="addfood" class="btn btn-primary" role="button"
+			data-toggle="modal" data-target="#AddNewFood">Add New Food</button>
+		</div>
+	</div>
+	@views.html.restaurant.AddNewFood(foodForm)
+</div>
+
+
+@common.footer()
+
+</body>
+
+</html>

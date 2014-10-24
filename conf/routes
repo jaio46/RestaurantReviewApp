@@ -30,5 +30,9 @@ GET		/search/:query				controllers.Search.AnswerQueryWithJson.answer(query : Str
 GET		/createNewRestaurant/:id	controllers.Restaurant.RestaurantManager.createNewRestaurant(id : Integer)
 POST	/saveRestaurant				controllers.Restaurant.RestaurantManager.saveRestaurant()
 GET		/restaurant/:id				controllers.Restaurant.RestaurantManager.restaurantProfile(id : Integer)
+POST	/saveFood					controllers.Restaurant.RestaurantManager.addFood()
+
+GET 	/submitRating/restaurant/:id/:rating	controllers.UserFeed.UserFeedOnRestaurant.feedOnRestaurant(id : Integer, rating : Integer)
+GET		/submitRating/food/:id/:rating		controllers.UserFeed.UserFeedOnRestaurant.feenOdFood(id : Integer, rating : Integer)
 
 GET 	/logout						controllers.UserControl.LogoutAndSessionClear.logout()

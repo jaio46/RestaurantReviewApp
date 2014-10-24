@@ -8,6 +8,7 @@ import javax.persistence.ManyToOne;
 import models.Foods.FoodItem;
 import models.User.User;
 import play.db.ebean.Model;
+import play.db.ebean.Model.Finder;
 
 
 @Entity
@@ -20,47 +21,16 @@ public class FeedOnFoodItem extends Model{
 	
 	@Id
 	@GeneratedValue
-	int id;
+	public int id;
 	
 	@ManyToOne
-	User feeder;
+	public User feeder;
 	
 	@ManyToOne
-	FoodItem item;
+	public FoodItem item;
 	
-	double rating;
-
-	public int getId() {
-		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
-	}
-
-	public User getFeeder() {
-		return feeder;
-	}
-
-	public void setFeeder(User feeder) {
-		this.feeder = feeder;
-	}
-
-	public FoodItem getItem() {
-		return item;
-	}
-
-	public void setItem(FoodItem item) {
-		this.item = item;
-	}
-
-	public double getRating() {
-		return rating;
-	}
-
-	public void setRating(double rating) {
-		this.rating = rating;
-	}
+	public double rating;
 	
-	
+	public static Finder<Long,FeedOnFoodItem> find = 
+			new Finder<Long, FeedOnFoodItem> (Long.class, FeedOnFoodItem.class);
 }

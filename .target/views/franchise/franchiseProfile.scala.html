@@ -27,7 +27,7 @@
 				<tbody>
 					@for( restaurant<-restaurants ){
 						<tr>
-							<th> <h5><a class="btn" href="#"></h5>@restaurant.restaurantName</h5></th>
+							<th> <h5><a class="btn" href="/restaurant/@restaurant.id"></h5>@restaurant.restaurantName</h5></th>
 							<th> <h5>@restaurant.rating</th>
 						</tr>
 					}

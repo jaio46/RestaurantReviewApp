@@ -123,7 +123,7 @@ $(window).load(function(){
       })
       // Initialize view with default value
       .each(function () {
-        var val = $(this).find('input').val();
+        var val = Math.round($(this).find('input').val());
         if (val) {
           _paintValue(this, val);
           $(this).find('.rating-clear').show();

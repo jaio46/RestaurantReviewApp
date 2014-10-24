@@ -41,7 +41,7 @@ public class test extends Controller{
     	else
     	{
     		temp=new User();
-    		temp.firstName=obj.findPath("name").textValue();
+    		temp.name=obj.findPath("name").textValue();
     		temp.email=obj.findPath("email").textValue();
     		/*temp.id=Integer.parseInt(obj.findPath("id").textValue());*/
     	}

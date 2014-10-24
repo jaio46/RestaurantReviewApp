@@ -31,7 +31,7 @@ public class FeedOnRestaurant extends Model{
 	public double rating;
 	
 	@ManyToOne(fetch=FetchType.LAZY)
-	Restaurant restaurnat;
+	public Restaurant restaurnat;
 	
 
 	public static Finder<Long,FeedOnRestaurant> find = 

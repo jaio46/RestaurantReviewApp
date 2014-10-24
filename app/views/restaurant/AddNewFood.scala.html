@@ -1,0 +1,31 @@
+@(foodForm : play.data.Form[models.Foods.FoodItem])
+<div class="modal fade" id="AddNewFood" tabindex="-1" role="dialog"
+	aria-labelledby="signInModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"
+					aria-hidden="true">&times;</button>
+				<h4 class="modal-title" id="AddNewFoodLabel">Add New Food</h4>
+			</div>
+			<div class="modal-body">
+			@helper.form(action = controllers.Restaurant.routes.RestaurantManager.addFood()){
+						@helper.input(foodForm("Item Title"),
+								 '_showConstraints -> false) { (id, name, value, args) =>
+									<input type="text" class="form-control" name="@name" id="@id"
+									placeholder='Name for your franchise'>
+							}
+						
+						@helper.input(foodForm("Item Category"),
+									'_showConstraints -> false){(id, name, value, args)=>
+									<input type="text" class="form-control" name="@name" id="@id"
+									placeholder='Email Address'>
+							}
+						<div class="modal-footer">
+							<button type="submit" class="btn btn-success">Confirm</button>
+						</div>
+					}
+					</div>
+		</div>
+	</div>
+</div>
