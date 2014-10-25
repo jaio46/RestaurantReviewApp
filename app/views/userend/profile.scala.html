@@ -1,4 +1,4 @@
-@(user : models.User.User)
+@(user : models.User.User, restaurants : List[models.Restaurants.Restaurant], foods: List[models.Foods.FoodItem])
 
 <!DOCTYPE html>
 <html>
@@ -7,6 +7,76 @@
 </head>
 <body>
 @common.navbar("Profile")
+
+<div class="container">
+	<div class="row clearfix">
+		<div class="col-md-12 column">
+			<div class="row clearfix">
+				<div class="col-md-6 column">
+					<h3 class="text-info">
+						Top Restaurants
+					</h3>
+					<table class="table table-striped">
+						<thead>
+							<tr>
+								<th>
+									Restaurants
+								</th>
+								<th>
+									Rating
+								</th>
+							</tr>
+						</thead>
+						<tbody>
+							@for(restaurant<-restaurants){
+								<tr>
+									<td>
+									<a href='/restaurant/@restaurant.id'>@restaurant.restaurantName</a>
+									</td>
+									<td>
+									@common.rating("restaurant/"+restaurant.id,restaurant.rating)
+									</td>
+								</tr>
+							}
+						</tbody>
+					</table>
+				</div>
+				<div class="col-md-6 column">
+					<h3 class="text-info">
+						Top Food Items
+					</h3>
+					<table class="table table-striped">
+						<thead>
+							<tr>
+								<th>
+									Food Item
+								</th>
+								<th>
+									Rating
+								</th>
+							</tr>
+						</thead>
+						<tbody>
+								@for(food<-foods){
+								<tr>
+								
+									<td>
+										<a href='/restaurant/@food.restaurant.id'> @food.itemName from @food.restaurant.getRestaurantName()</a>
+									</td>
+									<td>
+										@common.rating("food/"+food.id,food.rating)
+									</td>
+									</tr>	
+								}
+								
+							
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
 
 @common.footer()
 

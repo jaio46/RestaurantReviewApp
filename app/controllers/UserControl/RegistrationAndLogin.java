@@ -42,7 +42,7 @@ public class RegistrationAndLogin extends Controller{
     	else
     	{
     		saveSession();
-    		return ok("http://localhost:9000/Profile/"+String.valueOf(temp.id));
+    		return ok("http://localhost:9000/profile");
     	}
     	
     	
@@ -63,7 +63,7 @@ public class RegistrationAndLogin extends Controller{
 		}
 		else if(User.find.where().eq("id",temp.id).findUnique()!=null)
 		{
-			return redirect("/Profile/"+String.valueOf(temp.id));
+			return redirect("/profile");
 		}
 		else
 		{
@@ -80,6 +80,6 @@ public class RegistrationAndLogin extends Controller{
 		userToAdd.userName=params.get("Username")[0];
 		userToAdd.id=temp.id;
 		userToAdd.save();
-		return redirect("/Profile/"+String.valueOf(userToAdd.id));
+		return redirect("/profile");
 	}
 }

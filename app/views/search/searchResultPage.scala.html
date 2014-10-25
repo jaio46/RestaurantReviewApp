@@ -33,7 +33,7 @@
 					 <a class="list-group-item active">Resulets from Foods</a>
 					@for(food<-foods){
 						<div class="list-group-item">
-							<a href='/restaurant/@food.restaurant.id'>@food.itemName from @food.restaurant.restaurantName</a>
+							<a href='/restaurant/@food.restaurant.id'>@food.itemName from @food.restaurant.getRestaurantName()</a>
 						</div>
 					}
 					

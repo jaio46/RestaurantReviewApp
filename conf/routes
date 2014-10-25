@@ -17,7 +17,7 @@ POST    /test/JSON/                 controllers.UserControl.RegistrationAndLogin
 
 GET		/new						controllers.UserControl.RegistrationAndLogin.newUser()
 POST	/userRegistration			controllers.UserControl.RegistrationAndLogin.saveUser()
-GET		/Profile/:userId			controllers.UserControl.Profile.profileProvider(userId : Long)
+GET		/profile					controllers.UserControl.Profile.profileProvider()
 
 GET		/createNewFranchise			controllers.Franchise.FranchiseManager.createNewFranchise()
 POST	/saveFranchise				controllers.Franchise.FranchiseManager.saveFranchiseAndShowProfile()
@@ -35,5 +35,7 @@ POST	/saveFood					controllers.Restaurant.RestaurantManager.addFood()
 
 GET 	/submitRating/restaurant/:id/:rating	controllers.UserFeed.UserFeedOnRestaurant.feedOnRestaurant(id : Integer, rating : Integer)
 GET		/submitRating/food/:id/:rating		controllers.UserFeed.UserFeedOnRestaurant.feedOnFood(id : Integer, rating : Integer)
+
+#GET		/food/:id					controllers.
 
 GET 	/logout						controllers.UserControl.LogoutAndSessionClear.logout()

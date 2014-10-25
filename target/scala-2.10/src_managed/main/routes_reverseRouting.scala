@@ -1,6 +1,6 @@
 // @SOURCE:/Users/sheikhahmed/Projects/RestaurantApp/conf/routes
-// @HASH:12855ac7121808e709fef704c8e84395d578dbda
-// @DATE:Sat Oct 25 10:05:30 BDT 2014
+// @HASH:0a3dce7ad81b478d0bec787df391fc879544df67
+// @DATE:Sat Oct 25 13:28:26 BDT 2014
 
 import Routes.{prefix => _prefix, defaultPrefix => _defaultPrefix}
 import play.core._
@@ -249,18 +249,18 @@ def answer(query:String): Call = {
 }
                   
 
-// @LINE:39
+// @LINE:41
 // @LINE:20
 // @LINE:19
 // @LINE:18
 // @LINE:16
 package controllers.UserControl {
 
-// @LINE:39
+// @LINE:41
 class ReverseLogoutAndSessionClear {
     
 
-// @LINE:39
+// @LINE:41
 def logout(): Call = {
    Call("GET", _prefix + { _defaultPrefix } + "logout")
 }
@@ -301,8 +301,8 @@ class ReverseProfile {
     
 
 // @LINE:20
-def profileProvider(userId:Long): Call = {
-   Call("GET", _prefix + { _defaultPrefix } + "Profile/" + implicitly[PathBindable[Long]].unbind("userId", userId))
+def profileProvider(): Call = {
+   Call("GET", _prefix + { _defaultPrefix } + "profile")
 }
                                                 
     
@@ -643,18 +643,18 @@ def answer : JavascriptReverseRoute = JavascriptReverseRoute(
 }
         
 
-// @LINE:39
+// @LINE:41
 // @LINE:20
 // @LINE:19
 // @LINE:18
 // @LINE:16
 package controllers.UserControl.javascript {
 
-// @LINE:39
+// @LINE:41
 class ReverseLogoutAndSessionClear {
     
 
-// @LINE:39
+// @LINE:41
 def logout : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.UserControl.LogoutAndSessionClear.logout",
    """
@@ -718,8 +718,8 @@ class ReverseProfile {
 def profileProvider : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.UserControl.Profile.profileProvider",
    """
-      function(userId) {
-      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "Profile/" + (""" + implicitly[PathBindable[Long]].javascriptUnbind + """)("userId", userId)})
+      function() {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "profile"})
       }
    """
 )
@@ -973,7 +973,7 @@ def answer(query:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerR
 }
         
 
-// @LINE:39
+// @LINE:41
 // @LINE:20
 // @LINE:19
 // @LINE:18
@@ -981,11 +981,11 @@ def answer(query:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerR
 package controllers.UserControl.ref {
 
 
-// @LINE:39
+// @LINE:41
 class ReverseLogoutAndSessionClear {
     
 
-// @LINE:39
+// @LINE:41
 def logout(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.UserControl.LogoutAndSessionClear.logout(), HandlerDef(this, "controllers.UserControl.LogoutAndSessionClear", "logout", Seq(), "GET", """""", _prefix + """logout""")
 )
@@ -1026,8 +1026,8 @@ class ReverseProfile {
     
 
 // @LINE:20
-def profileProvider(userId:Long): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.UserControl.Profile.profileProvider(userId), HandlerDef(this, "controllers.UserControl.Profile", "profileProvider", Seq(classOf[Long]), "GET", """""", _prefix + """Profile/$userId<[^/]+>""")
+def profileProvider(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.UserControl.Profile.profileProvider(), HandlerDef(this, "controllers.UserControl.Profile", "profileProvider", Seq(), "GET", """""", _prefix + """profile""")
 )
                       
     

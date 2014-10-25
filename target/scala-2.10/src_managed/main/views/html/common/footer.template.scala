@@ -30,11 +30,11 @@ Seq[Any](format.raw/*1.1*/("""<div class="footer" role="contentinfo">
 	<div class="container">
 		<div class="copyright">&copy; 2014</div>
 		<ul class="bs-docs-footer-links muted">
-			<li><a href="/about">About Us</a></li>
-			<li><a href="/contact">Contact</a></li>
-			<li><a href="/terms">Terms and Condition</a></li>
-			<li><a href="/privacy">Privacy Policy</a></li>
-			<li><a href="/help">Help</a></li>
+			<li><a href="#">About Us</a></li>
+			<li><a href="#">Contact</a></li>
+			<li><a href="#">Terms and Condition</a></li>
+			<li><a href="#">Privacy Policy</a></li>
+			<li><a href="#">Help</a></li>
 		</ul>
 	</div>
 </div>"""))}
@@ -49,9 +49,9 @@ Seq[Any](format.raw/*1.1*/("""<div class="footer" role="contentinfo">
 }
                 /*
                     -- GENERATED --
-                    DATE: Sat Sep 27 05:33:16 MYT 2014
+                    DATE: Sat Oct 25 13:36:46 BDT 2014
                     SOURCE: /Users/sheikhahmed/Projects/RestaurantApp/app/views/common/footer.scala.html
-                    HASH: 5d9aabbb4fb10c77bb4520fcedf086486fd0e1c0
+                    HASH: 9eaf9c59a977630a48416410e1db7e81fd9111c6
                     MATRIX: 863->0
                     LINES: 29->1
                     -- GENERATED --

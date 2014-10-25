@@ -41,6 +41,54 @@ public class Franchise extends Model{
 	@ManyToOne
 	public User createdBy;
 	
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getFranchiseName() {
+		return franchiseName;
+	}
+
+	public void setFranchiseName(String franchiseName) {
+		this.franchiseName = franchiseName;
+	}
+
+	public String getFranchiseEmail() {
+		return franchiseEmail;
+	}
+
+	public void setFranchiseEmail(String franchiseEmail) {
+		this.franchiseEmail = franchiseEmail;
+	}
+
+	public String getFranciseAddress() {
+		return franciseAddress;
+	}
+
+	public void setFranciseAddress(String franciseAddress) {
+		this.franciseAddress = franciseAddress;
+	}
+
+	public String getFranchisePhone() {
+		return franchisePhone;
+	}
+
+	public void setFranchisePhone(String franchisePhone) {
+		this.franchisePhone = franchisePhone;
+	}
+
+	public User getCreatedBy() {
+		return createdBy;
+	}
+
+	public void setCreatedBy(User createdBy) {
+		this.createdBy = createdBy;
+	}
+
 	public static Finder<Integer,Franchise> find = 
 			new Finder<Integer, Franchise> (Integer.class, Franchise.class);
 	

@@ -24,7 +24,7 @@ public class RestaurantManager extends Controller{
 	{
 		franchise=Franchise.find.where().eq("id", id).findUnique();
 		List<Restaurant> list=Restaurant.find.where().eq("franchise", franchise).orderBy("rating desc").setMaxRows(5).findList();
-		int cnt=Restaurant.find.where().eq("franchise",franchise).findRowCount();
+		int cnt=Restaurant.find.where().eq("franchise",franchise).findRowCount()-list.size();
 		return ok(views.html.restaurant.restaurantCreation.render(franchise,restaurantForm,list,cnt));
 	}
 	
@@ -70,7 +70,7 @@ public class RestaurantManager extends Controller{
 		item.restaurant=temp;
 		item.save();
 		
-		return ok("saved");
+		return redirect("/restaurant/"+temp.id);
 	}
 	
 }

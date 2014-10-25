@@ -43,6 +43,10 @@ Seq[Any](format.raw/*1.134*/("""
 			<h3 class="text-info">
 				"""),_display_(Seq[Any](/*16.6*/restaurant/*16.16*/.restaurantName)),format.raw/*16.31*/(""" """),_display_(Seq[Any](/*16.33*/common/*16.39*/.rating("restaurant/"+restaurant.id,restaurant.rating))),format.raw/*16.93*/("""
 			</h3>
+			<h5 class="text-info">
+				by <a href="/franchise/"""),_display_(Seq[Any](/*19.29*/restaurant/*19.39*/.franchise.id)),format.raw/*19.52*/("""">"""),_display_(Seq[Any](/*19.55*/restaurant/*19.65*/.franchise.getFranchiseName())),format.raw/*19.94*/("""</a>
+			</h5>
+			
 		</div>
 	</div>
 	<div class="row clearfix">
@@ -55,19 +59,19 @@ Seq[Any](format.raw/*1.134*/("""
 					Address
 				</dt>
 				<dd>
-					"""),_display_(Seq[Any](/*30.7*/restaurant/*30.17*/.restaurantAddress)),format.raw/*30.35*/("""
+					"""),_display_(Seq[Any](/*34.7*/restaurant/*34.17*/.restaurantAddress)),format.raw/*34.35*/("""
 				</dd>
 				<dt>
 				Email
 				</dt>
 				<dd>
-					"""),_display_(Seq[Any](/*36.7*/restaurant/*36.17*/.restaurantEmail)),format.raw/*36.33*/("""
+					"""),_display_(Seq[Any](/*40.7*/restaurant/*40.17*/.restaurantEmail)),format.raw/*40.33*/("""
 				</dd>
 				<dt>
 				Phone
 				</dt>
 				<dd>
-				"""),_display_(Seq[Any](/*42.6*/restaurant/*42.16*/.restaurantPhone)),format.raw/*42.32*/("""
+				"""),_display_(Seq[Any](/*46.6*/restaurant/*46.16*/.restaurantPhone)),format.raw/*46.32*/("""
 				</dd>
 			</dl>
 		</div>
@@ -86,27 +90,27 @@ Seq[Any](format.raw/*1.134*/("""
 					</tr>
 				</thead>
 				<tbody>
-				"""),_display_(Seq[Any](/*61.6*/for(food<-foodList) yield /*61.25*/{_display_(Seq[Any](format.raw/*61.26*/("""
+				"""),_display_(Seq[Any](/*65.6*/for(food<-foodList) yield /*65.25*/{_display_(Seq[Any](format.raw/*65.26*/("""
 					<tr>
 						<td>
-							"""),_display_(Seq[Any](/*64.9*/food/*64.13*/.itemName)),format.raw/*64.22*/("""
+							"""),_display_(Seq[Any](/*68.9*/food/*68.13*/.itemName)),format.raw/*68.22*/("""
 						</td>
 						<td>
-						"""),_display_(Seq[Any](/*67.8*/common/*67.14*/.rating("food/"+food.id,food.rating))),format.raw/*67.50*/("""
+						"""),_display_(Seq[Any](/*71.8*/common/*71.14*/.rating("food/"+food.id,food.rating))),format.raw/*71.50*/("""
 						</td>
 					</tr>
-				""")))})),format.raw/*70.6*/("""
+				""")))})),format.raw/*74.6*/("""
 				</tbody>
 			</table>
 			<button type="button" id="addfood" class="btn btn-primary" role="button"
 			data-toggle="modal" data-target="#AddNewFood">Add New Food</button>
 		</div>
 	</div>
-	"""),_display_(Seq[Any](/*77.3*/views/*77.8*/.html.restaurant.AddNewFood(foodForm))),format.raw/*77.45*/("""
+	"""),_display_(Seq[Any](/*81.3*/views/*81.8*/.html.restaurant.AddNewFood(foodForm))),format.raw/*81.45*/("""
 </div>
 
 
-"""),_display_(Seq[Any](/*81.2*/common/*81.8*/.footer())),format.raw/*81.17*/("""
+"""),_display_(Seq[Any](/*85.2*/common/*85.8*/.footer())),format.raw/*85.17*/("""
 
 </body>
 
@@ -122,11 +126,11 @@ Seq[Any](format.raw/*1.134*/("""
 }
                 /*
                     -- GENERATED --
-                    DATE: Sat Oct 25 06:56:38 BDT 2014
+                    DATE: Sat Oct 25 13:22:17 BDT 2014
                     SOURCE: /Users/sheikhahmed/Projects/RestaurantApp/app/views/restaurant/restaurantProfile.scala.html
-                    HASH: c0f47681dd0ecd88d9ce0c29952874f16031895b
-                    MATRIX: 886->1|1131->133|1158->153|1228->189|1242->195|1308->240|1360->257|1374->263|1414->281|1567->399|1586->409|1623->424|1661->426|1676->432|1752->486|2037->736|2056->746|2096->764|2186->819|2205->829|2243->845|2332->899|2351->909|2389->925|2690->1191|2725->1210|2764->1211|2829->1241|2842->1245|2873->1254|2939->1285|2954->1291|3012->1327|3072->1356|3299->1548|3312->1553|3371->1590|3417->1601|3431->1607|3462->1616
-                    LINES: 26->1|30->1|31->3|35->7|35->7|35->7|38->10|38->10|38->10|44->16|44->16|44->16|44->16|44->16|44->16|58->30|58->30|58->30|64->36|64->36|64->36|70->42|70->42|70->42|89->61|89->61|89->61|92->64|92->64|92->64|95->67|95->67|95->67|98->70|105->77|105->77|105->77|109->81|109->81|109->81
+                    HASH: 07a5b5b656c352a6d89fee7c7a6b9f63b182fbf8
+                    MATRIX: 886->1|1131->133|1158->153|1228->189|1242->195|1308->240|1360->257|1374->263|1414->281|1567->399|1586->409|1623->424|1661->426|1676->432|1752->486|1852->550|1871->560|1906->573|1945->576|1964->586|2015->615|2308->873|2327->883|2367->901|2457->956|2476->966|2514->982|2603->1036|2622->1046|2660->1062|2961->1328|2996->1347|3035->1348|3100->1378|3113->1382|3144->1391|3210->1422|3225->1428|3283->1464|3343->1493|3570->1685|3583->1690|3642->1727|3688->1738|3702->1744|3733->1753
+                    LINES: 26->1|30->1|31->3|35->7|35->7|35->7|38->10|38->10|38->10|44->16|44->16|44->16|44->16|44->16|44->16|47->19|47->19|47->19|47->19|47->19|47->19|62->34|62->34|62->34|68->40|68->40|68->40|74->46|74->46|74->46|93->65|93->65|93->65|96->68|96->68|96->68|99->71|99->71|99->71|102->74|109->81|109->81|109->81|113->85|113->85|113->85
                     -- GENERATED --
                 */
             
