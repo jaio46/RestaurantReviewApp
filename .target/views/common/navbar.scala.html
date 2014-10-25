@@ -11,7 +11,6 @@
 .typeahead,
 .tt-query,
 .tt-hint {
-  width: 396px;
   height: 34px;
   padding: 8px 12px;
   font-size: 20px;
@@ -135,11 +134,19 @@ $('#blood .typeahead').typeahead(null, {
                 <li class="active"><a href="#">Home</a></li>
                 <li><a href="#">Profile</a></li>
             </ul>
-            <form class="navbar-form navbar-left" role="search">
+            <script>
+            function getDone()
+            {
+            	var val=$('#field').val();
+            	$('#ina').val(val);
+            }
+            </script>
+            <form class="navbar-form navbar-left" role="search" action="/answer" method="post">
                 <div class="form-group" id="blood">
-                    <input type="text" class="typeahead" placeholder="Search">
+                     <input type="text" class="typeahead" id="field" placeholder="Search">
+                    <input type="hidden" class="form-control" name="check" id="ina">
                 </div>
-                <button type="submit" class="btn btn-default">Search</button>
+                <button type="submit" class="btn btn-default" onClick="getDone()">Search</button>
             </form>
             <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown">

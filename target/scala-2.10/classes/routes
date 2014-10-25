@@ -26,6 +26,7 @@ GET		/fr/list					controllers.Franchise.FranchiseManager.showAll()
 
 GET		/srs/preload				controllers.Search.AnswerQueryWithJson.preload()
 GET		/search/:query				controllers.Search.AnswerQueryWithJson.answer(query : String)
+POST	/answer						controllers.Search.AnswerQueryWithJson.searchPage()
 
 GET		/createNewRestaurant/:id	controllers.Restaurant.RestaurantManager.createNewRestaurant(id : Integer)
 POST	/saveRestaurant				controllers.Restaurant.RestaurantManager.saveRestaurant()

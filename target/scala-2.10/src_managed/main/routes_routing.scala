@@ -1,6 +1,6 @@
 // @SOURCE:/Users/sheikhahmed/Projects/RestaurantApp/conf/routes
-// @HASH:11b54ba4a3b150d5f11e9f91ee22c08829fe222b
-// @DATE:Sat Oct 25 06:37:37 BDT 2014
+// @HASH:12855ac7121808e709fef704c8e84395d578dbda
+// @DATE:Sat Oct 25 10:05:30 BDT 2014
 
 
 import play.core._
@@ -92,34 +92,38 @@ private[this] lazy val controllers_Search_AnswerQueryWithJson_preload14 = Route(
 private[this] lazy val controllers_Search_AnswerQueryWithJson_answer15 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("search/"),DynamicPart("query", """[^/]+""",true))))
         
 
-// @LINE:30
-private[this] lazy val controllers_Restaurant_RestaurantManager_createNewRestaurant16 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("createNewRestaurant/"),DynamicPart("id", """[^/]+""",true))))
+// @LINE:29
+private[this] lazy val controllers_Search_AnswerQueryWithJson_searchPage16 = Route("POST", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("answer"))))
         
 
 // @LINE:31
-private[this] lazy val controllers_Restaurant_RestaurantManager_saveRestaurant17 = Route("POST", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("saveRestaurant"))))
+private[this] lazy val controllers_Restaurant_RestaurantManager_createNewRestaurant17 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("createNewRestaurant/"),DynamicPart("id", """[^/]+""",true))))
         
 
 // @LINE:32
-private[this] lazy val controllers_Restaurant_RestaurantManager_restaurantProfile18 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("restaurant/"),DynamicPart("id", """[^/]+""",true))))
+private[this] lazy val controllers_Restaurant_RestaurantManager_saveRestaurant18 = Route("POST", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("saveRestaurant"))))
         
 
 // @LINE:33
-private[this] lazy val controllers_Restaurant_RestaurantManager_addFood19 = Route("POST", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("saveFood"))))
+private[this] lazy val controllers_Restaurant_RestaurantManager_restaurantProfile19 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("restaurant/"),DynamicPart("id", """[^/]+""",true))))
         
 
-// @LINE:35
-private[this] lazy val controllers_UserFeed_UserFeedOnRestaurant_feedOnRestaurant20 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("submitRating/restaurant/"),DynamicPart("id", """[^/]+""",true),StaticPart("/"),DynamicPart("rating", """[^/]+""",true))))
+// @LINE:34
+private[this] lazy val controllers_Restaurant_RestaurantManager_addFood20 = Route("POST", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("saveFood"))))
         
 
 // @LINE:36
-private[this] lazy val controllers_UserFeed_UserFeedOnRestaurant_feedOnFood21 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("submitRating/food/"),DynamicPart("id", """[^/]+""",true),StaticPart("/"),DynamicPart("rating", """[^/]+""",true))))
+private[this] lazy val controllers_UserFeed_UserFeedOnRestaurant_feedOnRestaurant21 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("submitRating/restaurant/"),DynamicPart("id", """[^/]+""",true),StaticPart("/"),DynamicPart("rating", """[^/]+""",true))))
         
 
-// @LINE:38
-private[this] lazy val controllers_UserControl_LogoutAndSessionClear_logout22 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("logout"))))
+// @LINE:37
+private[this] lazy val controllers_UserFeed_UserFeedOnRestaurant_feedOnFood22 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("submitRating/food/"),DynamicPart("id", """[^/]+""",true),StaticPart("/"),DynamicPart("rating", """[^/]+""",true))))
         
-def documentation = List(("""GET""", prefix,"""controllers.isdrun.home.index()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """assets/$file<.+>""","""controllers.Assets.at(path:String = "/public", file:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """webjars/$file<.+>""","""controllers.WebJarAssets.at(file:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """User/$user<[^/]+>""","""controllers.isdrun.User.index(user:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """Restaurant/$restaurant<[^/]+>""","""controllers.isdrun.Restaurant.index(restaurant:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """test""","""controllers.isdrun.test.index()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """test/JSON/""","""controllers.UserControl.RegistrationAndLogin.verifier()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """new""","""controllers.UserControl.RegistrationAndLogin.newUser()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """userRegistration""","""controllers.UserControl.RegistrationAndLogin.saveUser()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """Profile/$userId<[^/]+>""","""controllers.UserControl.Profile.profileProvider(userId:Long)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """createNewFranchise""","""controllers.Franchise.FranchiseManager.createNewFranchise()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """saveFranchise""","""controllers.Franchise.FranchiseManager.saveFranchiseAndShowProfile()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """franchise/$id<[^/]+>""","""controllers.Franchise.FranchiseManager.franchiseProfile(id:Integer)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """fr/list""","""controllers.Franchise.FranchiseManager.showAll()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """srs/preload""","""controllers.Search.AnswerQueryWithJson.preload()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """search/$query<[^/]+>""","""controllers.Search.AnswerQueryWithJson.answer(query:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """createNewRestaurant/$id<[^/]+>""","""controllers.Restaurant.RestaurantManager.createNewRestaurant(id:Integer)"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """saveRestaurant""","""controllers.Restaurant.RestaurantManager.saveRestaurant()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """restaurant/$id<[^/]+>""","""controllers.Restaurant.RestaurantManager.restaurantProfile(id:Integer)"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """saveFood""","""controllers.Restaurant.RestaurantManager.addFood()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """submitRating/restaurant/$id<[^/]+>/$rating<[^/]+>""","""controllers.UserFeed.UserFeedOnRestaurant.feedOnRestaurant(id:Integer, rating:Integer)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """submitRating/food/$id<[^/]+>/$rating<[^/]+>""","""controllers.UserFeed.UserFeedOnRestaurant.feedOnFood(id:Integer, rating:Integer)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """logout""","""controllers.UserControl.LogoutAndSessionClear.logout()""")).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
+
+// @LINE:39
+private[this] lazy val controllers_UserControl_LogoutAndSessionClear_logout23 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("logout"))))
+        
+def documentation = List(("""GET""", prefix,"""controllers.isdrun.home.index()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """assets/$file<.+>""","""controllers.Assets.at(path:String = "/public", file:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """webjars/$file<.+>""","""controllers.WebJarAssets.at(file:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """User/$user<[^/]+>""","""controllers.isdrun.User.index(user:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """Restaurant/$restaurant<[^/]+>""","""controllers.isdrun.Restaurant.index(restaurant:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """test""","""controllers.isdrun.test.index()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """test/JSON/""","""controllers.UserControl.RegistrationAndLogin.verifier()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """new""","""controllers.UserControl.RegistrationAndLogin.newUser()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """userRegistration""","""controllers.UserControl.RegistrationAndLogin.saveUser()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """Profile/$userId<[^/]+>""","""controllers.UserControl.Profile.profileProvider(userId:Long)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """createNewFranchise""","""controllers.Franchise.FranchiseManager.createNewFranchise()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """saveFranchise""","""controllers.Franchise.FranchiseManager.saveFranchiseAndShowProfile()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """franchise/$id<[^/]+>""","""controllers.Franchise.FranchiseManager.franchiseProfile(id:Integer)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """fr/list""","""controllers.Franchise.FranchiseManager.showAll()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """srs/preload""","""controllers.Search.AnswerQueryWithJson.preload()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """search/$query<[^/]+>""","""controllers.Search.AnswerQueryWithJson.answer(query:String)"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """answer""","""controllers.Search.AnswerQueryWithJson.searchPage()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """createNewRestaurant/$id<[^/]+>""","""controllers.Restaurant.RestaurantManager.createNewRestaurant(id:Integer)"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """saveRestaurant""","""controllers.Restaurant.RestaurantManager.saveRestaurant()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """restaurant/$id<[^/]+>""","""controllers.Restaurant.RestaurantManager.restaurantProfile(id:Integer)"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """saveFood""","""controllers.Restaurant.RestaurantManager.addFood()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """submitRating/restaurant/$id<[^/]+>/$rating<[^/]+>""","""controllers.UserFeed.UserFeedOnRestaurant.feedOnRestaurant(id:Integer, rating:Integer)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """submitRating/food/$id<[^/]+>/$rating<[^/]+>""","""controllers.UserFeed.UserFeedOnRestaurant.feedOnFood(id:Integer, rating:Integer)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """logout""","""controllers.UserControl.LogoutAndSessionClear.logout()""")).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
   case r @ (_,_,_) => s :+ r.asInstanceOf[(String,String,String)]
   case l => s ++ l.asInstanceOf[List[(String,String,String)]] 
 }}
@@ -255,56 +259,64 @@ case controllers_Search_AnswerQueryWithJson_answer15(params) => {
 }
         
 
-// @LINE:30
-case controllers_Restaurant_RestaurantManager_createNewRestaurant16(params) => {
+// @LINE:29
+case controllers_Search_AnswerQueryWithJson_searchPage16(params) => {
+   call { 
+        invokeHandler(controllers.Search.AnswerQueryWithJson.searchPage(), HandlerDef(this, "controllers.Search.AnswerQueryWithJson", "searchPage", Nil,"POST", """""", Routes.prefix + """answer"""))
+   }
+}
+        
+
+// @LINE:31
+case controllers_Restaurant_RestaurantManager_createNewRestaurant17(params) => {
    call(params.fromPath[Integer]("id", None)) { (id) =>
         invokeHandler(controllers.Restaurant.RestaurantManager.createNewRestaurant(id), HandlerDef(this, "controllers.Restaurant.RestaurantManager", "createNewRestaurant", Seq(classOf[Integer]),"GET", """""", Routes.prefix + """createNewRestaurant/$id<[^/]+>"""))
    }
 }
         
 
-// @LINE:31
-case controllers_Restaurant_RestaurantManager_saveRestaurant17(params) => {
+// @LINE:32
+case controllers_Restaurant_RestaurantManager_saveRestaurant18(params) => {
    call { 
         invokeHandler(controllers.Restaurant.RestaurantManager.saveRestaurant(), HandlerDef(this, "controllers.Restaurant.RestaurantManager", "saveRestaurant", Nil,"POST", """""", Routes.prefix + """saveRestaurant"""))
    }
 }
         
 
-// @LINE:32
-case controllers_Restaurant_RestaurantManager_restaurantProfile18(params) => {
+// @LINE:33
+case controllers_Restaurant_RestaurantManager_restaurantProfile19(params) => {
    call(params.fromPath[Integer]("id", None)) { (id) =>
         invokeHandler(controllers.Restaurant.RestaurantManager.restaurantProfile(id), HandlerDef(this, "controllers.Restaurant.RestaurantManager", "restaurantProfile", Seq(classOf[Integer]),"GET", """""", Routes.prefix + """restaurant/$id<[^/]+>"""))
    }
 }
         
 
-// @LINE:33
-case controllers_Restaurant_RestaurantManager_addFood19(params) => {
+// @LINE:34
+case controllers_Restaurant_RestaurantManager_addFood20(params) => {
    call { 
         invokeHandler(controllers.Restaurant.RestaurantManager.addFood(), HandlerDef(this, "controllers.Restaurant.RestaurantManager", "addFood", Nil,"POST", """""", Routes.prefix + """saveFood"""))
    }
 }
         
 
-// @LINE:35
-case controllers_UserFeed_UserFeedOnRestaurant_feedOnRestaurant20(params) => {
+// @LINE:36
+case controllers_UserFeed_UserFeedOnRestaurant_feedOnRestaurant21(params) => {
    call(params.fromPath[Integer]("id", None), params.fromPath[Integer]("rating", None)) { (id, rating) =>
         invokeHandler(controllers.UserFeed.UserFeedOnRestaurant.feedOnRestaurant(id, rating), HandlerDef(this, "controllers.UserFeed.UserFeedOnRestaurant", "feedOnRestaurant", Seq(classOf[Integer], classOf[Integer]),"GET", """""", Routes.prefix + """submitRating/restaurant/$id<[^/]+>/$rating<[^/]+>"""))
    }
 }
         
 
-// @LINE:36
-case controllers_UserFeed_UserFeedOnRestaurant_feedOnFood21(params) => {
+// @LINE:37
+case controllers_UserFeed_UserFeedOnRestaurant_feedOnFood22(params) => {
    call(params.fromPath[Integer]("id", None), params.fromPath[Integer]("rating", None)) { (id, rating) =>
         invokeHandler(controllers.UserFeed.UserFeedOnRestaurant.feedOnFood(id, rating), HandlerDef(this, "controllers.UserFeed.UserFeedOnRestaurant", "feedOnFood", Seq(classOf[Integer], classOf[Integer]),"GET", """""", Routes.prefix + """submitRating/food/$id<[^/]+>/$rating<[^/]+>"""))
    }
 }
         
 
-// @LINE:38
-case controllers_UserControl_LogoutAndSessionClear_logout22(params) => {
+// @LINE:39
+case controllers_UserControl_LogoutAndSessionClear_logout23(params) => {
    call { 
         invokeHandler(controllers.UserControl.LogoutAndSessionClear.logout(), HandlerDef(this, "controllers.UserControl.LogoutAndSessionClear", "logout", Nil,"GET", """""", Routes.prefix + """logout"""))
    }

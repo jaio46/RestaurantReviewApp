@@ -1,6 +1,6 @@
 // @SOURCE:/Users/sheikhahmed/Projects/RestaurantApp/conf/routes
-// @HASH:11b54ba4a3b150d5f11e9f91ee22c08829fe222b
-// @DATE:Sat Oct 25 06:37:37 BDT 2014
+// @HASH:12855ac7121808e709fef704c8e84395d578dbda
+// @DATE:Sat Oct 25 10:05:30 BDT 2014
 
 import Routes.{prefix => _prefix, defaultPrefix => _defaultPrefix}
 import play.core._
@@ -55,22 +55,22 @@ def saveFranchiseAndShowProfile(): Call = {
 }
                   
 
+// @LINE:37
 // @LINE:36
-// @LINE:35
 package controllers.UserFeed {
 
+// @LINE:37
 // @LINE:36
-// @LINE:35
 class ReverseUserFeedOnRestaurant {
     
 
-// @LINE:36
+// @LINE:37
 def feedOnFood(id:Integer, rating:Integer): Call = {
    Call("GET", _prefix + { _defaultPrefix } + "submitRating/food/" + implicitly[PathBindable[Integer]].unbind("id", id) + "/" + implicitly[PathBindable[Integer]].unbind("rating", rating))
 }
                                                 
 
-// @LINE:35
+// @LINE:36
 def feedOnRestaurant(id:Integer, rating:Integer): Call = {
    Call("GET", _prefix + { _defaultPrefix } + "submitRating/restaurant/" + implicitly[PathBindable[Integer]].unbind("id", id) + "/" + implicitly[PathBindable[Integer]].unbind("rating", rating))
 }
@@ -173,38 +173,38 @@ def index(): Call = {
 }
                   
 
+// @LINE:34
 // @LINE:33
 // @LINE:32
 // @LINE:31
-// @LINE:30
 package controllers.Restaurant {
 
+// @LINE:34
 // @LINE:33
 // @LINE:32
 // @LINE:31
-// @LINE:30
 class ReverseRestaurantManager {
     
 
-// @LINE:33
+// @LINE:34
 def addFood(): Call = {
    Call("POST", _prefix + { _defaultPrefix } + "saveFood")
 }
                                                 
 
-// @LINE:31
+// @LINE:32
 def saveRestaurant(): Call = {
    Call("POST", _prefix + { _defaultPrefix } + "saveRestaurant")
 }
                                                 
 
-// @LINE:30
+// @LINE:31
 def createNewRestaurant(id:Integer): Call = {
    Call("GET", _prefix + { _defaultPrefix } + "createNewRestaurant/" + implicitly[PathBindable[Integer]].unbind("id", id))
 }
                                                 
 
-// @LINE:32
+// @LINE:33
 def restaurantProfile(id:Integer): Call = {
    Call("GET", _prefix + { _defaultPrefix } + "restaurant/" + implicitly[PathBindable[Integer]].unbind("id", id))
 }
@@ -215,10 +215,12 @@ def restaurantProfile(id:Integer): Call = {
 }
                   
 
+// @LINE:29
 // @LINE:28
 // @LINE:27
 package controllers.Search {
 
+// @LINE:29
 // @LINE:28
 // @LINE:27
 class ReverseAnswerQueryWithJson {
@@ -227,6 +229,12 @@ class ReverseAnswerQueryWithJson {
 // @LINE:27
 def preload(): Call = {
    Call("GET", _prefix + { _defaultPrefix } + "srs/preload")
+}
+                                                
+
+// @LINE:29
+def searchPage(): Call = {
+   Call("POST", _prefix + { _defaultPrefix } + "answer")
 }
                                                 
 
@@ -241,18 +249,18 @@ def answer(query:String): Call = {
 }
                   
 
-// @LINE:38
+// @LINE:39
 // @LINE:20
 // @LINE:19
 // @LINE:18
 // @LINE:16
 package controllers.UserControl {
 
-// @LINE:38
+// @LINE:39
 class ReverseLogoutAndSessionClear {
     
 
-// @LINE:38
+// @LINE:39
 def logout(): Call = {
    Call("GET", _prefix + { _defaultPrefix } + "logout")
 }
@@ -366,16 +374,16 @@ def saveFranchiseAndShowProfile : JavascriptReverseRoute = JavascriptReverseRout
 }
         
 
+// @LINE:37
 // @LINE:36
-// @LINE:35
 package controllers.UserFeed.javascript {
 
+// @LINE:37
 // @LINE:36
-// @LINE:35
 class ReverseUserFeedOnRestaurant {
     
 
-// @LINE:36
+// @LINE:37
 def feedOnFood : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.UserFeed.UserFeedOnRestaurant.feedOnFood",
    """
@@ -386,7 +394,7 @@ def feedOnFood : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:35
+// @LINE:36
 def feedOnRestaurant : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.UserFeed.UserFeedOnRestaurant.feedOnRestaurant",
    """
@@ -524,20 +532,20 @@ def index : JavascriptReverseRoute = JavascriptReverseRoute(
 }
         
 
+// @LINE:34
 // @LINE:33
 // @LINE:32
 // @LINE:31
-// @LINE:30
 package controllers.Restaurant.javascript {
 
+// @LINE:34
 // @LINE:33
 // @LINE:32
 // @LINE:31
-// @LINE:30
 class ReverseRestaurantManager {
     
 
-// @LINE:33
+// @LINE:34
 def addFood : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Restaurant.RestaurantManager.addFood",
    """
@@ -548,7 +556,7 @@ def addFood : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:31
+// @LINE:32
 def saveRestaurant : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Restaurant.RestaurantManager.saveRestaurant",
    """
@@ -559,7 +567,7 @@ def saveRestaurant : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:30
+// @LINE:31
 def createNewRestaurant : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Restaurant.RestaurantManager.createNewRestaurant",
    """
@@ -570,7 +578,7 @@ def createNewRestaurant : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:32
+// @LINE:33
 def restaurantProfile : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Restaurant.RestaurantManager.restaurantProfile",
    """
@@ -586,10 +594,12 @@ def restaurantProfile : JavascriptReverseRoute = JavascriptReverseRoute(
 }
         
 
+// @LINE:29
 // @LINE:28
 // @LINE:27
 package controllers.Search.javascript {
 
+// @LINE:29
 // @LINE:28
 // @LINE:27
 class ReverseAnswerQueryWithJson {
@@ -601,6 +611,17 @@ def preload : JavascriptReverseRoute = JavascriptReverseRoute(
    """
       function() {
       return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "srs/preload"})
+      }
+   """
+)
+                        
+
+// @LINE:29
+def searchPage : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.Search.AnswerQueryWithJson.searchPage",
+   """
+      function() {
+      return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "answer"})
       }
    """
 )
@@ -622,18 +643,18 @@ def answer : JavascriptReverseRoute = JavascriptReverseRoute(
 }
         
 
-// @LINE:38
+// @LINE:39
 // @LINE:20
 // @LINE:19
 // @LINE:18
 // @LINE:16
 package controllers.UserControl.javascript {
 
-// @LINE:38
+// @LINE:39
 class ReverseLogoutAndSessionClear {
     
 
-// @LINE:38
+// @LINE:39
 def logout : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.UserControl.LogoutAndSessionClear.logout",
    """
@@ -753,23 +774,23 @@ def saveFranchiseAndShowProfile(): play.api.mvc.HandlerRef[_] = new play.api.mvc
 }
         
 
+// @LINE:37
 // @LINE:36
-// @LINE:35
 package controllers.UserFeed.ref {
 
 
+// @LINE:37
 // @LINE:36
-// @LINE:35
 class ReverseUserFeedOnRestaurant {
     
 
-// @LINE:36
+// @LINE:37
 def feedOnFood(id:Integer, rating:Integer): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.UserFeed.UserFeedOnRestaurant.feedOnFood(id, rating), HandlerDef(this, "controllers.UserFeed.UserFeedOnRestaurant", "feedOnFood", Seq(classOf[Integer], classOf[Integer]), "GET", """""", _prefix + """submitRating/food/$id<[^/]+>/$rating<[^/]+>""")
 )
                       
 
-// @LINE:35
+// @LINE:36
 def feedOnRestaurant(id:Integer, rating:Integer): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.UserFeed.UserFeedOnRestaurant.feedOnRestaurant(id, rating), HandlerDef(this, "controllers.UserFeed.UserFeedOnRestaurant", "feedOnRestaurant", Seq(classOf[Integer], classOf[Integer]), "GET", """""", _prefix + """submitRating/restaurant/$id<[^/]+>/$rating<[^/]+>""")
 )
@@ -874,39 +895,39 @@ def index(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
 }
         
 
+// @LINE:34
 // @LINE:33
 // @LINE:32
 // @LINE:31
-// @LINE:30
 package controllers.Restaurant.ref {
 
 
+// @LINE:34
 // @LINE:33
 // @LINE:32
 // @LINE:31
-// @LINE:30
 class ReverseRestaurantManager {
     
 
-// @LINE:33
+// @LINE:34
 def addFood(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.Restaurant.RestaurantManager.addFood(), HandlerDef(this, "controllers.Restaurant.RestaurantManager", "addFood", Seq(), "POST", """""", _prefix + """saveFood""")
 )
                       
 
-// @LINE:31
+// @LINE:32
 def saveRestaurant(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.Restaurant.RestaurantManager.saveRestaurant(), HandlerDef(this, "controllers.Restaurant.RestaurantManager", "saveRestaurant", Seq(), "POST", """""", _prefix + """saveRestaurant""")
 )
                       
 
-// @LINE:30
+// @LINE:31
 def createNewRestaurant(id:Integer): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.Restaurant.RestaurantManager.createNewRestaurant(id), HandlerDef(this, "controllers.Restaurant.RestaurantManager", "createNewRestaurant", Seq(classOf[Integer]), "GET", """""", _prefix + """createNewRestaurant/$id<[^/]+>""")
 )
                       
 
-// @LINE:32
+// @LINE:33
 def restaurantProfile(id:Integer): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.Restaurant.RestaurantManager.restaurantProfile(id), HandlerDef(this, "controllers.Restaurant.RestaurantManager", "restaurantProfile", Seq(classOf[Integer]), "GET", """""", _prefix + """restaurant/$id<[^/]+>""")
 )
@@ -917,11 +938,13 @@ def restaurantProfile(id:Integer): play.api.mvc.HandlerRef[_] = new play.api.mvc
 }
         
 
+// @LINE:29
 // @LINE:28
 // @LINE:27
 package controllers.Search.ref {
 
 
+// @LINE:29
 // @LINE:28
 // @LINE:27
 class ReverseAnswerQueryWithJson {
@@ -930,6 +953,12 @@ class ReverseAnswerQueryWithJson {
 // @LINE:27
 def preload(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.Search.AnswerQueryWithJson.preload(), HandlerDef(this, "controllers.Search.AnswerQueryWithJson", "preload", Seq(), "GET", """""", _prefix + """srs/preload""")
+)
+                      
+
+// @LINE:29
+def searchPage(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.Search.AnswerQueryWithJson.searchPage(), HandlerDef(this, "controllers.Search.AnswerQueryWithJson", "searchPage", Seq(), "POST", """""", _prefix + """answer""")
 )
                       
 
@@ -944,7 +973,7 @@ def answer(query:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerR
 }
         
 
-// @LINE:38
+// @LINE:39
 // @LINE:20
 // @LINE:19
 // @LINE:18
@@ -952,11 +981,11 @@ def answer(query:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerR
 package controllers.UserControl.ref {
 
 
-// @LINE:38
+// @LINE:39
 class ReverseLogoutAndSessionClear {
     
 
-// @LINE:38
+// @LINE:39
 def logout(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.UserControl.LogoutAndSessionClear.logout(), HandlerDef(this, "controllers.UserControl.LogoutAndSessionClear", "logout", Seq(), "GET", """""", _prefix + """logout""")
 )

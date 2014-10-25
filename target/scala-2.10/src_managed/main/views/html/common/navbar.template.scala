@@ -39,7 +39,6 @@ Seq[Any](format.raw/*1.17*/("""
 .typeahead,
 .tt-query,
 .tt-hint """),format.raw/*13.10*/("""{"""),format.raw/*13.11*/("""
-  width: 396px;
   height: 34px;
   padding: 8px 12px;
   font-size: 20px;
@@ -49,27 +48,27 @@ Seq[Any](format.raw/*1.17*/("""
      -moz-border-radius: 4px;
           border-radius: 4px;
   outline: none;
-"""),format.raw/*24.1*/("""}"""),format.raw/*24.2*/("""
+"""),format.raw/*23.1*/("""}"""),format.raw/*23.2*/("""
 
-.typeahead """),format.raw/*26.12*/("""{"""),format.raw/*26.13*/("""
+.typeahead """),format.raw/*25.12*/("""{"""),format.raw/*25.13*/("""
   background-color: #fff;
-"""),format.raw/*28.1*/("""}"""),format.raw/*28.2*/("""
+"""),format.raw/*27.1*/("""}"""),format.raw/*27.2*/("""
 
-.typeahead:focus """),format.raw/*30.18*/("""{"""),format.raw/*30.19*/("""
+.typeahead:focus """),format.raw/*29.18*/("""{"""),format.raw/*29.19*/("""
   border: 2px solid #0097cf;
-"""),format.raw/*32.1*/("""}"""),format.raw/*32.2*/("""
+"""),format.raw/*31.1*/("""}"""),format.raw/*31.2*/("""
 
-.tt-query """),format.raw/*34.11*/("""{"""),format.raw/*34.12*/("""
+.tt-query """),format.raw/*33.11*/("""{"""),format.raw/*33.12*/("""
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
      -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
           box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-"""),format.raw/*38.1*/("""}"""),format.raw/*38.2*/("""
+"""),format.raw/*37.1*/("""}"""),format.raw/*37.2*/("""
 
-.tt-hint """),format.raw/*40.10*/("""{"""),format.raw/*40.11*/("""
+.tt-hint """),format.raw/*39.10*/("""{"""),format.raw/*39.11*/("""
   color: #999
-"""),format.raw/*42.1*/("""}"""),format.raw/*42.2*/("""
+"""),format.raw/*41.1*/("""}"""),format.raw/*41.2*/("""
 
-.tt-dropdown-menu """),format.raw/*44.19*/("""{"""),format.raw/*44.20*/("""
+.tt-dropdown-menu """),format.raw/*43.19*/("""{"""),format.raw/*43.20*/("""
   width: 422px;
   margin-top: 12px;
   padding: 8px 0;
@@ -82,66 +81,66 @@ Seq[Any](format.raw/*1.17*/("""
   -webkit-box-shadow: 0 5px 10px rgba(0,0,0,.2);
      -moz-box-shadow: 0 5px 10px rgba(0,0,0,.2);
           box-shadow: 0 5px 10px rgba(0,0,0,.2);
-"""),format.raw/*57.1*/("""}"""),format.raw/*57.2*/("""
+"""),format.raw/*56.1*/("""}"""),format.raw/*56.2*/("""
 
-.tt-suggestion """),format.raw/*59.16*/("""{"""),format.raw/*59.17*/("""
+.tt-suggestion """),format.raw/*58.16*/("""{"""),format.raw/*58.17*/("""
   padding: 8px 12px;
   font-size: 20px;
   line-height: 26px;
-"""),format.raw/*63.1*/("""}"""),format.raw/*63.2*/("""
+"""),format.raw/*62.1*/("""}"""),format.raw/*62.2*/("""
 
-.tt-suggestion.tt-is-under-cursor """),format.raw/*65.35*/("""{"""),format.raw/*65.36*/("""
+.tt-suggestion.tt-is-under-cursor """),format.raw/*64.35*/("""{"""),format.raw/*64.36*/("""
   color: #fff;
   background-color: #0097cf;
 
-"""),format.raw/*69.1*/("""}"""),format.raw/*69.2*/("""
+"""),format.raw/*68.1*/("""}"""),format.raw/*68.2*/("""
 
-.tt-suggestion p """),format.raw/*71.18*/("""{"""),format.raw/*71.19*/("""
+.tt-suggestion p """),format.raw/*70.18*/("""{"""),format.raw/*70.19*/("""
   margin: 0;
-"""),format.raw/*73.1*/("""}"""),format.raw/*73.2*/("""
+"""),format.raw/*72.1*/("""}"""),format.raw/*72.2*/("""
 </style> 
 
 <script>
-$(window).load(function()"""),format.raw/*77.26*/("""{"""),format.raw/*77.27*/("""
+$(window).load(function()"""),format.raw/*76.26*/("""{"""),format.raw/*76.27*/("""
 // Instantiate the Bloodhound suggestion engine
-var movies = new Bloodhound("""),format.raw/*79.29*/("""{"""),format.raw/*79.30*/("""
+var movies = new Bloodhound("""),format.raw/*78.29*/("""{"""),format.raw/*78.30*/("""
     datumTokenizer: Bloodhound.tokenizers.obj.whitespace('value'),
   	queryTokenizer: Bloodhound.tokenizers.whitespace,
     
     limit:10,
-    prefetch: """),format.raw/*84.15*/("""{"""),format.raw/*84.16*/("""
+    prefetch: """),format.raw/*83.15*/("""{"""),format.raw/*83.16*/("""
         url: 'http://localhost:9000/srs/preload',
         
-        filter: function (list) """),format.raw/*87.33*/("""{"""),format.raw/*87.34*/("""
+        filter: function (list) """),format.raw/*86.33*/("""{"""),format.raw/*86.34*/("""
             // Map the remote source JSON array to a JavaScript array
-            return $.map(list, function (movie) """),format.raw/*89.49*/("""{"""),format.raw/*89.50*/("""
-                return """),format.raw/*90.24*/("""{"""),format.raw/*90.25*/(""" value : movie """),format.raw/*90.40*/("""}"""),format.raw/*90.41*/(""";
-            """),format.raw/*91.13*/("""}"""),format.raw/*91.14*/(""");
-        """),format.raw/*92.9*/("""}"""),format.raw/*92.10*/("""
-    """),format.raw/*93.5*/("""}"""),format.raw/*93.6*/(""",
+            return $.map(list, function (movie) """),format.raw/*88.49*/("""{"""),format.raw/*88.50*/("""
+                return """),format.raw/*89.24*/("""{"""),format.raw/*89.25*/(""" value : movie """),format.raw/*89.40*/("""}"""),format.raw/*89.41*/(""";
+            """),format.raw/*90.13*/("""}"""),format.raw/*90.14*/(""");
+        """),format.raw/*91.9*/("""}"""),format.raw/*91.10*/("""
+    """),format.raw/*92.5*/("""}"""),format.raw/*92.6*/(""",
     
-    remote: """),format.raw/*95.13*/("""{"""),format.raw/*95.14*/("""
+    remote: """),format.raw/*94.13*/("""{"""),format.raw/*94.14*/("""
     
     	url: 'http://localhost:9000/search/%QUERY',
-        filter: function (list) """),format.raw/*98.33*/("""{"""),format.raw/*98.34*/("""
+        filter: function (list) """),format.raw/*97.33*/("""{"""),format.raw/*97.34*/("""
             // Map the remote source JSON array to a JavaScript array
-            return $.map(list, function (movie) """),format.raw/*100.49*/("""{"""),format.raw/*100.50*/("""
-                return """),format.raw/*101.24*/("""{"""),format.raw/*101.25*/(""" value : movie """),format.raw/*101.40*/("""}"""),format.raw/*101.41*/(""";
-            """),format.raw/*102.13*/("""}"""),format.raw/*102.14*/(""");
-        """),format.raw/*103.9*/("""}"""),format.raw/*103.10*/("""
-    """),format.raw/*104.5*/("""}"""),format.raw/*104.6*/("""
-"""),format.raw/*105.1*/("""}"""),format.raw/*105.2*/(""");
+            return $.map(list, function (movie) """),format.raw/*99.49*/("""{"""),format.raw/*99.50*/("""
+                return """),format.raw/*100.24*/("""{"""),format.raw/*100.25*/(""" value : movie """),format.raw/*100.40*/("""}"""),format.raw/*100.41*/(""";
+            """),format.raw/*101.13*/("""}"""),format.raw/*101.14*/(""");
+        """),format.raw/*102.9*/("""}"""),format.raw/*102.10*/("""
+    """),format.raw/*103.5*/("""}"""),format.raw/*103.6*/("""
+"""),format.raw/*104.1*/("""}"""),format.raw/*104.2*/(""");
 
 // Initialize the Bloodhound suggestion engine
 movies.initialize();
 
 // Instantiate the Typeahead UI
-$('#blood .typeahead').typeahead(null, """),format.raw/*111.40*/("""{"""),format.raw/*111.41*/("""
+$('#blood .typeahead').typeahead(null, """),format.raw/*110.40*/("""{"""),format.raw/*110.41*/("""
 	name: 'movies',
     displayKey: 'value',
     source: movies.ttAdapter()
+"""),format.raw/*114.1*/("""}"""),format.raw/*114.2*/(""");
 """),format.raw/*115.1*/("""}"""),format.raw/*115.2*/(""");
-"""),format.raw/*116.1*/("""}"""),format.raw/*116.2*/(""");
 </script>
 
 <nav class="navbar navbar-default" role="navigation">
@@ -163,11 +162,19 @@ $('#blood .typeahead').typeahead(null, """),format.raw/*111.40*/("""{"""),format
                 <li class="active"><a href="#">Home</a></li>
                 <li><a href="#">Profile</a></li>
             </ul>
-            <form class="navbar-form navbar-left" role="search">
+            <script>
+            function getDone()
+            """),format.raw/*139.13*/("""{"""),format.raw/*139.14*/("""
+            	var val=$('#field').val();
+            	$('#ina').val(val);
+            """),format.raw/*142.13*/("""}"""),format.raw/*142.14*/("""
+            </script>
+            <form class="navbar-form navbar-left" role="search" action="/answer" method="post">
                 <div class="form-group" id="blood">
-                    <input type="text" class="typeahead" placeholder="Search">
+                     <input type="text" class="typeahead" id="field" placeholder="Search">
+                    <input type="hidden" class="form-control" name="check" id="ina">
                 </div>
-                <button type="submit" class="btn btn-default">Search</button>
+                <button type="submit" class="btn btn-default" onClick="getDone()">Search</button>
             </form>
             <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown">
@@ -196,11 +203,11 @@ $('#blood .typeahead').typeahead(null, """),format.raw/*111.40*/("""{"""),format
 }
                 /*
                     -- GENERATED --
-                    DATE: Sat Oct 25 08:08:11 BDT 2014
+                    DATE: Sat Oct 25 10:16:41 BDT 2014
                     SOURCE: /Users/sheikhahmed/Projects/RestaurantApp/app/views/common/navbar.scala.html
-                    HASH: d123c1a9c6dfd91362d13af1147bd7d0ddf05259
-                    MATRIX: 782->1|891->16|1002->100|1030->101|1077->122|1104->123|1166->157|1195->158|1449->385|1477->386|1518->399|1547->400|1601->427|1629->428|1676->447|1705->448|1762->478|1790->479|1830->491|1859->492|2067->673|2095->674|2134->685|2163->686|2205->701|2233->702|2281->722|2310->723|2721->1107|2749->1108|2794->1125|2823->1126|2912->1188|2940->1189|3004->1225|3033->1226|3106->1272|3134->1273|3181->1292|3210->1293|3251->1307|3279->1308|3353->1354|3382->1355|3487->1432|3516->1433|3698->1587|3727->1588|3847->1680|3876->1681|4023->1800|4052->1801|4104->1825|4133->1826|4176->1841|4205->1842|4247->1856|4276->1857|4314->1868|4343->1869|4375->1874|4403->1875|4450->1894|4479->1895|4594->1982|4623->1983|4771->2102|4801->2103|4854->2127|4884->2128|4928->2143|4958->2144|5001->2158|5031->2159|5070->2170|5100->2171|5133->2176|5162->2177|5191->2178|5220->2179|5393->2323|5423->2324|5525->2398|5554->2399|5585->2402|5614->2403
-                    LINES: 26->1|29->1|35->7|35->7|37->9|37->9|41->13|41->13|52->24|52->24|54->26|54->26|56->28|56->28|58->30|58->30|60->32|60->32|62->34|62->34|66->38|66->38|68->40|68->40|70->42|70->42|72->44|72->44|85->57|85->57|87->59|87->59|91->63|91->63|93->65|93->65|97->69|97->69|99->71|99->71|101->73|101->73|105->77|105->77|107->79|107->79|112->84|112->84|115->87|115->87|117->89|117->89|118->90|118->90|118->90|118->90|119->91|119->91|120->92|120->92|121->93|121->93|123->95|123->95|126->98|126->98|128->100|128->100|129->101|129->101|129->101|129->101|130->102|130->102|131->103|131->103|132->104|132->104|133->105|133->105|139->111|139->111|143->115|143->115|144->116|144->116
+                    HASH: 2b2b371d06eb1149c4862b445c5d6cbf8506a7fa
+                    MATRIX: 782->1|891->16|1002->100|1030->101|1077->122|1104->123|1166->157|1195->158|1433->369|1461->370|1502->383|1531->384|1585->411|1613->412|1660->431|1689->432|1746->462|1774->463|1814->475|1843->476|2051->657|2079->658|2118->669|2147->670|2189->685|2217->686|2265->706|2294->707|2705->1091|2733->1092|2778->1109|2807->1110|2896->1172|2924->1173|2988->1209|3017->1210|3090->1256|3118->1257|3165->1276|3194->1277|3235->1291|3263->1292|3337->1338|3366->1339|3471->1416|3500->1417|3682->1571|3711->1572|3831->1664|3860->1665|4007->1784|4036->1785|4088->1809|4117->1810|4160->1825|4189->1826|4231->1840|4260->1841|4298->1852|4327->1853|4359->1858|4387->1859|4434->1878|4463->1879|4578->1966|4607->1967|4754->2086|4783->2087|4836->2111|4866->2112|4910->2127|4940->2128|4983->2142|5013->2143|5052->2154|5082->2155|5115->2160|5144->2161|5173->2162|5202->2163|5375->2307|5405->2308|5507->2382|5536->2383|5567->2386|5596->2387|6666->3428|6696->3429|6811->3515|6841->3516
+                    LINES: 26->1|29->1|35->7|35->7|37->9|37->9|41->13|41->13|51->23|51->23|53->25|53->25|55->27|55->27|57->29|57->29|59->31|59->31|61->33|61->33|65->37|65->37|67->39|67->39|69->41|69->41|71->43|71->43|84->56|84->56|86->58|86->58|90->62|90->62|92->64|92->64|96->68|96->68|98->70|98->70|100->72|100->72|104->76|104->76|106->78|106->78|111->83|111->83|114->86|114->86|116->88|116->88|117->89|117->89|117->89|117->89|118->90|118->90|119->91|119->91|120->92|120->92|122->94|122->94|125->97|125->97|127->99|127->99|128->100|128->100|128->100|128->100|129->101|129->101|130->102|130->102|131->103|131->103|132->104|132->104|138->110|138->110|142->114|142->114|143->115|143->115|167->139|167->139|170->142|170->142
                     -- GENERATED --
                 */
             
