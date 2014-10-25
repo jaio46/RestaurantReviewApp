@@ -82,8 +82,19 @@ var movies = new Bloodhound({
     
     limit:10,
     prefetch: {
-        url: 'http://localhost:9000/search/all',
+        url: 'http://localhost:9000/srs/preload',
         
+        filter: function (list) {
+            // Map the remote source JSON array to a JavaScript array
+            return $.map(list, function (movie) {
+                return { value : movie };
+            });
+        }
+    },
+    
+    remote: {
+    
+    	url: 'http://localhost:9000/search/%QUERY',
         filter: function (list) {
             // Map the remote source JSON array to a JavaScript array
             return $.map(list, function (movie) {

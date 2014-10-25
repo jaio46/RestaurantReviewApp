@@ -17,7 +17,7 @@ public class UserFeedOnRestaurant extends Controller{
 		{
 			return redirect("/");
 		}
-		User user=User.find.where().eq("id", Integer.parseInt(val)).findUnique();
+		User user=User.find.where().eq("id", Long.parseLong(val)).findUnique();
 		Restaurant temp=Restaurant.find.where().eq("id", restaurantId).findUnique();
 		int ret=(int)((double)temp.rating*temp.ratedBy);
 		FeedOnRestaurant x=FeedOnRestaurant.find.where().eq("feeder", user).eq("restaurnat", temp).findUnique();
@@ -25,26 +25,25 @@ public class UserFeedOnRestaurant extends Controller{
 		{
 			//new
 			x=new FeedOnRestaurant();
-			x.rating=rating;
-			x.feeder=user;
-			x.restaurnat=temp;
+			x.setRating(rating);
+			x.setFeeder(user);
+			x.setRestaurnat(temp);
 			x.save();
-			temp.ratedBy++;
+			temp.setRatedBy(temp.ratedBy+1);
 			ret+=x.rating;
-			temp.rating=(double)ret/temp.ratedBy;
+			temp.setRating((double)ret/temp.ratedBy);
 			temp.update();
 		}
 		else
 		{
 			ret-=x.rating;
-			x.rating=rating;
+			x.setRating(rating);
 			x.update();
 			ret+=x.rating;
-			temp.rating=(double)ret/temp.ratedBy;
+			temp.setRating((double)ret/temp.ratedBy);
 			temp.update();
 		}
 		
-		//update in restauarant
 		
 		return ok(String.valueOf(temp.rating));
 	}
@@ -56,18 +55,31 @@ public class UserFeedOnRestaurant extends Controller{
 		{
 			return redirect("/");
 		}
-		User user=User.find.where().eq("id", Integer.parseInt(val)).findUnique();
+		User user=User.find.where().eq("id", Long.parseLong(val)).findUnique();
 		FoodItem item=FoodItem.find.where().eq("id", foodId).findUnique();
 		int ret=(int)((double)item.ratedBy*item.rating);
 		FeedOnFoodItem feed=FeedOnFoodItem.find.where().eq("feeder", user).eq("item", item).findUnique();
 		if(feed==null)
 		{
-			
+			feed=new FeedOnFoodItem();
+			feed.setRating(rating);
+			feed.setFeeder(user);
+			feed.setItem(item);
+			feed.save();
+			item.setRatedBy(item.ratedBy+1);
+			ret+=rating;
+			item.setRating((double)ret/item.ratedBy);
+			item.update();
 		}
 		else
 		{
-			
+			ret-=feed.rating;
+			feed.setRating(rating);
+			feed.update();
+			ret+=rating;
+			item.setRating((double)ret/item.ratedBy);
+			item.update();
 		}
-		return ok("");
+		return ok(String.valueOf(item.id));
 	}
 }

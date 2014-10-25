@@ -23,6 +23,7 @@ public class FeedOnFoodItem extends Model{
 	@GeneratedValue
 	public int id;
 	
+
 	@ManyToOne
 	public User feeder;
 	
@@ -30,6 +31,38 @@ public class FeedOnFoodItem extends Model{
 	public FoodItem item;
 	
 	public double rating;
+	
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public User getFeeder() {
+		return feeder;
+	}
+
+	public void setFeeder(User feeder) {
+		this.feeder = feeder;
+	}
+
+	public FoodItem getItem() {
+		return item;
+	}
+
+	public void setItem(FoodItem item) {
+		this.item = item;
+	}
+
+	public double getRating() {
+		return rating;
+	}
+
+	public void setRating(double rating) {
+		this.rating = rating;
+	}
 	
 	public static Finder<Long,FeedOnFoodItem> find = 
 			new Finder<Long, FeedOnFoodItem> (Long.class, FeedOnFoodItem.class);

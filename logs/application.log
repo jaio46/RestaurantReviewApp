@@ -1,449 +1,780 @@
-2014-10-24 21:28:47,857 - [INFO] - from play in pool-77-thread-5 
+2014-10-25 06:58:50,800 - [INFO] - from play in pool-31-thread-2 
 Listening for HTTP on /0:0:0:0:0:0:0:0:9000
 
-2014-10-24 21:29:02,299 - [INFO] - from play in play-internal-execution-context-1 
+2014-10-25 06:58:54,162 - [INFO] - from play in play-internal-execution-context-1 
 datasource [jdbc:mysql://localhost/restaurantdb] bound to JNDI as DefaultDS
 
-2014-10-24 21:29:02,729 - [INFO] - from play in play-internal-execution-context-1 
+2014-10-25 06:58:54,581 - [INFO] - from play in play-internal-execution-context-1 
 database [default] connected at jdbc:mysql://localhost/restaurantdb
 
-2014-10-24 21:29:03,669 - [ERROR] - from application in New I/O worker #1 
-
-
-! @6k1lgc825 - Internal server error, for (GET) [/] ->
-
-play.api.db.evolutions.InvalidDatabaseRevision: Database 'default' needs evolution![An SQL script need to be run on your database.]
-	at play.api.db.evolutions.EvolutionsPlugin$$anonfun$onStart$1$$anonfun$apply$1.apply$mcV$sp(Evolutions.scala:486) ~[na:na]
-	at play.api.db.evolutions.EvolutionsPlugin.withLock(Evolutions.scala:507) ~[na:na]
-	at play.api.db.evolutions.EvolutionsPlugin$$anonfun$onStart$1.apply(Evolutions.scala:461) ~[na:na]
-	at play.api.db.evolutions.EvolutionsPlugin$$anonfun$onStart$1.apply(Evolutions.scala:459) ~[na:na]
-	at scala.collection.immutable.List.foreach(List.scala:318) ~[na:na]
-	at play.api.db.evolutions.EvolutionsPlugin.onStart(Evolutions.scala:459) ~[na:na]
-	at play.api.Play$$anonfun$start$1$$anonfun$apply$mcV$sp$1.apply(Play.scala:88) ~[na:na]
-	at play.api.Play$$anonfun$start$1$$anonfun$apply$mcV$sp$1.apply(Play.scala:88) ~[na:na]
-	at scala.collection.immutable.List.foreach(List.scala:318) ~[na:na]
-	at play.api.Play$$anonfun$start$1.apply$mcV$sp(Play.scala:88) ~[na:na]
-	at play.api.Play$$anonfun$start$1.apply(Play.scala:88) ~[na:na]
-	at play.api.Play$$anonfun$start$1.apply(Play.scala:88) ~[na:na]
-	at play.utils.Threads$.withContextClassLoader(Threads.scala:18) ~[na:na]
-	at play.api.Play$.start(Play.scala:87) ~[na:na]
-	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1$$anonfun$1.apply(ApplicationProvider.scala:139) ~[na:na]
-	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1$$anonfun$1.apply(ApplicationProvider.scala:112) ~[na:na]
-	at scala.Option.map(Option.scala:145) ~[na:na]
-	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1.apply(ApplicationProvider.scala:112) ~[na:na]
-	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1.apply(ApplicationProvider.scala:110) ~[na:na]
-	at scala.util.Success.flatMap(Try.scala:200) ~[na:na]
-	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:110) ~[na:na]
-	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:102) ~[na:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[na:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[na:na]
-	at com.typesafe.trace.FutureRunnable.run(FutureTrace.scala:119) ~[na:na]
-	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[na:na]
-	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[na:na]
-	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[na:na]
-	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[na:na]
-	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[na:na]
-
-2014-10-24 21:29:10,119 - [INFO] - from play in play-internal-execution-context-1 
-datasource [jdbc:mysql://localhost/restaurantdb] bound to JNDI as DefaultDS
-
-2014-10-24 21:29:10,164 - [INFO] - from play in play-internal-execution-context-1 
-database [default] connected at jdbc:mysql://localhost/restaurantdb
-
-2014-10-24 21:29:10,255 - [INFO] - from play in play-internal-execution-context-1 
+2014-10-25 06:58:55,852 - [INFO] - from play in play-internal-execution-context-1 
 Application started (Dev)
 
-2014-10-24 23:09:24,358 - [ERROR] - from application in New I/O worker #7 
+2014-10-25 06:59:22,526 - [ERROR] - from play in play-internal-execution-context-1 
+Cannot invoke the action, eventually got an error: java.lang.NumberFormatException: For input string: "4761113682622"
+
+2014-10-25 06:59:22,560 - [ERROR] - from application in play-internal-execution-context-1 
 
 
-! @6k1m3gmc0 - Internal server error, for (GET) [/createNewRestaurant/1] ->
+! @6k1od95k5 - Internal server error, for (GET) [/submitRating/food/1/4] ->
 
-play.PlayExceptions$CompilationException: Compilation error[value addFood is not a member of controllers.Restaurant.ReverseRestaurantManager]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
-	at scala.Option.map(Option.scala:145) ~[na:na]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:304) ~[na:na]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:298) ~[na:na]
-	at scala.Option.map(Option.scala:145) ~[na:na]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:298) ~[na:na]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:296) ~[na:na]
-	at scala.util.Either$LeftProjection.map(Either.scala:377) ~[na:na]
-	at play.PlayReloader$$anon$1.reload(PlayReloader.scala:296) ~[na:na]
-	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:104) ~[na:na]
-	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:102) ~[na:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[na:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[na:na]
-	at com.typesafe.trace.FutureRunnable.run(FutureTrace.scala:119) ~[na:na]
-	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[na:na]
-	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[na:na]
-	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[na:na]
-	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[na:na]
-	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[na:na]
+play.api.Application$$anon$1: Execution exception[[NumberFormatException: For input string: "4761113682622"]]
+	at play.api.Application$class.handleError(Application.scala:293) ~[na:na]
+	at play.api.DefaultApplication.handleError(Application.scala:399) [na:na]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$3.apply(PlayDefaultUpstreamHandler.scala:264) [na:na]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$3.apply(PlayDefaultUpstreamHandler.scala:264) [na:na]
+	at scala.Option.map(Option.scala:145) [na:na]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:264) [na:na]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:260) [na:na]
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:344) [na:na]
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:343) [na:na]
+	at com.typesafe.trace.FutureCallback.apply(FutureTrace.scala:136) [na:na]
+	at com.typesafe.trace.FutureCallback.apply(FutureTrace.scala:127) [na:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [na:na]
+	at play.api.libs.iteratee.Execution$$anon$1.execute_aroundBody0(Execution.scala:43) [na:na]
+	at play.api.libs.iteratee.Execution$$anon$1.execute_aroundBody1$advice(Execution.scala:138) [na:na]
+	at play.api.libs.iteratee.Execution$$anon$1.execute(Execution.scala:1) [na:na]
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [na:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete_aroundBody2(Promise.scala:248) [na:na]
+	at scala.concurrent.impl.Promise$DefaultPromise$AjcClosure3.run(Promise.scala:1) [na:na]
+	at com.typesafe.trace.FutureTraceAspect.ajc$around$com_typesafe_trace_FutureTraceAspect$4$3fd2d6f0proceed(FutureTraceAspect.aj:148) [na:na]
+	at com.typesafe.trace.FutureTraceAspect.ajc$around$com_typesafe_trace_FutureTraceAspect$4$3fd2d6f0(FutureTraceAspect.aj:150) [na:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:244) [na:na]
+	at scala.concurrent.Promise$class.complete(Promise.scala:55) [na:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [na:na]
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:235) [na:na]
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:235) [na:na]
+	at com.typesafe.trace.FutureCallback.apply(FutureTrace.scala:136) [na:na]
+	at com.typesafe.trace.FutureCallback.apply(FutureTrace.scala:127) [na:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [na:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) [na:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [na:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [na:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [na:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [na:na]
+Caused by: java.lang.NumberFormatException: For input string: "4761113682622"
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65) ~[na:1.8.0_20]
+	at java.lang.Integer.parseInt(Integer.java:583) ~[na:1.8.0_20]
+	at java.lang.Integer.parseInt(Integer.java:615) ~[na:1.8.0_20]
+	at controllers.UserFeed.UserFeedOnRestaurant.feedOnFood(UserFeedOnRestaurant.java:59) ~[na:na]
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$22$$anonfun$apply$22.apply(routes_routing.scala:301) ~[na:na]
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$22$$anonfun$apply$22.apply(routes_routing.scala:301) ~[na:na]
+	at play.core.Router$HandlerInvoker$$anon$7$$anon$2.invocation(Router.scala:183) ~[na:na]
+	at play.core.Router$Routes$$anon$1.invocation(Router.scala:377) ~[na:na]
+	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:56) ~[na:na]
+	at play.core.j.JavaAction$$anon$3.apply(JavaAction.scala:91) ~[na:na]
+	at play.core.j.JavaAction$$anon$3.apply(JavaAction.scala:90) ~[na:na]
+	at play.core.j.FPromiseHelper$$anonfun$flatMap$1.apply(FPromiseHelper.scala:82) ~[na:na]
+	at play.core.j.FPromiseHelper$$anonfun$flatMap$1.apply(FPromiseHelper.scala:82) ~[na:na]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:251) ~[na:na]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) ~[na:na]
+	at com.typesafe.trace.FutureCallback.apply(FutureTrace.scala:136) [na:na]
+	at com.typesafe.trace.FutureCallback.apply(FutureTrace.scala:127) [na:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [na:na]
+	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:37) ~[na:na]
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:39) ~[na:na]
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:385) ~[na:na]
+	... 4 common frames omitted
 
-2014-10-24 23:09:53,168 - [ERROR] - from application in New I/O worker #7 
+2014-10-25 06:59:28,298 - [ERROR] - from play in play-internal-execution-context-1 
+Cannot invoke the action, eventually got an error: java.lang.NumberFormatException: For input string: "4761113682622"
 
-
-! @6k1m3id26 - Internal server error, for (GET) [/createNewRestaurant/1] ->
-
-play.PlayExceptions$CompilationException: Compilation error[value addFood is not a member of controllers.Restaurant.ReverseRestaurantManager]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
-	at scala.Option.map(Option.scala:145) ~[na:na]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:304) ~[na:na]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:298) ~[na:na]
-	at scala.Option.map(Option.scala:145) ~[na:na]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:298) ~[na:na]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:296) ~[na:na]
-	at scala.util.Either$LeftProjection.map(Either.scala:377) ~[na:na]
-	at play.PlayReloader$$anon$1.reload(PlayReloader.scala:296) ~[na:na]
-	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:104) ~[na:na]
-	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:102) ~[na:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[na:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[na:na]
-	at com.typesafe.trace.FutureRunnable.run(FutureTrace.scala:119) ~[na:na]
-	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[na:na]
-	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[na:na]
-	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[na:na]
-	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[na:na]
-	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[na:na]
-
-2014-10-24 23:17:26,489 - [ERROR] - from application in New I/O worker #7 
-
-
-! @6k1m4i7hg - Internal server error, for (GET) [/createNewRestaurant/1] ->
-
-play.PlayExceptions$CompilationException: Compilation error[not found: value restaurantForm]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
-	at scala.Option.map(Option.scala:145) ~[na:na]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:304) ~[na:na]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:298) ~[na:na]
-	at scala.Option.map(Option.scala:145) ~[na:na]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:298) ~[na:na]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:296) ~[na:na]
-	at scala.util.Either$LeftProjection.map(Either.scala:377) ~[na:na]
-	at play.PlayReloader$$anon$1.reload(PlayReloader.scala:296) ~[na:na]
-	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:104) ~[na:na]
-	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:102) ~[na:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[na:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[na:na]
-	at com.typesafe.trace.FutureRunnable.run(FutureTrace.scala:119) ~[na:na]
-	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[na:na]
-	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[na:na]
-	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[na:na]
-	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[na:na]
-	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[na:na]
-
-2014-10-24 23:21:29,511 - [ERROR] - from application in New I/O worker #7 
+2014-10-25 06:59:28,304 - [ERROR] - from application in play-internal-execution-context-1 
 
 
-! @6k1m5634i - Internal server error, for (GET) [/createNewRestaurant/1] ->
+! @6k1od9e79 - Internal server error, for (GET) [/submitRating/food/1/4] ->
 
-play.PlayExceptions$CompilationException: Compilation error[not found: value foodForm]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
-	at scala.Option.map(Option.scala:145) ~[na:na]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:304) ~[na:na]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:298) ~[na:na]
-	at scala.Option.map(Option.scala:145) ~[na:na]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:298) ~[na:na]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:296) ~[na:na]
-	at scala.util.Either$LeftProjection.map(Either.scala:377) ~[na:na]
-	at play.PlayReloader$$anon$1.reload(PlayReloader.scala:296) ~[na:na]
-	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:104) ~[na:na]
-	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:102) ~[na:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[na:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[na:na]
-	at com.typesafe.trace.FutureRunnable.run(FutureTrace.scala:119) ~[na:na]
-	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[na:na]
-	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[na:na]
-	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[na:na]
-	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[na:na]
-	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[na:na]
+play.api.Application$$anon$1: Execution exception[[NumberFormatException: For input string: "4761113682622"]]
+	at play.api.Application$class.handleError(Application.scala:293) ~[na:na]
+	at play.api.DefaultApplication.handleError(Application.scala:399) [na:na]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$3.apply(PlayDefaultUpstreamHandler.scala:264) [na:na]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$3.apply(PlayDefaultUpstreamHandler.scala:264) [na:na]
+	at scala.Option.map(Option.scala:145) [na:na]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:264) [na:na]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:260) [na:na]
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:344) [na:na]
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:343) [na:na]
+	at com.typesafe.trace.FutureCallback.apply(FutureTrace.scala:136) [na:na]
+	at com.typesafe.trace.FutureCallback.apply(FutureTrace.scala:127) [na:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [na:na]
+	at play.api.libs.iteratee.Execution$$anon$1.execute_aroundBody0(Execution.scala:43) [na:na]
+	at play.api.libs.iteratee.Execution$$anon$1.execute_aroundBody1$advice(Execution.scala:138) [na:na]
+	at play.api.libs.iteratee.Execution$$anon$1.execute(Execution.scala:1) [na:na]
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [na:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete_aroundBody2(Promise.scala:248) [na:na]
+	at scala.concurrent.impl.Promise$DefaultPromise$AjcClosure3.run(Promise.scala:1) [na:na]
+	at com.typesafe.trace.FutureTraceAspect.ajc$around$com_typesafe_trace_FutureTraceAspect$4$3fd2d6f0proceed(FutureTraceAspect.aj:148) [na:na]
+	at com.typesafe.trace.FutureTraceAspect.ajc$around$com_typesafe_trace_FutureTraceAspect$4$3fd2d6f0(FutureTraceAspect.aj:150) [na:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:244) [na:na]
+	at scala.concurrent.Promise$class.complete(Promise.scala:55) [na:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [na:na]
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:235) [na:na]
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:235) [na:na]
+	at com.typesafe.trace.FutureCallback.apply(FutureTrace.scala:136) [na:na]
+	at com.typesafe.trace.FutureCallback.apply(FutureTrace.scala:127) [na:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [na:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) [na:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [na:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [na:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [na:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [na:na]
+Caused by: java.lang.NumberFormatException: For input string: "4761113682622"
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65) ~[na:1.8.0_20]
+	at java.lang.Integer.parseInt(Integer.java:583) ~[na:1.8.0_20]
+	at java.lang.Integer.parseInt(Integer.java:615) ~[na:1.8.0_20]
+	at controllers.UserFeed.UserFeedOnRestaurant.feedOnFood(UserFeedOnRestaurant.java:59) ~[na:na]
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$22$$anonfun$apply$22.apply(routes_routing.scala:301) ~[na:na]
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$22$$anonfun$apply$22.apply(routes_routing.scala:301) ~[na:na]
+	at play.core.Router$HandlerInvoker$$anon$7$$anon$2.invocation(Router.scala:183) ~[na:na]
+	at play.core.Router$Routes$$anon$1.invocation(Router.scala:377) ~[na:na]
+	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:56) ~[na:na]
+	at play.core.j.JavaAction$$anon$3.apply(JavaAction.scala:91) ~[na:na]
+	at play.core.j.JavaAction$$anon$3.apply(JavaAction.scala:90) ~[na:na]
+	at play.core.j.FPromiseHelper$$anonfun$flatMap$1.apply(FPromiseHelper.scala:82) ~[na:na]
+	at play.core.j.FPromiseHelper$$anonfun$flatMap$1.apply(FPromiseHelper.scala:82) ~[na:na]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:251) ~[na:na]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) ~[na:na]
+	at com.typesafe.trace.FutureCallback.apply(FutureTrace.scala:136) [na:na]
+	at com.typesafe.trace.FutureCallback.apply(FutureTrace.scala:127) [na:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [na:na]
+	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:37) ~[na:na]
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:39) ~[na:na]
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:385) ~[na:na]
+	... 4 common frames omitted
 
-2014-10-24 23:22:19,491 - [ERROR] - from application in New I/O worker #7 
+2014-10-25 06:59:57,122 - [ERROR] - from play in play-internal-execution-context-1 
+Cannot invoke the action, eventually got an error: java.lang.NumberFormatException: For input string: "4761113682622"
 
-
-! @6k1m58p2p - Internal server error, for (GET) [/createNewRestaurant/1] ->
-
-play.PlayExceptions$CompilationException: Compilation error[type mismatch;
- found   : Double
- required: Integer]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
-	at scala.Option.map(Option.scala:145) ~[na:na]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:304) ~[na:na]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:298) ~[na:na]
-	at scala.Option.map(Option.scala:145) ~[na:na]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:298) ~[na:na]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:296) ~[na:na]
-	at scala.util.Either$LeftProjection.map(Either.scala:377) ~[na:na]
-	at play.PlayReloader$$anon$1.reload(PlayReloader.scala:296) ~[na:na]
-	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:104) ~[na:na]
-	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:102) ~[na:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[na:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[na:na]
-	at com.typesafe.trace.FutureRunnable.run(FutureTrace.scala:119) ~[na:na]
-	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[na:na]
-	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[na:na]
-	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[na:na]
-	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[na:na]
-	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[na:na]
-
-2014-10-24 23:24:17,526 - [ERROR] - from application in New I/O worker #7 
-
-
-! @6k1m5fhik - Internal server error, for (GET) [/createNewRestaurant/1] ->
-
-play.PlayExceptions$CompilationException: Compilation error[not found: value round]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
-	at scala.Option.map(Option.scala:145) ~[na:na]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:304) ~[na:na]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:298) ~[na:na]
-	at scala.Option.map(Option.scala:145) ~[na:na]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:298) ~[na:na]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:296) ~[na:na]
-	at scala.util.Either$LeftProjection.map(Either.scala:377) ~[na:na]
-	at play.PlayReloader$$anon$1.reload(PlayReloader.scala:296) ~[na:na]
-	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:104) ~[na:na]
-	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:102) ~[na:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[na:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[na:na]
-	at com.typesafe.trace.FutureRunnable.run(FutureTrace.scala:119) ~[na:na]
-	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[na:na]
-	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[na:na]
-	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[na:na]
-	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[na:na]
-	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[na:na]
-
-2014-10-24 23:26:24,310 - [ERROR] - from application in New I/O worker #7 
+2014-10-25 06:59:57,126 - [ERROR] - from application in play-internal-execution-context-1 
 
 
-! @6k1m5mn73 - Internal server error, for (GET) [/createNewRestaurant/1] ->
+! @6k1odb4nn - Internal server error, for (GET) [/submitRating/food/1/4] ->
 
-play.PlayExceptions$CompilationException: Compilation error[illegal start of simple expression]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
-	at scala.Option.map(Option.scala:145) ~[na:na]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:304) ~[na:na]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:298) ~[na:na]
-	at scala.Option.map(Option.scala:145) ~[na:na]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:298) ~[na:na]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:296) ~[na:na]
-	at scala.util.Either$LeftProjection.map(Either.scala:377) ~[na:na]
-	at play.PlayReloader$$anon$1.reload(PlayReloader.scala:296) ~[na:na]
-	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:104) ~[na:na]
-	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:102) ~[na:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[na:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[na:na]
-	at com.typesafe.trace.FutureRunnable.run(FutureTrace.scala:119) ~[na:na]
-	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[na:na]
-	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[na:na]
-	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[na:na]
-	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[na:na]
-	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[na:na]
+play.api.Application$$anon$1: Execution exception[[NumberFormatException: For input string: "4761113682622"]]
+	at play.api.Application$class.handleError(Application.scala:293) ~[na:na]
+	at play.api.DefaultApplication.handleError(Application.scala:399) [na:na]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$3.apply(PlayDefaultUpstreamHandler.scala:264) [na:na]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$3.apply(PlayDefaultUpstreamHandler.scala:264) [na:na]
+	at scala.Option.map(Option.scala:145) [na:na]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:264) [na:na]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:260) [na:na]
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:344) [na:na]
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:343) [na:na]
+	at com.typesafe.trace.FutureCallback.apply(FutureTrace.scala:136) [na:na]
+	at com.typesafe.trace.FutureCallback.apply(FutureTrace.scala:127) [na:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [na:na]
+	at play.api.libs.iteratee.Execution$$anon$1.execute_aroundBody0(Execution.scala:43) [na:na]
+	at play.api.libs.iteratee.Execution$$anon$1.execute_aroundBody1$advice(Execution.scala:138) [na:na]
+	at play.api.libs.iteratee.Execution$$anon$1.execute(Execution.scala:1) [na:na]
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [na:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete_aroundBody2(Promise.scala:248) [na:na]
+	at scala.concurrent.impl.Promise$DefaultPromise$AjcClosure3.run(Promise.scala:1) [na:na]
+	at com.typesafe.trace.FutureTraceAspect.ajc$around$com_typesafe_trace_FutureTraceAspect$4$3fd2d6f0proceed(FutureTraceAspect.aj:148) [na:na]
+	at com.typesafe.trace.FutureTraceAspect.ajc$around$com_typesafe_trace_FutureTraceAspect$4$3fd2d6f0(FutureTraceAspect.aj:150) [na:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:244) [na:na]
+	at scala.concurrent.Promise$class.complete(Promise.scala:55) [na:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [na:na]
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:235) [na:na]
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:235) [na:na]
+	at com.typesafe.trace.FutureCallback.apply(FutureTrace.scala:136) [na:na]
+	at com.typesafe.trace.FutureCallback.apply(FutureTrace.scala:127) [na:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [na:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) [na:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [na:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [na:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [na:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [na:na]
+Caused by: java.lang.NumberFormatException: For input string: "4761113682622"
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65) ~[na:1.8.0_20]
+	at java.lang.Integer.parseInt(Integer.java:583) ~[na:1.8.0_20]
+	at java.lang.Integer.parseInt(Integer.java:615) ~[na:1.8.0_20]
+	at controllers.UserFeed.UserFeedOnRestaurant.feedOnFood(UserFeedOnRestaurant.java:59) ~[na:na]
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$22$$anonfun$apply$22.apply(routes_routing.scala:301) ~[na:na]
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$22$$anonfun$apply$22.apply(routes_routing.scala:301) ~[na:na]
+	at play.core.Router$HandlerInvoker$$anon$7$$anon$2.invocation(Router.scala:183) ~[na:na]
+	at play.core.Router$Routes$$anon$1.invocation(Router.scala:377) ~[na:na]
+	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:56) ~[na:na]
+	at play.core.j.JavaAction$$anon$3.apply(JavaAction.scala:91) ~[na:na]
+	at play.core.j.JavaAction$$anon$3.apply(JavaAction.scala:90) ~[na:na]
+	at play.core.j.FPromiseHelper$$anonfun$flatMap$1.apply(FPromiseHelper.scala:82) ~[na:na]
+	at play.core.j.FPromiseHelper$$anonfun$flatMap$1.apply(FPromiseHelper.scala:82) ~[na:na]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:251) ~[na:na]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) ~[na:na]
+	at com.typesafe.trace.FutureCallback.apply(FutureTrace.scala:136) [na:na]
+	at com.typesafe.trace.FutureCallback.apply(FutureTrace.scala:127) [na:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [na:na]
+	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:37) ~[na:na]
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:39) ~[na:na]
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:385) ~[na:na]
+	... 4 common frames omitted
 
-2014-10-24 23:26:56,856 - [ERROR] - from application in New I/O worker #7 
-
-
-! @6k1m5ojan - Internal server error, for (GET) [/createNewRestaurant/1] ->
-
-play.PlayExceptions$CompilationException: Compilation error[type mismatch;
- found   : Double
- required: Float]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
-	at scala.Option.map(Option.scala:145) ~[na:na]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:304) ~[na:na]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:298) ~[na:na]
-	at scala.Option.map(Option.scala:145) ~[na:na]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:298) ~[na:na]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:296) ~[na:na]
-	at scala.util.Either$LeftProjection.map(Either.scala:377) ~[na:na]
-	at play.PlayReloader$$anon$1.reload(PlayReloader.scala:296) ~[na:na]
-	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:104) ~[na:na]
-	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:102) ~[na:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[na:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[na:na]
-	at com.typesafe.trace.FutureRunnable.run(FutureTrace.scala:119) ~[na:na]
-	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[na:na]
-	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[na:na]
-	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[na:na]
-	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[na:na]
-	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[na:na]
-
-2014-10-24 23:28:57,828 - [ERROR] - from application in New I/O worker #7 
-
-
-! @6k1m65g9g - Internal server error, for (GET) [/createNewRestaurant/1] ->
-
-play.PlayExceptions$CompilationException: Compilation error[Float does not take parameters]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
-	at scala.Option.map(Option.scala:145) ~[na:na]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:304) ~[na:na]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:298) ~[na:na]
-	at scala.Option.map(Option.scala:145) ~[na:na]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:298) ~[na:na]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:296) ~[na:na]
-	at scala.util.Either$LeftProjection.map(Either.scala:377) ~[na:na]
-	at play.PlayReloader$$anon$1.reload(PlayReloader.scala:296) ~[na:na]
-	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:104) ~[na:na]
-	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:102) ~[na:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[na:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[na:na]
-	at com.typesafe.trace.FutureRunnable.run(FutureTrace.scala:119) ~[na:na]
-	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[na:na]
-	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[na:na]
-	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[na:na]
-	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[na:na]
-	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[na:na]
-
-2014-10-24 23:29:29,990 - [ERROR] - from application in New I/O worker #7 
-
-
-! @6k1m67bog - Internal server error, for (GET) [/createNewRestaurant/1] ->
-
-play.PlayExceptions$CompilationException: Compilation error[type mismatch;
- found   : Double
- required: Float]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
-	at scala.Option.map(Option.scala:145) ~[na:na]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:304) ~[na:na]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:298) ~[na:na]
-	at scala.Option.map(Option.scala:145) ~[na:na]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:298) ~[na:na]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:296) ~[na:na]
-	at scala.util.Either$LeftProjection.map(Either.scala:377) ~[na:na]
-	at play.PlayReloader$$anon$1.reload(PlayReloader.scala:296) ~[na:na]
-	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:104) ~[na:na]
-	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:102) ~[na:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[na:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[na:na]
-	at com.typesafe.trace.FutureRunnable.run(FutureTrace.scala:119) ~[na:na]
-	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[na:na]
-	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[na:na]
-	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[na:na]
-	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[na:na]
-	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[na:na]
-
-2014-10-24 23:44:55,816 - [INFO] - from play in play-internal-execution-context-1 
+2014-10-25 07:00:08,327 - [INFO] - from play in play-internal-execution-context-1 
 datasource [jdbc:mysql://localhost/restaurantdb] bound to JNDI as DefaultDS
 
-2014-10-24 23:44:55,853 - [INFO] - from play in play-internal-execution-context-1 
+2014-10-25 07:00:08,386 - [INFO] - from play in play-internal-execution-context-1 
 database [default] connected at jdbc:mysql://localhost/restaurantdb
 
-2014-10-24 23:44:55,943 - [INFO] - from play in play-internal-execution-context-1 
+2014-10-25 07:00:08,459 - [INFO] - from play in play-internal-execution-context-1 
 Application started (Dev)
 
-2014-10-24 23:46:15,613 - [ERROR] - from application in New I/O worker #4 
-
-
-! @6k1m8cheb - Internal server error, for (GET) [/restaurant/1] ->
-
-play.PlayExceptions$CompilationException: Compilation error[not enough arguments for method apply: (linkId: String, presentRating: Double)play.api.templates.HtmlFormat.Appendable in object rating.
-Unspecified value parameter presentRating.]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
-	at scala.Option.map(Option.scala:145) ~[na:na]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:304) ~[na:na]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:298) ~[na:na]
-	at scala.Option.map(Option.scala:145) ~[na:na]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:298) ~[na:na]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:296) ~[na:na]
-	at scala.util.Either$LeftProjection.map(Either.scala:377) ~[na:na]
-	at play.PlayReloader$$anon$1.reload(PlayReloader.scala:296) ~[na:na]
-	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:104) ~[na:na]
-	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:102) ~[na:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[na:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[na:na]
-	at com.typesafe.trace.FutureRunnable.run(FutureTrace.scala:119) ~[na:na]
-	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[na:na]
-	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[na:na]
-	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[na:na]
-	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[na:na]
-	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[na:na]
-
-2014-10-24 23:46:41,446 - [INFO] - from play in play-internal-execution-context-2 
+2014-10-25 07:08:46,288 - [INFO] - from play in play-internal-execution-context-1 
 datasource [jdbc:mysql://localhost/restaurantdb] bound to JNDI as DefaultDS
 
-2014-10-24 23:46:41,488 - [INFO] - from play in play-internal-execution-context-2 
+2014-10-25 07:08:46,341 - [INFO] - from play in play-internal-execution-context-1 
 database [default] connected at jdbc:mysql://localhost/restaurantdb
 
-2014-10-24 23:46:41,602 - [INFO] - from play in play-internal-execution-context-2 
+2014-10-25 07:08:46,423 - [INFO] - from play in play-internal-execution-context-1 
 Application started (Dev)
 
-2014-10-24 23:48:00,405 - [INFO] - from play in play-internal-execution-context-3 
+2014-10-25 07:10:34,805 - [INFO] - from play in play-internal-execution-context-2 
 datasource [jdbc:mysql://localhost/restaurantdb] bound to JNDI as DefaultDS
 
-2014-10-24 23:48:00,447 - [INFO] - from play in play-internal-execution-context-3 
+2014-10-25 07:10:34,856 - [INFO] - from play in play-internal-execution-context-2 
 database [default] connected at jdbc:mysql://localhost/restaurantdb
 
-2014-10-24 23:48:00,547 - [INFO] - from play in play-internal-execution-context-3 
+2014-10-25 07:10:34,936 - [INFO] - from play in play-internal-execution-context-2 
 Application started (Dev)
 
-2014-10-24 23:49:14,734 - [INFO] - from play in play-internal-execution-context-3 
+2014-10-25 07:17:54,908 - [INFO] - from play in play-internal-execution-context-2 
 datasource [jdbc:mysql://localhost/restaurantdb] bound to JNDI as DefaultDS
 
-2014-10-24 23:49:14,778 - [INFO] - from play in play-internal-execution-context-3 
+2014-10-25 07:17:54,950 - [INFO] - from play in play-internal-execution-context-2 
 database [default] connected at jdbc:mysql://localhost/restaurantdb
 
-2014-10-24 23:49:14,882 - [INFO] - from play in play-internal-execution-context-3 
+2014-10-25 07:17:55,034 - [INFO] - from play in play-internal-execution-context-2 
 Application started (Dev)
 
-2014-10-24 23:51:29,700 - [INFO] - from play in play-internal-execution-context-3 
+2014-10-25 07:22:30,053 - [INFO] - from play in play-internal-execution-context-3 
 datasource [jdbc:mysql://localhost/restaurantdb] bound to JNDI as DefaultDS
 
-2014-10-24 23:51:29,747 - [INFO] - from play in play-internal-execution-context-3 
+2014-10-25 07:22:30,118 - [INFO] - from play in play-internal-execution-context-3 
 database [default] connected at jdbc:mysql://localhost/restaurantdb
 
-2014-10-24 23:51:29,831 - [INFO] - from play in play-internal-execution-context-3 
+2014-10-25 07:22:30,207 - [INFO] - from play in play-internal-execution-context-3 
 Application started (Dev)
 
-2014-10-24 23:52:38,089 - [INFO] - from play in play-internal-execution-context-5 
+2014-10-25 07:23:46,526 - [INFO] - from play in play-internal-execution-context-4 
 datasource [jdbc:mysql://localhost/restaurantdb] bound to JNDI as DefaultDS
 
-2014-10-24 23:52:38,124 - [INFO] - from play in play-internal-execution-context-5 
+2014-10-25 07:23:46,565 - [INFO] - from play in play-internal-execution-context-4 
 database [default] connected at jdbc:mysql://localhost/restaurantdb
 
-2014-10-24 23:52:38,279 - [INFO] - from play in play-internal-execution-context-5 
+2014-10-25 07:23:46,657 - [INFO] - from play in play-internal-execution-context-4 
 Application started (Dev)
 
-2014-10-24 23:53:13,448 - [INFO] - from play in play-internal-execution-context-6 
+2014-10-25 07:33:29,675 - [INFO] - from play in play-internal-execution-context-4 
 datasource [jdbc:mysql://localhost/restaurantdb] bound to JNDI as DefaultDS
 
-2014-10-24 23:53:13,490 - [INFO] - from play in play-internal-execution-context-6 
+2014-10-25 07:33:29,719 - [INFO] - from play in play-internal-execution-context-4 
 database [default] connected at jdbc:mysql://localhost/restaurantdb
 
-2014-10-24 23:53:13,585 - [INFO] - from play in play-internal-execution-context-6 
+2014-10-25 07:33:29,798 - [INFO] - from play in play-internal-execution-context-4 
 Application started (Dev)
 
-2014-10-24 23:54:21,156 - [INFO] - from play in play-internal-execution-context-6 
+2014-10-25 07:39:19,684 - [INFO] - from play in play-internal-execution-context-4 
 datasource [jdbc:mysql://localhost/restaurantdb] bound to JNDI as DefaultDS
 
-2014-10-24 23:54:21,199 - [INFO] - from play in play-internal-execution-context-6 
+2014-10-25 07:39:19,740 - [INFO] - from play in play-internal-execution-context-4 
 database [default] connected at jdbc:mysql://localhost/restaurantdb
 
-2014-10-24 23:54:21,314 - [INFO] - from play in play-internal-execution-context-6 
+2014-10-25 07:39:19,827 - [INFO] - from play in play-internal-execution-context-4 
 Application started (Dev)
 
-2014-10-24 23:56:04,915 - [INFO] - from play in play-internal-execution-context-6 
+2014-10-25 07:44:32,007 - [INFO] - from play in play-internal-execution-context-5 
 datasource [jdbc:mysql://localhost/restaurantdb] bound to JNDI as DefaultDS
 
-2014-10-24 23:56:04,978 - [INFO] - from play in play-internal-execution-context-6 
+2014-10-25 07:44:32,044 - [INFO] - from play in play-internal-execution-context-5 
 database [default] connected at jdbc:mysql://localhost/restaurantdb
 
-2014-10-24 23:56:05,081 - [INFO] - from play in play-internal-execution-context-6 
+2014-10-25 07:44:32,130 - [INFO] - from play in play-internal-execution-context-5 
 Application started (Dev)
 
-2014-10-25 00:41:10,891 - [INFO] - from play in play-internal-execution-context-6 
+2014-10-25 07:44:40,748 - [ERROR] - from play in play-internal-execution-context-5 
+Cannot invoke the action, eventually got an error: javax.persistence.PersistenceException: ERROR executing DML bindLog[] error['Infinity' is not a valid numeric or approximate numeric value]
+
+2014-10-25 07:44:40,753 - [ERROR] - from application in play-internal-execution-context-5 
+
+
+! @6k1oj7mk8 - Internal server error, for (GET) [/submitRating/restaurant/1/5] ->
+
+play.api.Application$$anon$1: Execution exception[[PersistenceException: ERROR executing DML bindLog[] error['Infinity' is not a valid numeric or approximate numeric value]]]
+	at play.api.Application$class.handleError(Application.scala:293) ~[na:na]
+	at play.api.DefaultApplication.handleError(Application.scala:399) [na:na]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$3.apply(PlayDefaultUpstreamHandler.scala:264) [na:na]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$3.apply(PlayDefaultUpstreamHandler.scala:264) [na:na]
+	at scala.Option.map(Option.scala:145) [na:na]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:264) [na:na]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:260) [na:na]
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:344) [na:na]
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:343) [na:na]
+	at com.typesafe.trace.FutureCallback.apply(FutureTrace.scala:136) [na:na]
+	at com.typesafe.trace.FutureCallback.apply(FutureTrace.scala:127) [na:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [na:na]
+	at play.api.libs.iteratee.Execution$$anon$1.execute_aroundBody0(Execution.scala:43) [na:na]
+	at play.api.libs.iteratee.Execution$$anon$1.execute_aroundBody1$advice(Execution.scala:138) [na:na]
+	at play.api.libs.iteratee.Execution$$anon$1.execute(Execution.scala:1) [na:na]
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [na:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete_aroundBody2(Promise.scala:248) [na:na]
+	at scala.concurrent.impl.Promise$DefaultPromise$AjcClosure3.run(Promise.scala:1) [na:na]
+	at com.typesafe.trace.FutureTraceAspect.ajc$around$com_typesafe_trace_FutureTraceAspect$4$3fd2d6f0proceed(FutureTraceAspect.aj:148) [na:na]
+	at com.typesafe.trace.FutureTraceAspect.ajc$around$com_typesafe_trace_FutureTraceAspect$4$3fd2d6f0(FutureTraceAspect.aj:150) [na:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:244) [na:na]
+	at scala.concurrent.Promise$class.complete(Promise.scala:55) [na:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [na:na]
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:235) [na:na]
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:235) [na:na]
+	at com.typesafe.trace.FutureCallback.apply(FutureTrace.scala:136) [na:na]
+	at com.typesafe.trace.FutureCallback.apply(FutureTrace.scala:127) [na:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [na:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) [na:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [na:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [na:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [na:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [na:na]
+Caused by: javax.persistence.PersistenceException: ERROR executing DML bindLog[] error['Infinity' is not a valid numeric or approximate numeric value]
+	at com.avaje.ebeaninternal.server.persist.dml.DmlBeanPersister.execute(DmlBeanPersister.java:97) ~[na:na]
+	at com.avaje.ebeaninternal.server.persist.dml.DmlBeanPersister.update(DmlBeanPersister.java:66) ~[na:na]
+	at com.avaje.ebeaninternal.server.persist.DefaultPersistExecute.executeUpdateBean(DefaultPersistExecute.java:82) ~[na:na]
+	at com.avaje.ebeaninternal.server.core.PersistRequestBean.executeNow(PersistRequestBean.java:452) ~[na:na]
+	at com.avaje.ebeaninternal.server.core.PersistRequestBean.executeOrQueue(PersistRequestBean.java:478) ~[na:na]
+	at com.avaje.ebeaninternal.server.persist.DefaultPersister.update(DefaultPersister.java:365) ~[na:na]
+	at com.avaje.ebeaninternal.server.persist.DefaultPersister.forceUpdate(DefaultPersister.java:176) ~[na:na]
+	at com.avaje.ebeaninternal.server.core.DefaultServer.update(DefaultServer.java:1609) ~[na:na]
+	at com.avaje.ebeaninternal.server.core.DefaultServer.update(DefaultServer.java:1598) ~[na:na]
+	at com.avaje.ebeaninternal.server.core.DefaultServer.update(DefaultServer.java:1575) ~[na:na]
+	at com.avaje.ebean.Ebean.update(Ebean.java:496) ~[na:na]
+	at play.db.ebean.Model.update(Model.java:133) ~[na:na]
+	at controllers.UserFeed.UserFeedOnRestaurant.feedOnRestaurant(UserFeedOnRestaurant.java:44) ~[na:na]
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$21$$anonfun$apply$21.apply(routes_routing.scala:293) ~[na:na]
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$21$$anonfun$apply$21.apply(routes_routing.scala:293) ~[na:na]
+	at play.core.Router$HandlerInvoker$$anon$7$$anon$2.invocation(Router.scala:183) ~[na:na]
+	at play.core.Router$Routes$$anon$1.invocation(Router.scala:377) ~[na:na]
+	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:56) ~[na:na]
+	at play.core.j.JavaAction$$anon$3.apply(JavaAction.scala:91) ~[na:na]
+	at play.core.j.JavaAction$$anon$3.apply(JavaAction.scala:90) ~[na:na]
+	at play.core.j.FPromiseHelper$$anonfun$flatMap$1.apply(FPromiseHelper.scala:82) ~[na:na]
+	at play.core.j.FPromiseHelper$$anonfun$flatMap$1.apply(FPromiseHelper.scala:82) ~[na:na]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:251) ~[na:na]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) ~[na:na]
+	at com.typesafe.trace.FutureCallback.apply(FutureTrace.scala:136) [na:na]
+	at com.typesafe.trace.FutureCallback.apply(FutureTrace.scala:127) [na:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [na:na]
+	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:37) ~[na:na]
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:39) ~[na:na]
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:385) ~[na:na]
+	... 4 common frames omitted
+Caused by: java.sql.SQLException: 'Infinity' is not a valid numeric or approximate numeric value
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1078) ~[na:na]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:989) ~[na:na]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:975) ~[na:na]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:920) ~[na:na]
+	at com.mysql.jdbc.PreparedStatement.setDouble(PreparedStatement.java:3740) ~[na:na]
+	at com.jolbox.bonecp.PreparedStatementHandle.setDouble(PreparedStatementHandle.java:788) ~[na:na]
+	at com.avaje.ebeaninternal.server.type.DataBind.setDouble(DataBind.java:83) ~[na:na]
+	at com.avaje.ebeaninternal.server.type.ScalarTypeDouble.bind(ScalarTypeDouble.java:24) ~[na:na]
+	at com.avaje.ebeaninternal.server.type.ScalarTypeDouble.bind(ScalarTypeDouble.java:14) ~[na:na]
+	at com.avaje.ebeaninternal.server.deploy.BeanProperty.bind(BeanProperty.java:631) ~[na:na]
+	at com.avaje.ebeaninternal.server.persist.dml.DmlHandler.bindInternal(DmlHandler.java:240) ~[na:na]
+	at com.avaje.ebeaninternal.server.persist.dml.DmlHandler.bind(DmlHandler.java:199) ~[na:na]
+	at com.avaje.ebeaninternal.server.persist.dmlbind.BindableProperty.dmlBind(BindableProperty.java:81) ~[na:na]
+	at com.avaje.ebeaninternal.server.persist.dmlbind.BindableProperty.dmlBind(BindableProperty.java:63) ~[na:na]
+	at com.avaje.ebeaninternal.server.persist.dmlbind.BindableList.dmlBind(BindableList.java:56) ~[na:na]
+	at com.avaje.ebeaninternal.server.persist.dml.UpdatePlan.bindSet(UpdatePlan.java:91) ~[na:na]
+	at com.avaje.ebeaninternal.server.persist.dml.UpdateMeta.bind(UpdateMeta.java:77) ~[na:na]
+	at com.avaje.ebeaninternal.server.persist.dml.UpdateHandler.bind(UpdateHandler.java:60) ~[na:na]
+	at com.avaje.ebeaninternal.server.persist.dml.DmlBeanPersister.execute(DmlBeanPersister.java:79) ~[na:na]
+	... 33 common frames omitted
+
+2014-10-25 07:44:50,896 - [ERROR] - from play in play-internal-execution-context-5 
+Cannot invoke the action, eventually got an error: javax.persistence.PersistenceException: ERROR executing DML bindLog[] error['NaN' is not a valid numeric or approximate numeric value]
+
+2014-10-25 07:44:50,900 - [ERROR] - from application in play-internal-execution-context-5 
+
+
+! @6k1oj8bkf - Internal server error, for (GET) [/submitRating/restaurant/1/5] ->
+
+play.api.Application$$anon$1: Execution exception[[PersistenceException: ERROR executing DML bindLog[] error['NaN' is not a valid numeric or approximate numeric value]]]
+	at play.api.Application$class.handleError(Application.scala:293) ~[na:na]
+	at play.api.DefaultApplication.handleError(Application.scala:399) [na:na]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$3.apply(PlayDefaultUpstreamHandler.scala:264) [na:na]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$3.apply(PlayDefaultUpstreamHandler.scala:264) [na:na]
+	at scala.Option.map(Option.scala:145) [na:na]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:264) [na:na]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:260) [na:na]
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:344) [na:na]
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:343) [na:na]
+	at com.typesafe.trace.FutureCallback.apply(FutureTrace.scala:136) [na:na]
+	at com.typesafe.trace.FutureCallback.apply(FutureTrace.scala:127) [na:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [na:na]
+	at play.api.libs.iteratee.Execution$$anon$1.execute_aroundBody0(Execution.scala:43) [na:na]
+	at play.api.libs.iteratee.Execution$$anon$1.execute_aroundBody1$advice(Execution.scala:138) [na:na]
+	at play.api.libs.iteratee.Execution$$anon$1.execute(Execution.scala:1) [na:na]
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [na:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete_aroundBody2(Promise.scala:248) [na:na]
+	at scala.concurrent.impl.Promise$DefaultPromise$AjcClosure3.run(Promise.scala:1) [na:na]
+	at com.typesafe.trace.FutureTraceAspect.ajc$around$com_typesafe_trace_FutureTraceAspect$4$3fd2d6f0proceed(FutureTraceAspect.aj:148) [na:na]
+	at com.typesafe.trace.FutureTraceAspect.ajc$around$com_typesafe_trace_FutureTraceAspect$4$3fd2d6f0(FutureTraceAspect.aj:150) [na:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:244) [na:na]
+	at scala.concurrent.Promise$class.complete(Promise.scala:55) [na:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [na:na]
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:235) [na:na]
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:235) [na:na]
+	at com.typesafe.trace.FutureCallback.apply(FutureTrace.scala:136) [na:na]
+	at com.typesafe.trace.FutureCallback.apply(FutureTrace.scala:127) [na:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [na:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) [na:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [na:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [na:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [na:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [na:na]
+Caused by: javax.persistence.PersistenceException: ERROR executing DML bindLog[] error['NaN' is not a valid numeric or approximate numeric value]
+	at com.avaje.ebeaninternal.server.persist.dml.DmlBeanPersister.execute(DmlBeanPersister.java:97) ~[na:na]
+	at com.avaje.ebeaninternal.server.persist.dml.DmlBeanPersister.update(DmlBeanPersister.java:66) ~[na:na]
+	at com.avaje.ebeaninternal.server.persist.DefaultPersistExecute.executeUpdateBean(DefaultPersistExecute.java:82) ~[na:na]
+	at com.avaje.ebeaninternal.server.core.PersistRequestBean.executeNow(PersistRequestBean.java:452) ~[na:na]
+	at com.avaje.ebeaninternal.server.core.PersistRequestBean.executeOrQueue(PersistRequestBean.java:478) ~[na:na]
+	at com.avaje.ebeaninternal.server.persist.DefaultPersister.update(DefaultPersister.java:365) ~[na:na]
+	at com.avaje.ebeaninternal.server.persist.DefaultPersister.forceUpdate(DefaultPersister.java:176) ~[na:na]
+	at com.avaje.ebeaninternal.server.core.DefaultServer.update(DefaultServer.java:1609) ~[na:na]
+	at com.avaje.ebeaninternal.server.core.DefaultServer.update(DefaultServer.java:1598) ~[na:na]
+	at com.avaje.ebeaninternal.server.core.DefaultServer.update(DefaultServer.java:1575) ~[na:na]
+	at com.avaje.ebean.Ebean.update(Ebean.java:496) ~[na:na]
+	at play.db.ebean.Model.update(Model.java:133) ~[na:na]
+	at controllers.UserFeed.UserFeedOnRestaurant.feedOnRestaurant(UserFeedOnRestaurant.java:44) ~[na:na]
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$21$$anonfun$apply$21.apply(routes_routing.scala:293) ~[na:na]
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$21$$anonfun$apply$21.apply(routes_routing.scala:293) ~[na:na]
+	at play.core.Router$HandlerInvoker$$anon$7$$anon$2.invocation(Router.scala:183) ~[na:na]
+	at play.core.Router$Routes$$anon$1.invocation(Router.scala:377) ~[na:na]
+	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:56) ~[na:na]
+	at play.core.j.JavaAction$$anon$3.apply(JavaAction.scala:91) ~[na:na]
+	at play.core.j.JavaAction$$anon$3.apply(JavaAction.scala:90) ~[na:na]
+	at play.core.j.FPromiseHelper$$anonfun$flatMap$1.apply(FPromiseHelper.scala:82) ~[na:na]
+	at play.core.j.FPromiseHelper$$anonfun$flatMap$1.apply(FPromiseHelper.scala:82) ~[na:na]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:251) ~[na:na]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) ~[na:na]
+	at com.typesafe.trace.FutureCallback.apply(FutureTrace.scala:136) [na:na]
+	at com.typesafe.trace.FutureCallback.apply(FutureTrace.scala:127) [na:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [na:na]
+	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:37) ~[na:na]
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:39) ~[na:na]
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:385) ~[na:na]
+	... 4 common frames omitted
+Caused by: java.sql.SQLException: 'NaN' is not a valid numeric or approximate numeric value
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1078) ~[na:na]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:989) ~[na:na]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:975) ~[na:na]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:920) ~[na:na]
+	at com.mysql.jdbc.PreparedStatement.setDouble(PreparedStatement.java:3740) ~[na:na]
+	at com.jolbox.bonecp.PreparedStatementHandle.setDouble(PreparedStatementHandle.java:788) ~[na:na]
+	at com.avaje.ebeaninternal.server.type.DataBind.setDouble(DataBind.java:83) ~[na:na]
+	at com.avaje.ebeaninternal.server.type.ScalarTypeDouble.bind(ScalarTypeDouble.java:24) ~[na:na]
+	at com.avaje.ebeaninternal.server.type.ScalarTypeDouble.bind(ScalarTypeDouble.java:14) ~[na:na]
+	at com.avaje.ebeaninternal.server.deploy.BeanProperty.bind(BeanProperty.java:631) ~[na:na]
+	at com.avaje.ebeaninternal.server.persist.dml.DmlHandler.bindInternal(DmlHandler.java:240) ~[na:na]
+	at com.avaje.ebeaninternal.server.persist.dml.DmlHandler.bind(DmlHandler.java:199) ~[na:na]
+	at com.avaje.ebeaninternal.server.persist.dmlbind.BindableProperty.dmlBind(BindableProperty.java:81) ~[na:na]
+	at com.avaje.ebeaninternal.server.persist.dmlbind.BindableProperty.dmlBind(BindableProperty.java:63) ~[na:na]
+	at com.avaje.ebeaninternal.server.persist.dmlbind.BindableList.dmlBind(BindableList.java:56) ~[na:na]
+	at com.avaje.ebeaninternal.server.persist.dml.UpdatePlan.bindSet(UpdatePlan.java:91) ~[na:na]
+	at com.avaje.ebeaninternal.server.persist.dml.UpdateMeta.bind(UpdateMeta.java:77) ~[na:na]
+	at com.avaje.ebeaninternal.server.persist.dml.UpdateHandler.bind(UpdateHandler.java:60) ~[na:na]
+	at com.avaje.ebeaninternal.server.persist.dml.DmlBeanPersister.execute(DmlBeanPersister.java:79) ~[na:na]
+	... 33 common frames omitted
+
+2014-10-25 07:56:50,562 - [INFO] - from play in play-internal-execution-context-5 
 datasource [jdbc:mysql://localhost/restaurantdb] bound to JNDI as DefaultDS
 
-2014-10-25 00:41:10,920 - [INFO] - from play in play-internal-execution-context-6 
+2014-10-25 07:56:50,596 - [INFO] - from play in play-internal-execution-context-5 
 database [default] connected at jdbc:mysql://localhost/restaurantdb
 
-2014-10-25 00:41:11,037 - [INFO] - from play in play-internal-execution-context-6 
+2014-10-25 07:56:50,661 - [INFO] - from play in play-internal-execution-context-5 
+Application started (Dev)
+
+2014-10-25 08:00:44,825 - [INFO] - from play in play-internal-execution-context-5 
+datasource [jdbc:mysql://localhost/restaurantdb] bound to JNDI as DefaultDS
+
+2014-10-25 08:00:44,861 - [INFO] - from play in play-internal-execution-context-5 
+database [default] connected at jdbc:mysql://localhost/restaurantdb
+
+2014-10-25 08:00:44,927 - [INFO] - from play in play-internal-execution-context-5 
+Application started (Dev)
+
+2014-10-25 08:01:21,273 - [INFO] - from play in play-internal-execution-context-5 
+datasource [jdbc:mysql://localhost/restaurantdb] bound to JNDI as DefaultDS
+
+2014-10-25 08:01:21,306 - [INFO] - from play in play-internal-execution-context-5 
+database [default] connected at jdbc:mysql://localhost/restaurantdb
+
+2014-10-25 08:01:21,790 - [INFO] - from play in play-internal-execution-context-5 
+Application started (Dev)
+
+2014-10-25 08:07:00,569 - [INFO] - from play in play-internal-execution-context-9 
+datasource [jdbc:mysql://localhost/restaurantdb] bound to JNDI as DefaultDS
+
+2014-10-25 08:07:00,603 - [INFO] - from play in play-internal-execution-context-9 
+database [default] connected at jdbc:mysql://localhost/restaurantdb
+
+2014-10-25 08:07:00,664 - [INFO] - from play in play-internal-execution-context-9 
+Application started (Dev)
+
+2014-10-25 08:08:12,076 - [INFO] - from play in play-internal-execution-context-10 
+datasource [jdbc:mysql://localhost/restaurantdb] bound to JNDI as DefaultDS
+
+2014-10-25 08:08:12,111 - [INFO] - from play in play-internal-execution-context-10 
+database [default] connected at jdbc:mysql://localhost/restaurantdb
+
+2014-10-25 08:08:12,174 - [INFO] - from play in play-internal-execution-context-10 
+Application started (Dev)
+
+2014-10-25 08:19:15,250 - [INFO] - from play in play-internal-execution-context-11 
+datasource [jdbc:mysql://localhost/restaurantdb] bound to JNDI as DefaultDS
+
+2014-10-25 08:19:15,324 - [INFO] - from play in play-internal-execution-context-11 
+database [default] connected at jdbc:mysql://localhost/restaurantdb
+
+2014-10-25 08:19:15,416 - [INFO] - from play in play-internal-execution-context-11 
+Application started (Dev)
+
+2014-10-25 08:21:55,432 - [INFO] - from play in play-internal-execution-context-12 
+datasource [jdbc:mysql://localhost/restaurantdb] bound to JNDI as DefaultDS
+
+2014-10-25 08:21:55,468 - [INFO] - from play in play-internal-execution-context-12 
+database [default] connected at jdbc:mysql://localhost/restaurantdb
+
+2014-10-25 08:21:55,538 - [INFO] - from play in play-internal-execution-context-12 
+Application started (Dev)
+
+2014-10-25 08:25:27,223 - [INFO] - from play in play-internal-execution-context-12 
+datasource [jdbc:mysql://localhost/restaurantdb] bound to JNDI as DefaultDS
+
+2014-10-25 08:25:27,257 - [INFO] - from play in play-internal-execution-context-12 
+database [default] connected at jdbc:mysql://localhost/restaurantdb
+
+2014-10-25 08:25:27,329 - [INFO] - from play in play-internal-execution-context-12 
+Application started (Dev)
+
+2014-10-25 08:38:46,635 - [INFO] - from play in play-internal-execution-context-12 
+datasource [jdbc:mysql://localhost/restaurantdb] bound to JNDI as DefaultDS
+
+2014-10-25 08:38:46,663 - [INFO] - from play in play-internal-execution-context-12 
+database [default] connected at jdbc:mysql://localhost/restaurantdb
+
+2014-10-25 08:38:46,726 - [INFO] - from play in play-internal-execution-context-12 
+Application started (Dev)
+
+2014-10-25 08:44:16,147 - [INFO] - from play in play-internal-execution-context-12 
+datasource [jdbc:mysql://localhost/restaurantdb] bound to JNDI as DefaultDS
+
+2014-10-25 08:44:16,181 - [INFO] - from play in play-internal-execution-context-12 
+database [default] connected at jdbc:mysql://localhost/restaurantdb
+
+2014-10-25 08:44:16,265 - [INFO] - from play in play-internal-execution-context-12 
+Application started (Dev)
+
+2014-10-25 08:44:21,257 - [ERROR] - from play in play-internal-execution-context-12 
+Cannot invoke the action, eventually got an error: java.lang.NullPointerException
+
+2014-10-25 08:44:21,261 - [ERROR] - from application in play-internal-execution-context-12 
+
+
+! @6k1p13fa4 - Internal server error, for (GET) [/search/ra] ->
+
+play.api.Application$$anon$1: Execution exception[[NullPointerException: null]]
+	at play.api.Application$class.handleError(Application.scala:293) ~[na:na]
+	at play.api.DefaultApplication.handleError(Application.scala:399) [na:na]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$3.apply(PlayDefaultUpstreamHandler.scala:264) [na:na]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$3.apply(PlayDefaultUpstreamHandler.scala:264) [na:na]
+	at scala.Option.map(Option.scala:145) [na:na]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:264) [na:na]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:260) [na:na]
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:344) [na:na]
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:343) [na:na]
+	at com.typesafe.trace.FutureCallback.apply(FutureTrace.scala:136) [na:na]
+	at com.typesafe.trace.FutureCallback.apply(FutureTrace.scala:127) [na:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [na:na]
+	at play.api.libs.iteratee.Execution$$anon$1.execute_aroundBody0(Execution.scala:43) [na:na]
+	at play.api.libs.iteratee.Execution$$anon$1.execute_aroundBody1$advice(Execution.scala:138) [na:na]
+	at play.api.libs.iteratee.Execution$$anon$1.execute(Execution.scala:1) [na:na]
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [na:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete_aroundBody2(Promise.scala:248) [na:na]
+	at scala.concurrent.impl.Promise$DefaultPromise$AjcClosure3.run(Promise.scala:1) [na:na]
+	at com.typesafe.trace.FutureTraceAspect.ajc$around$com_typesafe_trace_FutureTraceAspect$4$3fd2d6f0proceed(FutureTraceAspect.aj:148) [na:na]
+	at com.typesafe.trace.FutureTraceAspect.ajc$around$com_typesafe_trace_FutureTraceAspect$4$3fd2d6f0(FutureTraceAspect.aj:150) [na:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:244) [na:na]
+	at scala.concurrent.Promise$class.complete(Promise.scala:55) [na:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [na:na]
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:235) [na:na]
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:235) [na:na]
+	at com.typesafe.trace.FutureCallback.apply(FutureTrace.scala:136) [na:na]
+	at com.typesafe.trace.FutureCallback.apply(FutureTrace.scala:127) [na:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [na:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) [na:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [na:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [na:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [na:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [na:na]
+Caused by: java.lang.NullPointerException: null
+	at controllers.Search.AnswerQueryWithJson.answer(AnswerQueryWithJson.java:53) ~[na:na]
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$16$$anonfun$apply$16.apply(routes_routing.scala:253) ~[na:na]
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$16$$anonfun$apply$16.apply(routes_routing.scala:253) ~[na:na]
+	at play.core.Router$HandlerInvoker$$anon$7$$anon$2.invocation(Router.scala:183) ~[na:na]
+	at play.core.Router$Routes$$anon$1.invocation(Router.scala:377) ~[na:na]
+	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:56) ~[na:na]
+	at play.core.j.JavaAction$$anon$3.apply(JavaAction.scala:91) ~[na:na]
+	at play.core.j.JavaAction$$anon$3.apply(JavaAction.scala:90) ~[na:na]
+	at play.core.j.FPromiseHelper$$anonfun$flatMap$1.apply(FPromiseHelper.scala:82) ~[na:na]
+	at play.core.j.FPromiseHelper$$anonfun$flatMap$1.apply(FPromiseHelper.scala:82) ~[na:na]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:251) ~[na:na]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) ~[na:na]
+	at com.typesafe.trace.FutureCallback.apply(FutureTrace.scala:136) [na:na]
+	at com.typesafe.trace.FutureCallback.apply(FutureTrace.scala:127) [na:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [na:na]
+	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:37) ~[na:na]
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:39) ~[na:na]
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:385) ~[na:na]
+	... 4 common frames omitted
+
+2014-10-25 08:44:22,379 - [ERROR] - from play in play-internal-execution-context-12 
+Cannot invoke the action, eventually got an error: java.lang.NullPointerException
+
+2014-10-25 08:44:22,382 - [ERROR] - from application in play-internal-execution-context-12 
+
+
+! @6k1p13h17 - Internal server error, for (GET) [/search/r] ->
+
+play.api.Application$$anon$1: Execution exception[[NullPointerException: null]]
+	at play.api.Application$class.handleError(Application.scala:293) ~[na:na]
+	at play.api.DefaultApplication.handleError(Application.scala:399) [na:na]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$3.apply(PlayDefaultUpstreamHandler.scala:264) [na:na]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$3.apply(PlayDefaultUpstreamHandler.scala:264) [na:na]
+	at scala.Option.map(Option.scala:145) [na:na]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:264) [na:na]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:260) [na:na]
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:344) [na:na]
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:343) [na:na]
+	at com.typesafe.trace.FutureCallback.apply(FutureTrace.scala:136) [na:na]
+	at com.typesafe.trace.FutureCallback.apply(FutureTrace.scala:127) [na:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [na:na]
+	at play.api.libs.iteratee.Execution$$anon$1.execute_aroundBody0(Execution.scala:43) [na:na]
+	at play.api.libs.iteratee.Execution$$anon$1.execute_aroundBody1$advice(Execution.scala:138) [na:na]
+	at play.api.libs.iteratee.Execution$$anon$1.execute(Execution.scala:1) [na:na]
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [na:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete_aroundBody2(Promise.scala:248) [na:na]
+	at scala.concurrent.impl.Promise$DefaultPromise$AjcClosure3.run(Promise.scala:1) [na:na]
+	at com.typesafe.trace.FutureTraceAspect.ajc$around$com_typesafe_trace_FutureTraceAspect$4$3fd2d6f0proceed(FutureTraceAspect.aj:148) [na:na]
+	at com.typesafe.trace.FutureTraceAspect.ajc$around$com_typesafe_trace_FutureTraceAspect$4$3fd2d6f0(FutureTraceAspect.aj:150) [na:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:244) [na:na]
+	at scala.concurrent.Promise$class.complete(Promise.scala:55) [na:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [na:na]
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:235) [na:na]
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:235) [na:na]
+	at com.typesafe.trace.FutureCallback.apply(FutureTrace.scala:136) [na:na]
+	at com.typesafe.trace.FutureCallback.apply(FutureTrace.scala:127) [na:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [na:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) [na:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [na:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [na:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [na:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [na:na]
+Caused by: java.lang.NullPointerException: null
+	at controllers.Search.AnswerQueryWithJson.answer(AnswerQueryWithJson.java:53) ~[na:na]
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$16$$anonfun$apply$16.apply(routes_routing.scala:253) ~[na:na]
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$16$$anonfun$apply$16.apply(routes_routing.scala:253) ~[na:na]
+	at play.core.Router$HandlerInvoker$$anon$7$$anon$2.invocation(Router.scala:183) ~[na:na]
+	at play.core.Router$Routes$$anon$1.invocation(Router.scala:377) ~[na:na]
+	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:56) ~[na:na]
+	at play.core.j.JavaAction$$anon$3.apply(JavaAction.scala:91) ~[na:na]
+	at play.core.j.JavaAction$$anon$3.apply(JavaAction.scala:90) ~[na:na]
+	at play.core.j.FPromiseHelper$$anonfun$flatMap$1.apply(FPromiseHelper.scala:82) ~[na:na]
+	at play.core.j.FPromiseHelper$$anonfun$flatMap$1.apply(FPromiseHelper.scala:82) ~[na:na]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:251) ~[na:na]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) ~[na:na]
+	at com.typesafe.trace.FutureCallback.apply(FutureTrace.scala:136) [na:na]
+	at com.typesafe.trace.FutureCallback.apply(FutureTrace.scala:127) [na:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [na:na]
+	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:37) ~[na:na]
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:39) ~[na:na]
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:385) ~[na:na]
+	... 4 common frames omitted
+
+2014-10-25 08:44:23,831 - [ERROR] - from play in play-internal-execution-context-12 
+Cannot invoke the action, eventually got an error: java.lang.NullPointerException
+
+2014-10-25 08:44:23,834 - [ERROR] - from application in play-internal-execution-context-12 
+
+
+! @6k1p13j54 - Internal server error, for (GET) [/search/R] ->
+
+play.api.Application$$anon$1: Execution exception[[NullPointerException: null]]
+	at play.api.Application$class.handleError(Application.scala:293) ~[na:na]
+	at play.api.DefaultApplication.handleError(Application.scala:399) [na:na]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$3.apply(PlayDefaultUpstreamHandler.scala:264) [na:na]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$3.apply(PlayDefaultUpstreamHandler.scala:264) [na:na]
+	at scala.Option.map(Option.scala:145) [na:na]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:264) [na:na]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:260) [na:na]
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:344) [na:na]
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:343) [na:na]
+	at com.typesafe.trace.FutureCallback.apply(FutureTrace.scala:136) [na:na]
+	at com.typesafe.trace.FutureCallback.apply(FutureTrace.scala:127) [na:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [na:na]
+	at play.api.libs.iteratee.Execution$$anon$1.execute_aroundBody0(Execution.scala:43) [na:na]
+	at play.api.libs.iteratee.Execution$$anon$1.execute_aroundBody1$advice(Execution.scala:138) [na:na]
+	at play.api.libs.iteratee.Execution$$anon$1.execute(Execution.scala:1) [na:na]
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [na:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete_aroundBody2(Promise.scala:248) [na:na]
+	at scala.concurrent.impl.Promise$DefaultPromise$AjcClosure3.run(Promise.scala:1) [na:na]
+	at com.typesafe.trace.FutureTraceAspect.ajc$around$com_typesafe_trace_FutureTraceAspect$4$3fd2d6f0proceed(FutureTraceAspect.aj:148) [na:na]
+	at com.typesafe.trace.FutureTraceAspect.ajc$around$com_typesafe_trace_FutureTraceAspect$4$3fd2d6f0(FutureTraceAspect.aj:150) [na:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:244) [na:na]
+	at scala.concurrent.Promise$class.complete(Promise.scala:55) [na:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [na:na]
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:235) [na:na]
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:235) [na:na]
+	at com.typesafe.trace.FutureCallback.apply(FutureTrace.scala:136) [na:na]
+	at com.typesafe.trace.FutureCallback.apply(FutureTrace.scala:127) [na:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [na:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) [na:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [na:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [na:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [na:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [na:na]
+Caused by: java.lang.NullPointerException: null
+	at controllers.Search.AnswerQueryWithJson.answer(AnswerQueryWithJson.java:53) ~[na:na]
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$16$$anonfun$apply$16.apply(routes_routing.scala:253) ~[na:na]
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$16$$anonfun$apply$16.apply(routes_routing.scala:253) ~[na:na]
+	at play.core.Router$HandlerInvoker$$anon$7$$anon$2.invocation(Router.scala:183) ~[na:na]
+	at play.core.Router$Routes$$anon$1.invocation(Router.scala:377) ~[na:na]
+	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:56) ~[na:na]
+	at play.core.j.JavaAction$$anon$3.apply(JavaAction.scala:91) ~[na:na]
+	at play.core.j.JavaAction$$anon$3.apply(JavaAction.scala:90) ~[na:na]
+	at play.core.j.FPromiseHelper$$anonfun$flatMap$1.apply(FPromiseHelper.scala:82) ~[na:na]
+	at play.core.j.FPromiseHelper$$anonfun$flatMap$1.apply(FPromiseHelper.scala:82) ~[na:na]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:251) ~[na:na]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) ~[na:na]
+	at com.typesafe.trace.FutureCallback.apply(FutureTrace.scala:136) [na:na]
+	at com.typesafe.trace.FutureCallback.apply(FutureTrace.scala:127) [na:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [na:na]
+	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:37) ~[na:na]
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:39) ~[na:na]
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:385) ~[na:na]
+	... 4 common frames omitted
+
+2014-10-25 08:44:40,972 - [INFO] - from play in play-internal-execution-context-12 
+datasource [jdbc:mysql://localhost/restaurantdb] bound to JNDI as DefaultDS
+
+2014-10-25 08:44:41,007 - [INFO] - from play in play-internal-execution-context-12 
+database [default] connected at jdbc:mysql://localhost/restaurantdb
+
+2014-10-25 08:44:41,075 - [INFO] - from play in play-internal-execution-context-12 
+Application started (Dev)
+
+2014-10-25 08:46:24,623 - [INFO] - from play in play-internal-execution-context-12 
+datasource [jdbc:mysql://localhost/restaurantdb] bound to JNDI as DefaultDS
+
+2014-10-25 08:46:24,654 - [INFO] - from play in play-internal-execution-context-12 
+database [default] connected at jdbc:mysql://localhost/restaurantdb
+
+2014-10-25 08:46:24,741 - [INFO] - from play in play-internal-execution-context-12 
 Application started (Dev)
 

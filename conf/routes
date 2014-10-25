@@ -33,6 +33,6 @@ GET		/restaurant/:id				controllers.Restaurant.RestaurantManager.restaurantProfi
 POST	/saveFood					controllers.Restaurant.RestaurantManager.addFood()
 
 GET 	/submitRating/restaurant/:id/:rating	controllers.UserFeed.UserFeedOnRestaurant.feedOnRestaurant(id : Integer, rating : Integer)
-GET		/submitRating/food/:id/:rating		controllers.UserFeed.UserFeedOnRestaurant.feenOdFood(id : Integer, rating : Integer)
+GET		/submitRating/food/:id/:rating		controllers.UserFeed.UserFeedOnRestaurant.feedOnFood(id : Integer, rating : Integer)
 
 GET 	/logout						controllers.UserControl.LogoutAndSessionClear.logout()

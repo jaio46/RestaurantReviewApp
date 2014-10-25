@@ -109,7 +109,15 @@ $(window).load(function(){
         var self = $(this);
         var val = self.data('value');
         var address="/submitRating/"+self.siblings('input').attr('id')+"/"+val;
-        alert(address);
+        $.ajax({
+        	type: "GET",
+        	url: address,
+        	success: function(data){
+        	},
+    		failure: function(errMsg) {
+        		alert(errMsg);
+    		}
+        });
         self.siblings('input').val(val).trigger('change');
         self.siblings('.rating-clear').show();
         e.preventDefault();

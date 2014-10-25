@@ -3,6 +3,8 @@ package controllers.Restaurant;
 import java.util.List;
 import java.util.Map;
 
+import com.avaje.ebean.annotation.Where;
+
 import models.Foods.FoodItem;
 import models.Restaurants.Franchise;
 import models.Restaurants.Restaurant;
@@ -21,7 +23,7 @@ public class RestaurantManager extends Controller{
 	public static Result createNewRestaurant(int id)
 	{
 		franchise=Franchise.find.where().eq("id", id).findUnique();
-		List<Restaurant> list=Restaurant.find.orderBy("rating desc").setMaxRows(5).findList();
+		List<Restaurant> list=Restaurant.find.where().eq("franchise", franchise).orderBy("rating desc").setMaxRows(5).findList();
 		int cnt=Restaurant.find.where().eq("franchise",franchise).findRowCount();
 		return ok(views.html.restaurant.restaurantCreation.render(franchise,restaurantForm,list,cnt));
 	}

@@ -38,10 +38,84 @@ public class FoodItem extends Model{
 	@ManyToOne
 	public Restaurant restaurant;
 	
+	
 	public double rating=2;
 	
 	public int ratedBy=0;
 	
+	
+
+	public int getId() {
+		return id;
+	}
+
+
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+
+
+	public String getItemName() {
+		return itemName;
+	}
+
+
+
+	public void setItemName(String itemName) {
+		this.itemName = itemName;
+	}
+
+
+
+	public String getItemCategory() {
+		return itemCategory;
+	}
+
+
+
+	public void setItemCategory(String itemCategory) {
+		this.itemCategory = itemCategory;
+	}
+
+
+
+	public Restaurant getRestaurant() {
+		return restaurant;
+	}
+
+
+
+	public void setRestaurant(Restaurant restaurant) {
+		this.restaurant = restaurant;
+	}
+
+
+
+	public double getRating() {
+		return rating;
+	}
+
+
+
+	public void setRating(double rating) {
+		this.rating = rating;
+	}
+
+
+
+	public int getRatedBy() {
+		return ratedBy;
+	}
+
+
+
+	public void setRatedBy(int ratedBy) {
+		this.ratedBy = ratedBy;
+	}
+
+
 
 	public static Finder<Integer,FoodItem> find = 
 			new Finder<Integer, FoodItem> (Integer.class, FoodItem.class);
