@@ -65,7 +65,7 @@
 				@for(food<-foodList){
 					<tr>
 						<td>
-							@food.itemName
+							<a href="/food/@food.id">@food.itemName</a>
 						</td>
 						<td>
 						@common.rating("food/"+food.id,food.rating)

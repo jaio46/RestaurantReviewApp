@@ -1,6 +1,6 @@
 // @SOURCE:/Users/sheikhahmed/Projects/RestaurantApp/conf/routes
-// @HASH:0a3dce7ad81b478d0bec787df391fc879544df67
-// @DATE:Sat Oct 25 13:28:26 BDT 2014
+// @HASH:c08607e69d28c95f7dcfb41a733aa85f2c347926
+// @DATE:Sat Oct 25 14:12:56 BDT 2014
 
 import Routes.{prefix => _prefix, defaultPrefix => _defaultPrefix}
 import play.core._
@@ -165,6 +165,24 @@ class Reversetest {
 // @LINE:15
 def index(): Call = {
    Call("GET", _prefix + { _defaultPrefix } + "test")
+}
+                                                
+    
+}
+                          
+}
+                  
+
+// @LINE:39
+package controllers.Food {
+
+// @LINE:39
+class ReverseFoodManager {
+    
+
+// @LINE:39
+def profile(id:Integer): Call = {
+   Call("GET", _prefix + { _defaultPrefix } + "food/" + implicitly[PathBindable[Integer]].unbind("id", id))
 }
                                                 
     
@@ -532,6 +550,29 @@ def index : JavascriptReverseRoute = JavascriptReverseRoute(
 }
         
 
+// @LINE:39
+package controllers.Food.javascript {
+
+// @LINE:39
+class ReverseFoodManager {
+    
+
+// @LINE:39
+def profile : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.Food.FoodManager.profile",
+   """
+      function(id) {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "food/" + (""" + implicitly[PathBindable[Integer]].javascriptUnbind + """)("id", id)})
+      }
+   """
+)
+                        
+    
+}
+              
+}
+        
+
 // @LINE:34
 // @LINE:33
 // @LINE:32
@@ -887,6 +928,25 @@ class Reversetest {
 // @LINE:15
 def index(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.isdrun.test.index(), HandlerDef(this, "controllers.isdrun.test", "index", Seq(), "GET", """""", _prefix + """test""")
+)
+                      
+    
+}
+                          
+}
+        
+
+// @LINE:39
+package controllers.Food.ref {
+
+
+// @LINE:39
+class ReverseFoodManager {
+    
+
+// @LINE:39
+def profile(id:Integer): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.Food.FoodManager.profile(id), HandlerDef(this, "controllers.Food.FoodManager", "profile", Seq(classOf[Integer]), "GET", """""", _prefix + """food/$id<[^/]+>""")
 )
                       
     

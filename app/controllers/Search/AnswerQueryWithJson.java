@@ -5,8 +5,10 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
+import models.Feeds.FeedOnRestaurant;
 import models.Foods.FoodItem;
 import models.Restaurants.Restaurant;
+import models.User.User;
 
 import com.fasterxml.jackson.databind.JsonNode;
 
@@ -19,6 +21,26 @@ import views.html.*;
 public class AnswerQueryWithJson  extends Controller{
 	
 	static Set<String> st;
+	
+	public static double likely(User x, User y)
+	{
+		double ret;
+		List<FeedOnRestaurant> list= FeedOnRestaurant.find.where().eq("feeder", x).findList();
+		List<FeedOnRestaurant> list1= FeedOnRestaurant.find.where().eq("feeder", y).findList();
+		int i,j;
+		ret=0.0;
+		for(i=0;i<list.size();i++)
+		{
+			for(j=0;j<list1.size();j++)
+			{
+				if(list.get(i).restaurnat.equals(list1.get(j).restaurnat))
+				{
+					ret+=1.0;
+				}
+			}
+		}
+		return ret;
+	}
 	
 	public static Result answer(String x)
 	{
@@ -110,5 +132,18 @@ public class AnswerQueryWithJson  extends Controller{
 		
 		return ok(views.html.search.searchResultPage.render(x,restaurantList,foodList));
 	}
-	
+	public static Result colaborative()
+	{
+		List<User> userList=User.find.all();
+		int i,j;
+		double res=0.0;
+		for(i=0;i<userList.size();i++)
+		{
+			for(j=i+1;j<userList.size();j++)
+			{
+				res=likely(userList.get(i), userList.get(j));
+			}
+		}
+		return ok(String.valueOf(res));
+	}
 }

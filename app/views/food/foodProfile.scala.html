@@ -1,0 +1,41 @@
+@(food : models.Foods.FoodItem)
+<!DOCTYPE html>
+<html>
+<head>
+    @common.head(food.itemName)
+</head>
+
+<body>
+@common.navbar("Create New Franchise")
+
+<div class="container">
+	<div class="row clearfix">
+		<div class="col-md-12 column">
+			<h3 class="text-info">
+				@food.itemName by <a href="/restaurant/@food.restaurant.id">@food.restaurant.getRestaurantName()</a>
+			</h3>
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="panel-title">
+						@food.itemName details
+					</h3>
+				</div>
+				<div class="panel-body">
+					Category - @food.itemCategory
+				</div>
+				<div class="panel-body">
+					Reviewd by @food.ratedBy
+				</div>
+				<div class="panel-body">
+					Rating @common.rating("food/"+food.id,food.rating)
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+@common.footer()
+
+</body>
+
+</html>
